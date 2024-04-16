@@ -1,0 +1,100 @@
+ERROR - 2024-04-12 16:23:27 --> Table 'dbabsensi1.uangkas' doesn't exist
+CRITICAL - 2024-04-12 16:23:27 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\uangkas\Home.php(209): App\Models\uangkas\M_model->tampil('uangkas')
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\uangkas\Home->dashboard()
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\uangkas\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 16:56:01 --> Unknown column 'user' in 'where clause'
+CRITICAL - 2024-04-12 16:56:01 --> Call to a member function getRow() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(447): App\Models\piketm\M_model->tampilWR('rombel', 'data_guru', 'data_guru.rombe...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 16:56:10 --> Unknown column 'user' in 'where clause'
+CRITICAL - 2024-04-12 16:56:10 --> Call to a member function getRow() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(447): App\Models\piketm\M_model->tampilWR('rombel', 'data_guru', 'data_guru.rombe...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 16:57:10 --> Unknown column 'user' in 'where clause'
+CRITICAL - 2024-04-12 16:57:10 --> Call to a member function getRow() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(447): App\Models\piketm\M_model->tampilWR('rombel', 'data_guru', 'data_guru.rombe...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 16:57:50 --> Table 'dbabsensi1.data_murid' doesn't exist
+CRITICAL - 2024-04-12 16:57:50 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(452): App\Models\piketm\M_model->tampilW2('data_murid', 'jabatan', 'rombel', 'data_murid.jaba...', 'data_murid.kela...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 16:58:05 --> Unknown column 'guru' in 'where clause'
+CRITICAL - 2024-04-12 16:58:05 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(452): App\Models\piketm\M_model->tampilW2('siswa', 'jabatan', 'rombel', 'siswa.jabatan=j...', 'siswa.kelas=rom...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 17:06:57 --> Table 'dbabsensi1.data_murid' doesn't exist
+CRITICAL - 2024-04-12 17:06:57 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(452): App\Models\piketm\M_model->tampilW2('data_murid', 'jabatan', 'rombel', 'data_murid.jaba...', 'data_murid.kela...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 17:09:52 --> Table 'dbabsensi1.data_murid' doesn't exist
+CRITICAL - 2024-04-12 17:09:52 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\piket\Home.php(452): App\Models\piketm\M_model->tampilW2('data_murid', 'jabatan', 'rombel', 'data_murid.jaba...', 'data_murid.kela...', Array)
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\piket\Home->m_murid2('14')
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\piket\Home))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+CRITICAL - 2024-04-12 17:10:25 --> Invalid file: diagram.php
+#0 D:\ERP-PH-main\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('diagram.php')
+#1 D:\ERP-PH-main\system\Common.php(1089): CodeIgniter\View\View->render('diagram', Array, true)
+#2 D:\ERP-PH-main\app\Controllers\voting\Hasil.php(29): view('diagram', Array)
+#3 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\voting\Hasil->index()
+#4 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\voting\Hasil))
+#5 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#8 {main}
+ERROR - 2024-04-12 22:01:20 --> Table 'dbabsensi1.data_siswa' doesn't exist
+CRITICAL - 2024-04-12 22:01:20 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\agendapkl\Data_absensi_guru.php(18): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '14')
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->index()
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}
+ERROR - 2024-04-12 22:01:27 --> Table 'dbabsensi1.data_siswa' doesn't exist
+CRITICAL - 2024-04-12 22:01:27 --> Call to a member function getResult() on bool
+#0 D:\ERP-PH-main\app\Controllers\agendapkl\Data_absensi_guru.php(37): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '14')
+#1 D:\ERP-PH-main\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->menu_print()
+#2 D:\ERP-PH-main\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 D:\ERP-PH-main\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\ERP-PH-main\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\ERP-PH-main\system\Commands\Server\rewrite.php(43): require_once('D:\\ERP-PH-main\\...')
+#6 {main}

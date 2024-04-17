@@ -32,7 +32,6 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'landing_page::index');
-$routes->add('agendapkl', 'Agendapkl\Login::index');
 // $routes->add('data_siswa/edit_siswa/(:num)', 'data_siswa/::edit_siswa/$1');
 
 

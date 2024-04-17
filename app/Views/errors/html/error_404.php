@@ -35,7 +35,7 @@
 					<p class="fs-5 text-gray-600">
 						The page you are looking not found.
 					</p>
-					<a href="<?=base_url('dashboard')?>" class="btn btn-lg btn-outline-primary mt-3"
+					<a href="<?=base_url('landing_page_erp/home/dashboard')?>" class="btn btn-lg btn-outline-primary mt-3"
 						>Go Home</a
 						>
 					</div>

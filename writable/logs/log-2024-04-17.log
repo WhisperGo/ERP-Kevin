@@ -1,0 +1,23 @@
+CRITICAL - 2024-04-17 16:46:16 --> Class 'App\Models\M_model' not found
+#0 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(832): App\Controllers\Laporan->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#2 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#5 {main}
+CRITICAL - 2024-04-17 16:46:27 --> Class 'App\Models\M_login' not found
+#0 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(832): App\Controllers\Dashboard->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#5 {main}
+ERROR - 2024-04-17 17:04:13 --> Table 'erp_kevin.data_guru' doesn't exist
+CRITICAL - 2024-04-17 17:04:13 --> Call to a member function getResult() on bool
+#0 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/app/Controllers/Agendapkl/Data_kesiswaan.php(16): App\Models\agendapkl\M_kesiswaan->join2('data_guru', 'level', 'data_guru.jabat...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(832): App\Controllers\agendapkl\Data_kesiswaan->index()
+#2 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_kesiswaan))
+#3 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/ERP-Kevin/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}

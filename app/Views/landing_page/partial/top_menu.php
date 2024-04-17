@@ -53,7 +53,7 @@
             <a href="<?= base_url('data_pendaftaran/pendaftaran_baru')?>"
             class="btn btn-brand ms-lg-3"><i class="faj-button fa-solid fa-user-plus"></i>Pendaftaran</a>
 
-            <a href="<?= base_url('landinpage')?>"
+            <a href="<?= base_url('landing_page_erp')?>"
             class="btn btn-brand ms-lg-3"><i class="faj-button fa-regular fa-users"></i>ERP</a>
         </div>
     </div>

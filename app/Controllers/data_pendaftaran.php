@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_pendaftaran;
+use App\Models\universal\M_pendaftaran;
 
 class Data_pendaftaran extends BaseController
 {

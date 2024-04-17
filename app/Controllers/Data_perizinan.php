@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_perizinan;
-use App\Models\Amodel;
-use App\Models\BlokModel;
-use App\Models\TahunModel;
-use App\Models\SiswaModel;
-use App\Models\M_model;
+use App\Models\universal\M_perizinan;
+use App\Models\universal\Amodel;
+use App\Models\universal\BlokModel;
+use App\Models\universal\TahunModel;
+use App\Models\universal\SiswaModel;
+use App\Models\universal\M_model;
 use Dompdf\Dompdf;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

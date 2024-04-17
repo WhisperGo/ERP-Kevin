@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_login;
+use App\Models\universal\M_login;
 
 class Master extends BaseController
 {
@@ -19,7 +19,6 @@ class Master extends BaseController
            echo view('partial_dashboard/header_dashboard', $data);
            echo view('partial/top_menu');
            echo view('partial/side_menu2');
-       
            echo view('login/dashboard', $data);
            echo view('partial_dashboard/footer_dashboard');
 

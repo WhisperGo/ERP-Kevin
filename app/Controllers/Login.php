@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_login;
+use App\Models\universal\M_login;
 
 class Login extends BaseController
 {
@@ -14,13 +14,13 @@ class Login extends BaseController
     public function index()
     {
         if ($this->isLoggedIn()) {
-            return redirect()->to('dashboard');
+            return redirect()->to('landing_page_erp/home/dashboard');
         }
 
-        $data['title']='Login';
-        echo view ('partial_login/header_login', $data);
-        echo view('login/view');
-        echo view('partial_login/footer_login');
+        // $data['title']='Login | ERP - SPH';
+        // echo view ('partial_login/header_login', $data);
+        echo view('landing_page_erp/login');
+        // echo view('partial_login/footer_login');
     }
 
     public function aksi_login()
@@ -80,23 +80,25 @@ class Login extends BaseController
             'password'=>$p
 
         );
+
         $cek=$model->getLoginWithPassword('user', $u, $p);
         if ($cek !== null) {
             session()->set('id', $cek['id_user']);
             session()->set('username', $cek['username']);
             session()->set('level', $cek['level']);
+            session()->set('nama', $cek['nama']);
             session()->set('jenjang', $cek['jenjang']);
-            return redirect()->to('dashboard');
+            return redirect()->to('landing_page_erp/Home/dashboard');
         }else {
             // Tambahkan peringatan username atau password salah
-            session()->setFlashdata('error', ' Username atau password Anda salah');
-            return redirect()->to('login');
+            // session()->setFlashdata('error', ' Username atau password Anda salah');
+            return redirect()->to('landing_page_erp/Home');
         }
     }
 
     public function log_out()
     {
         session()->destroy();
-        return redirect()->to('login');
+        return redirect()->to('landing_page_erp/Home');
     }
 }

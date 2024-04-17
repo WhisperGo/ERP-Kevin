@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_login;
+use App\Models\universal\M_login;
 
 class Login_pendaftaran extends BaseController
 {

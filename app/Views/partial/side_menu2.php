@@ -17,7 +17,7 @@ $logo = $builder->select('logo_website')
       <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a href="<?=base_url('dashboard2')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
+            <a href="<?=base_url('master')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
           </div>
           <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -53,8 +53,8 @@ $logo = $builder->select('logo_website')
           <ul class="menu">
             <li class="sidebar-title">Menu</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard2"){echo "active";}?>">
-              <a href="<?=base_url('dashboard2')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if($uri->getSegment(1) == "master"){echo "active";}?>">
+              <a href="<?=base_url('master')?>" class='sidebar-link'>
                 <i class="fa-solid fa-grid-2"></i>
                 <span>Dashboard</span>
               </a>
@@ -323,8 +323,5 @@ $logo = $builder->select('logo_website')
         </div>
       </div>
     </div>
-
-    <!-- Menu Guru  -------------------------------------------------------------------------------------------->
-
     
     <?php } ?>

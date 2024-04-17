@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_user;
-use App\Models\M_model;
-use App\Models\RombelModel;
+use App\Models\universal\M_user;
+use App\Models\universal\M_model;
+use App\Models\universal\RombelModel;
 
 class User extends BaseController
 {

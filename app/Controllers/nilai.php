@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_model;
-use App\Models\M_siswa;
-use App\Models\TahunModel;
-use App\Models\ModelNilai;
+use App\Models\universal\M_model;
+use App\Models\universal\M_siswa;
+use App\Models\universal\TahunModel;
+use App\Models\universal\ModelNilai;
 
 class nilai extends BaseController
 {

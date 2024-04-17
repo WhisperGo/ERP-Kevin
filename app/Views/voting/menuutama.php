@@ -316,7 +316,7 @@ if (!empty($user->foto)) {
             </li> -->
 
                                 <li>
-                                    <a class="dropdown-item" href="<?= base_url('landinpage/home/dashboard') ?>">
+                                    <a class="dropdown-item" href="<?= base_url('landing_page_erp/home/dashboard') ?>">
                                         <i class="fa-regular fa-arrow-right-from-bracket me-2"></i>
                                         Back</a>
                                 </li>

@@ -56,7 +56,7 @@
         }
 
         function logout() {
-          window.location.href = '<?= base_url('landinpage/home/logout') ?>';
+          window.location.href = '<?= base_url('landing_page_erp/home/logout') ?>';
         }
 
         // Resep timer setiap kali ada aktivitas

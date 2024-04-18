@@ -1,37 +1,56 @@
 <?php
-$db         = \Config\Database::connect();
+$db = \Config\Database::connect();
 
-$level      = session()->get('level');
-$on         = 'user.level=level.id_level';
-$namalevel  = $db->table('user')->join('level', $on, 'left')->where('level.id_level', $level)->get()->getRow();
+$level = session()->get('level');
+$on = 'user.level=level.id_level';
+$namalevel = $db->table('user')->join('level', $on, 'left')->where('level.id_level', $level)->get()->getRow();
 
 $id_user = session()->get('id');
 $user = $db->table('user')->where('id_user', $id_user)->get()->getRow();
 
+// Join dengan tabel siswa untuk mendapatkan nama_siswa
+$siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
+
 // if (!empty($user->foto)) {
-//   $foto = base_url('agendapkl/images/' . $user->foto);
+//   $foto = base_url('images/' . $user->foto);
 // } else {
-//   $foto = base_url('agendapkl/images/default.png');
+//   $foto = base_url('images/default.png');
 // }
 
+$builder = $db->table('website');
+$namaweb = $builder->select('nama_website')
+  ->where('deleted_at', null)
+  ->get()
+  ->getRow();
 ?>
+
 
 <div id="main-content">
   <div class="page-heading">
     <div class="page-heading">
-      <h3><?=$title?></h3>
+      <h2><?= $title ?></h2>
+      <h6><?= $namaweb->nama_website ?></h6>
     </div>
     <div class="page-content">
 
       <div class="card">
         <div class="card-body py-4 px-4">
           <div class="d-flex align-items-center">
-            <div class="avatar avatar-xl">
-              <img src="<?=base_url('@agendapkl/images/default.png')?>">
-            </div>
-            <div class="ms-3 name">
-              <h5 class="font-bold">Selamat Datang, <?=session()->get('username')?></h5>
-              <h6 class="text-muted mb-0">Anda adalah <?=$namalevel->nama_level?></h6>
+            <div class="name">
+              <?php
+              $level = session()->get('level');
+
+              if ($level == 1 || $level == 2 || $level == 3) {
+                // Jika level 1, 2, atau 3, gunakan session()->get('username')
+                echo "<h5 class='font-bold'>Selamat Datang, " . session()->get('username') . " di website $namaweb->nama_website</h5>";
+              } elseif ($level == 4 || $level == 5) {
+                // Jika level 4 atau 5, gunakan $siswa->nama_siswa
+                echo "<h5 class='font-bold'>Selamat Datang, $siswa->nama_siswa di website $namaweb->nama_website</h5>";
+              } else {
+                // Jika level tidak sesuai dengan kriteria di atas
+                echo "<h5 class='font-bold'>Selamat Datang di website $namaweb->nama_website</h5>";
+              }
+              ?>
             </div>
           </div>
         </div>
@@ -50,16 +69,16 @@ $user = $db->table('user')->where('id_user', $id_user)->get()->getRow();
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="<?=base_url('@agendapkl/assets/compiled/jpg/building.jpg')?>" class="d-block w-100"/>
+                      <img src="<?= base_url('assets/compiled/jpg/building.jpg') ?>" class="d-block w-100" />
                     </div>
                     <div class="carousel-item">
-                      <img src="<?=base_url('@agendapkl/assets/compiled/jpg/architecture1.jpg')?>" class="d-block w-100"/>
+                      <img src="<?= base_url('assets/compiled/jpg/architecture1.jpg') ?>" class="d-block w-100" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>           
+          </div>
 
           <div class="col-md-6">
             <div class="card">
@@ -77,7 +96,7 @@ $user = $db->table('user')->where('id_user', $id_user)->get()->getRow();
 
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="<?=base_url('@agendapkl//assets/compiled/png/1.png')?>" class="d-block w-100"/>
+                      <img src="<?= base_url('/assets/compiled/png/1.png') ?>" class="d-block w-100" />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>Aturan #1</h5>
                         <p>Datang harus tepat waktu</p>
@@ -85,18 +104,18 @@ $user = $db->table('user')->where('id_user', $id_user)->get()->getRow();
                     </div>
 
                     <div class="carousel-item">
-                      <img src="<?=base_url('@agendapkl//assets/compiled/png/2.png')?>" class="d-block w-100"/>
+                      <img src="<?= base_url('/assets/compiled/png/2.png') ?>" class="d-block w-100" />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>Aturan #2</h5>
-                        <p>Alpa dipotong 100.000 Gajinya</p>
+                        <p>Alpa akan dikurangi nilai</p>
                       </div>
                     </div>
 
                     <div class="carousel-item">
-                      <img src="<?=base_url('@agendapkl//assets/compiled/png/3.png')?>" class="d-block w-100"/>
+                      <img src="<?= base_url('/assets/compiled/png/3.png') ?>" class="d-block w-100" />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>Aturan #3</h5>
-                        <p>Sakit harus melapor ke HRD</p>
+                        <p>Sakit harus melapor ke Guru</p>
                       </div>
                     </div>
                   </div>

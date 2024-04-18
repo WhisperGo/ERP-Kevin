@@ -126,7 +126,7 @@
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-0 col-md-offset-0">
-												<!-- <a href="javascript:history.back()" class="btn btn-danger">Cancel</a> -->
+												<a href="<?=base_url('/')?>" class="btn btn-danger">Cancel</a>
 												<button type="submit" class="btn btn-primary" id="submit-button" disabled>Submit</button>
 											</div>
 										</div>

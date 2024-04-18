@@ -18,7 +18,7 @@ class Data_level extends BaseController
         echo view('agendapkl/data_level/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -34,7 +34,7 @@ public function create()
         echo view('agendapkl/data_level/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -58,7 +58,7 @@ public function aksi_create()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_level');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 public function edit($id)
@@ -98,7 +98,7 @@ public function aksi_edit()
      return redirect()->to('agendapkl/data_level');
 
  }else {
-    return redirect()->to('agendapkl');
+    return redirect()->to('landing_page_erp');
 }
 }
 
@@ -116,7 +116,7 @@ public function delete($id)
         $model->qedit('level', $data, $where);
         return redirect()->to('agendapkl/data_level');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

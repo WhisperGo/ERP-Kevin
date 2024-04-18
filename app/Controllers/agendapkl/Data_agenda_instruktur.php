@@ -22,7 +22,7 @@ class Data_agenda_instruktur extends BaseController
             echo view('agendapkl/data_agenda_instruktur/view', $data);
             echo view('agendapkl/partial/footer_datatable');
         } else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -46,7 +46,7 @@ class Data_agenda_instruktur extends BaseController
             echo view('agendapkl/data_agenda_instruktur/view_agenda', $data);
             echo view('agendapkl/partial/footer_datatable');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -70,7 +70,7 @@ class Data_agenda_instruktur extends BaseController
             echo view('agendapkl/data_agenda_instruktur/agenda', $data);
             echo view('agendapkl/partial/footer_datatable');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -138,7 +138,7 @@ class Data_agenda_instruktur extends BaseController
             $model->qedit('data_agenda', $data2, $where2);
             return redirect()->to('agendapkl/data_agenda_instruktur/detail/'. $id2);
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
     public function delete($id)
@@ -155,7 +155,7 @@ class Data_agenda_instruktur extends BaseController
             $model->qedit('data_agenda', $data, $where);
             return redirect()->to('agendapkl/data_agenda_instruktur');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -176,7 +176,7 @@ class Data_agenda_instruktur extends BaseController
             echo view('agendapkl/data_agenda_instruktur/menu_print', $data);
             echo view('agendapkl/partial/footer_datatable');    
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
 
     }
@@ -203,7 +203,7 @@ class Data_agenda_instruktur extends BaseController
             $dompdf->render();
             $dompdf->stream('agenda_pkl.pdf', ['Attachment' => 0]);
         } else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 

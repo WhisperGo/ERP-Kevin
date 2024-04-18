@@ -24,7 +24,7 @@ class Data_absensi_guru extends BaseController
         echo view('agendapkl/data_absensi_guru/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -43,7 +43,7 @@ public function menu_print()
         echo view('agendapkl/data_absensi_guru/menu_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -63,7 +63,7 @@ public function export_windows()
         echo view('agendapkl/data_absensi_guru/print_windows_view', $data);
         echo view('agendapkl/partial/footer_datatable');  
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -89,7 +89,7 @@ public function export_pdf()
         $dompdf->render();
         $dompdf->stream('laporan_absensi_sekolah.pdf', ['Attachment' => 0]);
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -194,7 +194,7 @@ public function export_excel()
         header('Cache-Control: max-age=0');
         $writer->save('php://output');
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

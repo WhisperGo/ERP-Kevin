@@ -26,7 +26,7 @@ class Data_agenda_guru extends BaseController
             echo view('agendapkl/data_agenda_guru/index', $data);
             echo view('agendapkl/partial/footer_datatable');
         } else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -52,7 +52,7 @@ class Data_agenda_guru extends BaseController
             echo view('agendapkl/data_agenda_guru/view', $data);
             echo view('agendapkl/partial/footer_datatable');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -76,7 +76,7 @@ class Data_agenda_guru extends BaseController
             echo view('agendapkl/data_agenda_guru/detail', $data);
             echo view('agendapkl/partial/footer_datatable');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -94,7 +94,7 @@ class Data_agenda_guru extends BaseController
             $model->qedit('data_agenda', $data2, $where2);
             return redirect()->to('agendapkl/data_agenda_guru/view/'. session()->get('id_balik_agenda_guru'));
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -115,7 +115,7 @@ class Data_agenda_guru extends BaseController
             echo view('agendapkl/data_agenda_guru/menu_print', $data);
             echo view('agendapkl/partial/footer_datatable');    
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -141,7 +141,7 @@ class Data_agenda_guru extends BaseController
             $dompdf->render();
             $dompdf->stream('agenda_pkl.pdf', ['Attachment' => 0]);
         } else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -278,7 +278,7 @@ class Data_agenda_guru extends BaseController
             header('Cache-Control: max-age=0');
             $writer->save('php://output');
         } else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 

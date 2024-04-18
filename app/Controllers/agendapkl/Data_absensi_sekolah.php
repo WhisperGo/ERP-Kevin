@@ -21,7 +21,7 @@ class Data_absensi_sekolah extends BaseController
         echo view('agendapkl/data_absensi_sekolah/menu', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -39,7 +39,7 @@ public function rpl()
         echo view('agendapkl/data_absensi_sekolah/view_rpl', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -57,7 +57,7 @@ public function bdp()
         echo view('agendapkl/data_absensi_sekolah/view_bdp', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -75,7 +75,7 @@ public function akl()
         echo view('agendapkl/data_absensi_sekolah/view_akl', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -102,7 +102,7 @@ public function detail($id)
         echo view('agendapkl/data_absensi_sekolah/detail', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -125,7 +125,7 @@ public function create()
         echo view('agendapkl/data_absensi_sekolah/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -157,7 +157,7 @@ public function aksi_create()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_absensi_sekolah/detail/'. session()->get('id_balik_absensi'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -177,7 +177,7 @@ public function edit($id)
         echo view('agendapkl/data_absensi_sekolah/edit',$data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -201,7 +201,7 @@ public function aksi_edit()
      $model->qedit('data_absensi_sekolah', $data2, $where);
      return redirect()->to('agendapkl/data_absensi_sekolah/detail/'. session()->get('id_balik_absensi'));
  }else {
-    return redirect()->to('agendapkl');
+    return redirect()->to('landing_page_erp');
 }
 }
 
@@ -220,7 +220,7 @@ public function create_all_rpl()
         echo view('agendapkl/data_absensi_sekolah/create_all_rpl', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -238,7 +238,7 @@ public function create_all_bdp()
         echo view('agendapkl/data_absensi_sekolah/create_all_bdp', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -256,7 +256,7 @@ public function create_all_akl()
         echo view('agendapkl/data_absensi_sekolah/create_all_akl', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -292,7 +292,7 @@ public function aksi_create_all_rpl()
 
         return redirect()->to('agendapkl/data_absensi_sekolah/rpl/');
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -328,7 +328,7 @@ public function aksi_create_all_bdp()
 
         return redirect()->to('agendapkl/data_absensi_sekolah/bdp/');
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -364,7 +364,7 @@ public function aksi_create_all_akl()
 
         return redirect()->to('agendapkl/data_absensi_sekolah/akl/');
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -382,7 +382,7 @@ public function delete($id)
         $model->qedit('data_absensi_sekolah', $data, $where);
         return redirect()->to('agendapkl/data_absensi_sekolah/detail/'. session()->get('id_balik_absensi'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -404,7 +404,7 @@ public function menu_print_absensi_sekolah()
         echo view('agendapkl/data_absensi_sekolah/menu_jurusan_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 
 }
@@ -423,7 +423,7 @@ public function menu_print_rpl()
         echo view('agendapkl/data_absensi_sekolah/menu_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 
 }
@@ -442,7 +442,7 @@ public function menu_print_bdp()
         echo view('agendapkl/data_absensi_sekolah/menu_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 
 }
@@ -461,7 +461,7 @@ public function menu_print_akl()
         echo view('agendapkl/data_absensi_sekolah/menu_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 
 }
@@ -482,7 +482,7 @@ public function export_windows()
         echo view('agendapkl/data_absensi_sekolah/print_windows_view', $data);
         echo view('agendapkl/partial/footer_datatable');  
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -508,7 +508,7 @@ public function export_pdf()
         $dompdf->render();
         $dompdf->stream('laporan_absensi_sekolah.pdf', ['Attachment' => 0]);
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -613,7 +613,7 @@ public function export_excel()
         header('Cache-Control: max-age=0');
         $writer->save('php://output');
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

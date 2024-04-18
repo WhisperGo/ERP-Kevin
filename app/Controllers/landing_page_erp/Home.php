@@ -41,20 +41,20 @@ class Home extends BaseController
             session()->set('jenjang', $cek['jenjang']);
             return redirect()->to('landing_page_erp/Home/dashboard');
         }else {
-            return redirect()->to('landing_page_erp/Home');
+            return redirect()->to('landing_page_erp');
         }
     }
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('landing_page_erp/Home');
+        return redirect()->to('landing_page_erp');
     }
     public function dashboard()
     {
         if(session()->get('id')>0) {
             echo view('landing_page_erp/dashboard');
         }else{
-            return redirect()->to('landing_page_erp/Home');
+            return redirect()->to('landing_page_erp');
         }
     }
 }

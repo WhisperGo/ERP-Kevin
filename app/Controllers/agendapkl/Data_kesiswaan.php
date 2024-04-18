@@ -22,7 +22,7 @@ class Data_kesiswaan extends BaseController
         echo view('agendapkl/data_kesiswaan/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -37,7 +37,7 @@ public function create()
         echo view('agendapkl/data_kesiswaan/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -101,7 +101,7 @@ public function aksi_create()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_kesiswaan');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 public function edit($id)
@@ -184,7 +184,7 @@ public function aksi_edit()
         $model->qedit('data_guru', $data2, $where2);
         return redirect()->to('agendapkl/data_kesiswaan');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 public function delete($id)
@@ -203,7 +203,7 @@ public function delete($id)
         $model->qedit('user', $data, $where2);
         return redirect()->to('agendapkl/data_kesiswaan');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -251,7 +251,7 @@ public function import_excel()
 
         return redirect()->back()->with('success', 'Data Excel Telah Berhasil Diimport');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

@@ -1,0 +1,27 @@
+ERROR - 2024-04-18 21:06:06 --> Table 'erp_kevin.data_guru' doesn't exist
+CRITICAL - 2024-04-18 21:06:06 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_kesiswaan.php(16): App\Models\agendapkl\M_kesiswaan->join2('data_guru', 'level', 'data_guru.jabat...')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_kesiswaan->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_kesiswaan))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-18 21:06:09 --> Table 'erp_kevin.data_guru' doesn't exist
+CRITICAL - 2024-04-18 21:06:09 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_kesiswaan.php(16): App\Models\agendapkl\M_kesiswaan->join2('data_guru', 'level', 'data_guru.jabat...')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_kesiswaan->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_kesiswaan))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-18 21:06:19 --> Table 'erp_kevin.data_instruktur' doesn't exist
+CRITICAL - 2024-04-18 21:06:19 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_instruktur.php(15): App\Models\agendapkl\M_instruktur->tampil('data_instruktur')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_instruktur->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_instruktur))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

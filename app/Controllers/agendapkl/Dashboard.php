@@ -23,7 +23,7 @@ class Dashboard extends BaseController
            echo view('agendapkl/partial_dashboard/footer_dashboard');
 
        }else{
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

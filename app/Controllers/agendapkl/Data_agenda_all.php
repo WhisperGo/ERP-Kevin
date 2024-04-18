@@ -22,7 +22,7 @@ class Data_agenda_all extends BaseController
         echo view('agendapkl/data_agenda_all/menu', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -40,7 +40,7 @@ public function rpl()
         echo view('agendapkl/data_agenda_all/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -58,7 +58,7 @@ public function bdp()
         echo view('agendapkl/data_agenda_all/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -76,7 +76,7 @@ public function akl()
         echo view('agendapkl/data_agenda_all/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -100,7 +100,7 @@ public function detail($id)
         echo view('agendapkl/data_agenda_all/detail', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -124,7 +124,7 @@ public function agenda($id)
         echo view('agendapkl/data_agenda_all/agenda', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -139,7 +139,7 @@ public function create()
         echo view('agendapkl/data_agenda/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -194,7 +194,7 @@ public function aksi_create()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_agenda');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 public function edit($id)
@@ -254,7 +254,7 @@ public function aksi_edit()
         $model->qedit('data_agenda', $data2, $where2);
         return redirect()->to('agendapkl/data_agenda');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 public function delete($id)
@@ -271,7 +271,7 @@ public function delete($id)
         $model->qedit('data_agenda', $data, $where);
         return redirect()->to('agendapkl/data_agenda');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -291,7 +291,7 @@ public function menu_print_rpl()
         echo view('agendapkl/data_agenda_all/menu_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 
 }
@@ -318,7 +318,7 @@ public function export_pdf()
         $dompdf->render();
         $dompdf->stream('agenda_pkl.pdf', ['Attachment' => 0]);
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

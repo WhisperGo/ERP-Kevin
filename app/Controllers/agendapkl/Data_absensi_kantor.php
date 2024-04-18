@@ -24,7 +24,7 @@ class Data_absensi_kantor extends BaseController
             echo view('agendapkl/data_absensi_kantor/view', $data);
             echo view('agendapkl/partial/footer_datatable');
         } else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 
@@ -51,7 +51,7 @@ class Data_absensi_kantor extends BaseController
         echo view('agendapkl/data_absensi_kantor/detail', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -67,7 +67,7 @@ public function create()
         echo view('agendapkl/data_absensi_kantor/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -94,7 +94,7 @@ public function aksi_create()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_absensi_kantor/detail/'. session()->get('id_balik_absensi_kantor'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 public function edit($id)
@@ -111,7 +111,7 @@ public function edit($id)
         echo view('agendapkl/data_absensi_kantor/edit',$data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -136,7 +136,7 @@ public function aksi_edit()
      $model->qedit('data_absensi_kantor', $data2, $where);
      return redirect()->to('agendapkl/data_absensi_kantor/detail/'. session()->get('id_balik_absensi_kantor'));
  }else {
-    return redirect()->to('agendapkl');
+    return redirect()->to('landing_page_erp');
 }
 }
 public function delete($id)
@@ -153,7 +153,7 @@ public function delete($id)
         $model->qedit('data_absensi_kantor', $data, $where);
         return redirect()->to('agendapkl/data_absensi_kantor/detail/'. session()->get('id_balik_absensi_kantor'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -174,7 +174,7 @@ public function menu_print_absensi_kantor()
         echo view('agendapkl/data_absensi_kantor/menu_print', $data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 
 }
@@ -195,7 +195,7 @@ public function export_windows()
         echo view('agendapkl/data_absensi_kantor/print_windows_view', $data);
         echo view('agendapkl/partial/footer_datatable');  
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -221,7 +221,7 @@ public function export_pdf()
         $dompdf->render();
         $dompdf->stream('laporan_absensi_kantor.pdf', ['Attachment' => 0]);
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -326,7 +326,7 @@ public function export_excel()
         header('Cache-Control: max-age=0');
         $writer->save('php://output');
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

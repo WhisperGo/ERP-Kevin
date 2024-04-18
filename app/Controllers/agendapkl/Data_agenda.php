@@ -26,7 +26,7 @@ class Data_agenda extends BaseController
         echo view('agendapkl/data_agenda/view', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -50,7 +50,7 @@ public function agenda($id)
         echo view('agendapkl/data_agenda/agenda', $data);
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -76,7 +76,7 @@ public function aksi_tambah()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_agenda/index/'. session()->get('id'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -93,7 +93,7 @@ public function create($id)
         echo view('agendapkl/data_agenda/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -148,7 +148,7 @@ public function aksi_create()
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_agenda/index/'. session()->get('id'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -172,7 +172,7 @@ public function aksi_logout($id)
         echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_agenda/index/'. session()->get('id'));
     }else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 
@@ -282,7 +282,7 @@ public function printpdf($id)
         $pdf->Output("Agenda-pkl.pdf", 'I');
 
     } else {
-        return redirect()->to('agendapkl');
+        return redirect()->to('landing_page_erp');
     }
 }
 

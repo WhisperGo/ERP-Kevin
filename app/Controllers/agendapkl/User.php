@@ -18,7 +18,7 @@ class User extends BaseController
             echo view('agendapkl/user/view', $data);
             echo view('agendapkl/partial/footer_datatable');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
 
         }
     }
@@ -38,7 +38,7 @@ class User extends BaseController
 
             return redirect()->to('agendapkl/user');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
 
         }
     }

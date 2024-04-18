@@ -33,7 +33,7 @@ class Data_siswa_all extends BaseController
             echo view('agendapkl/data_siswa_all/view', $data);
             echo view('agendapkl/partial/footer_datatable');
         }else {
-            return redirect()->to('agendapkl');
+            return redirect()->to('landing_page_erp');
         }
     }
 }
@@ -129,7 +129,7 @@ public function aksi_edit()
     $model->qedit('data_siswa', $data2, $where2);
     return redirect()->to('agendapkl/data_siswa_all');
 }else {
-    return redirect()->to('agendapkl');
+    return redirect()->to('landing_page_erp');
 }
 }
 

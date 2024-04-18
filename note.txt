@@ -1,15 +1,15 @@
 Yang tidak ada : 
-- data_absensi_kantor
-- data_absensi_sekolah
-- data_agenda
-- data_instruktur
-- data_keterangan
+- data_absensi_kantor (DONE)
+- data_absensi_sekolah (DONE)
+- data_agenda (DONE)
+- data_instruktur (DONE)
+- data_keterangan (DONE)
 
 Yang sama : 
 - data_guru -> guru
 - data_jurusan -> jurusan
 - data_siswa -> siswa
 - data_level -> level
-- perusahaan -> website
-- user -> user
+- perusahaan -> website (DONE)
+- user -> user (DONE)
 

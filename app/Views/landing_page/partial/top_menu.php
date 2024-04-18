@@ -54,7 +54,7 @@
             class="btn btn-brand ms-lg-3"><i class="faj-button fa-solid fa-user-plus"></i>Pendaftaran</a>
 
             <a href="<?= base_url('landing_page_erp')?>"
-            class="btn btn-brand ms-lg-3"><i class="faj-button fa-regular fa-users"></i>ERP</a>
+            class="btn btn-brand ms-lg-3"><i class="faj-button fa-solid fa-solar-system"></i>ERP</a>
         </div>
     </div>
 </nav>

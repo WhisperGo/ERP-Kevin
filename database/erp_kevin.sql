@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Apr 2024 pada 18.13
+-- Waktu pembuatan: 19 Apr 2024 pada 18.39
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -44,39 +44,6 @@ CREATE TABLE `absen` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `absensi_pkl_kantor`
---
-
-CREATE TABLE `absensi_pkl_kantor` (
-  `id_absensi` int(11) NOT NULL,
-  `siswa` int(11) NOT NULL,
-  `tanggal` date NOT NULL,
-  `keterangan` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime DEFAULT NULL,
-  `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `absensi_pkl_sekolah`
---
-
-CREATE TABLE `absensi_pkl_sekolah` (
-  `id_absensi` int(11) NOT NULL,
-  `siswa` int(11) NOT NULL,
-  `jurusan` int(11) NOT NULL,
-  `tanggal` date NOT NULL,
-  `keterangan` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime DEFAULT NULL,
-  `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `agama`
 --
 
@@ -103,10 +70,83 @@ INSERT INTO `agama` (`id_agama`, `nama_agama`, `created_at`, `updated_at`, `dele
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `agenda_pkl`
+-- Struktur dari tabel `blok`
 --
 
-CREATE TABLE `agenda_pkl` (
+CREATE TABLE `blok` (
+  `id_blok` int(11) NOT NULL,
+  `nama_b` varchar(255) NOT NULL,
+  `statuss` varchar(255) NOT NULL,
+  `semester` int(11) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `blok`
+--
+
+INSERT INTO `blok` (`id_blok`, `nama_b`, `statuss`, `semester`, `created_at`) VALUES
+(2, '1', 'Aktif', 1, '2023-10-15 02:06:42'),
+(3, '2', 'Tidak-Aktif', 1, '2023-10-15 02:06:43'),
+(4, '3', 'Tidak-Aktif\r\n', 1, '2023-10-15 02:06:44'),
+(5, '4', 'Tidak-Aktif\r\n', 1, '2023-10-15 02:06:45'),
+(6, '5', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:46'),
+(7, '6', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:47'),
+(8, '7', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:48'),
+(9, '8', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:49');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `data_absensi_kantor`
+--
+
+CREATE TABLE `data_absensi_kantor` (
+  `id_absensi` int(11) NOT NULL,
+  `siswa` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `keterangan` int(11) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `data_absensi_sekolah`
+--
+
+CREATE TABLE `data_absensi_sekolah` (
+  `id_absensi` int(11) NOT NULL,
+  `siswa` int(11) NOT NULL,
+  `jurusan` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `keterangan` int(11) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `data_absensi_sekolah`
+--
+
+INSERT INTO `data_absensi_sekolah` (`id_absensi`, `siswa`, `jurusan`, `tanggal`, `keterangan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 11, 2, '2024-04-19', 1, '2024-04-19 18:06:32', '2024-04-19 19:41:11', NULL),
+(2, 14, 2, '2024-04-19', 2, '2024-04-19 18:06:32', NULL, NULL),
+(3, 13, 4, '2024-04-19', 2, '2024-04-19 18:06:41', NULL, NULL),
+(4, 16, 4, '2024-04-19', 3, '2024-04-19 18:06:41', NULL, NULL),
+(5, 12, 3, '2024-04-19', 1, '2024-04-19 18:06:47', NULL, NULL),
+(6, 15, 3, '2024-04-19', 4, '2024-04-19 18:06:47', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `data_agenda`
+--
+
+CREATE TABLE `data_agenda` (
   `id_agenda` int(11) NOT NULL,
   `siswa` int(11) NOT NULL,
   `tanggal` date NOT NULL,
@@ -141,33 +181,62 @@ CREATE TABLE `agenda_pkl` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `data_agenda`
+--
+
+INSERT INTO `data_agenda` (`id_agenda`, `siswa`, `tanggal`, `jam_masuk`, `jam_keluar`, `renper_1`, `renper_2`, `renper_3`, `renper_4`, `renper_5`, `reape_1`, `reape_2`, `reape_3`, `reape_4`, `reape_5`, `pk_1`, `pk_2`, `pk_3`, `pm_1`, `pm_2`, `pm_3`, `senyum`, `keramahan`, `penampilan`, `komunikasi`, `realisasi_kerja`, `catatan`, `kondisi`, `approve_g`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 11, '2024-04-19', '08:00:00', '17:00:00', 'Rakit komputer baru', '-', '-', '-', '-', 'Rakit komputer terselesaikan', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Baik', 'Baik', 'Baik', 'Baik', 'Baik', '-', 1, NULL, '2024-04-19 23:12:13', '2024-04-19 00:00:00', NULL),
+(2, 11, '2024-04-20', '08:00:00', '17:00:00', 'Rakit komputer baru', '-', '-', '-', '-', 'Rakit komputer setengah jadi', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Baik', 'Baik', 'Baik', 'Baik', 'Baik', '-', 1, NULL, '2024-04-19 23:12:13', '2024-04-19 00:00:00', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blok`
+-- Struktur dari tabel `data_instruktur`
 --
 
-CREATE TABLE `blok` (
-  `id_blok` int(11) NOT NULL,
-  `nama_b` varchar(255) NOT NULL,
-  `statuss` varchar(255) NOT NULL,
-  `semester` int(11) NOT NULL,
-  `created_at` datetime NOT NULL
+CREATE TABLE `data_instruktur` (
+  `id_instruktur` int(11) NOT NULL,
+  `nama_instruktur` varchar(255) NOT NULL,
+  `nama_perusahaan` varchar(255) NOT NULL,
+  `telepon` varchar(13) NOT NULL,
+  `user` int(11) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `blok`
+-- Dumping data untuk tabel `data_instruktur`
 --
 
-INSERT INTO `blok` (`id_blok`, `nama_b`, `statuss`, `semester`, `created_at`) VALUES
-(2, '1', 'Aktif', 1, '2023-10-15 02:06:42'),
-(3, '2', 'Tidak-Aktif', 1, '2023-10-15 02:06:43'),
-(4, '3', 'Tidak-Aktif\r\n', 1, '2023-10-15 02:06:44'),
-(5, '4', 'Tidak-Aktif\r\n', 1, '2023-10-15 02:06:45'),
-(6, '5', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:46'),
-(7, '6', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:47'),
-(8, '7', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:48'),
-(9, '8', 'Tidak-Aktif\r\n', 2, '2023-10-15 02:06:49');
+INSERT INTO `data_instruktur` (`id_instruktur`, `nama_instruktur`, `nama_perusahaan`, `telepon`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Pak Haris', 'Batam Coding', '084512475687', 8, '2024-04-19 13:39:14', '2024-04-19 13:43:46', NULL),
+(2, 'Pak Tono', 'Indo Maju', '084679512487', 20, '2024-04-19 22:59:42', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `data_keterangan`
+--
+
+CREATE TABLE `data_keterangan` (
+  `id_keterangan` int(11) NOT NULL,
+  `nama_keterangan` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `data_keterangan`
+--
+
+INSERT INTO `data_keterangan` (`id_keterangan`, `nama_keterangan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Hadir', '2023-07-19 23:11:49', NULL, NULL),
+(2, 'Izin', '2023-07-19 23:12:01', NULL, NULL),
+(3, 'Sakit', '2023-07-19 23:12:17', NULL, NULL),
+(4, 'Alpa', '2023-07-19 23:12:17', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -179,12 +248,22 @@ CREATE TABLE `guru` (
   `id_guru` int(11) NOT NULL,
   `nik` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `rombel` int(11) NOT NULL,
+  `rombel` int(11) DEFAULT NULL,
   `user` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `guru`
+--
+
+INSERT INTO `guru` (`id_guru`, `nik`, `nama`, `rombel`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, '8001', 'Pak Dedi', 1, 6, '2024-04-19 11:47:23', NULL, NULL),
+(2, '8002', 'Pak If', 3, 17, '2024-04-19 19:22:59', NULL, NULL),
+(3, '8003', 'Bu Rosita', 22, 18, '2024-04-19 20:39:48', NULL, NULL),
+(4, '8004', 'Pak Beni', 21, 19, '2024-04-19 20:40:45', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -224,19 +303,25 @@ CREATE TABLE `hasil_vote` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `instruktur_pt`
+-- Struktur dari tabel `jabatan_guru`
 --
 
-CREATE TABLE `instruktur_pt` (
-  `id_instruktur` int(11) NOT NULL,
-  `nama_instruktur` varchar(255) NOT NULL,
-  `nama_perusahaan` varchar(255) NOT NULL,
-  `telepon` varchar(13) NOT NULL,
-  `user` int(11) NOT NULL,
+CREATE TABLE `jabatan_guru` (
+  `id_jabatan` int(11) NOT NULL,
+  `nama_jabatan` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jabatan_guru`
+--
+
+INSERT INTO `jabatan_guru` (`id_jabatan`, `nama_jabatan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Kesiswaan', '2024-04-19 10:43:35', NULL, NULL),
+(2, 'Kajur', '2024-04-19 10:43:35', NULL, NULL),
+(3, 'Guru Pembimbing', '2024-04-19 10:43:35', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -376,30 +461,6 @@ CREATE TABLE `keterangan_perizinan` (
 INSERT INTO `keterangan_perizinan` (`id_keterangan`, `nama_keterangan`, `kode_keterangan`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Izin', 'I', '2023-10-10 08:45:36', NULL, NULL),
 (2, 'Sakit', 'S', '2023-10-10 08:45:43', NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `keterangan_pkl`
---
-
-CREATE TABLE `keterangan_pkl` (
-  `id_keterangan` int(11) NOT NULL,
-  `nama_keterangan` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime DEFAULT NULL,
-  `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `keterangan_pkl`
---
-
-INSERT INTO `keterangan_pkl` (`id_keterangan`, `nama_keterangan`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Hadir', '2023-07-19 23:11:49', NULL, NULL),
-(2, 'Izin', '2023-07-19 23:12:01', NULL, NULL),
-(3, 'Sakit', '2023-07-19 23:12:17', NULL, NULL),
-(4, 'Alpa', '2023-07-19 23:12:17', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -562,7 +623,9 @@ INSERT INTO `rombel` (`id_rombel`, `nama_r`, `kelas`, `jurusan`, `jenjang`, `cre
 (16, 'Baru', 7, 4, 2, '2023-10-03 01:45:19', NULL, NULL),
 (17, 'Baru', 8, 5, 1, '2023-10-03 01:45:41', NULL, NULL),
 (18, 'Baru', 9, 5, 1, '2023-10-03 01:45:48', NULL, NULL),
-(19, 'Baru', 14, 5, 1, '2023-10-03 01:45:48', NULL, NULL);
+(19, 'Baru', 14, 5, 1, '2023-10-03 01:45:48', NULL, NULL),
+(21, 'A', 5, 3, 2, '2023-10-03 01:43:05', NULL, NULL),
+(22, 'A', 5, 4, 2, '2023-10-03 01:43:12', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -598,12 +661,26 @@ CREATE TABLE `siswa` (
   `nama_siswa` varchar(255) NOT NULL,
   `rombel` int(11) NOT NULL,
   `jabatan` int(4) DEFAULT NULL,
+  `jurusan` int(11) NOT NULL,
   `user` int(11) NOT NULL,
+  `instruktur` int(11) DEFAULT NULL,
   `jadwal_piket` int(4) DEFAULT NULL,
   `created_at` datetime DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `siswa`
+--
+
+INSERT INTO `siswa` (`id_siswa`, `nis`, `nama_siswa`, `rombel`, `jabatan`, `jurusan`, `user`, `instruktur`, `jadwal_piket`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(3, '1001', 'Kevin Fernando', 6, NULL, 2, 11, 1, NULL, '2024-04-19 15:28:24', '2024-04-19 22:57:40', NULL),
+(4, '1002', 'Jofinson', 21, NULL, 3, 12, NULL, NULL, '2024-04-19 15:31:30', NULL, NULL),
+(5, '1003', 'Kelsey', 22, NULL, 4, 13, NULL, NULL, '2024-04-19 15:31:57', NULL, NULL),
+(6, '1004', 'Darrell', 6, NULL, 2, 14, 2, NULL, '2024-04-19 17:32:44', '2024-04-19 23:02:55', NULL),
+(7, '1005', 'Richard', 21, NULL, 3, 15, NULL, NULL, '2024-04-19 17:33:34', NULL, NULL),
+(8, '1006', 'Yanda', 22, NULL, 4, 16, NULL, NULL, '2024-04-19 17:34:02', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -636,12 +713,13 @@ INSERT INTO `tahun` (`id_tahun`, `nama_t`, `status`, `created_at`, `updated_at`,
 
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `level` int(11) NOT NULL,
   `foto` text NOT NULL,
-  `jenjang` int(11) NOT NULL,
+  `jenjang` int(11) DEFAULT NULL,
+  `jabatan` int(11) DEFAULT NULL,
   `pendaftaran` int(11) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
@@ -652,9 +730,21 @@ CREATE TABLE `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `level`, `foto`, `jenjang`, `pendaftaran`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Superadmin SMP', 'Superadmin SMP', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 1, NULL, '2024-04-16 15:24:07', NULL, NULL),
-(2, 'Superadmin SMK', 'Superadmin SMK', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 2, NULL, '2024-04-16 15:24:07', NULL, NULL);
+INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `level`, `foto`, `jenjang`, `jabatan`, `pendaftaran`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Superadmin SMP', 'Superadmin SMP', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 1, NULL, NULL, '2024-04-16 15:24:07', NULL, NULL),
+(2, 'Superadmin SMK', 'Superadmin SMK', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 2, NULL, NULL, '2024-04-16 15:24:07', NULL, NULL),
+(6, NULL, 'Pak Dedi', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 1, NULL, '2024-04-19 11:47:23', NULL, NULL),
+(8, NULL, 'Pak Haris', 'c4ca4238a0b923820dcc509a6f75849b', 6, 'default.png', NULL, NULL, NULL, '2024-04-19 13:39:14', NULL, NULL),
+(11, 'Kevin Fernando', '1001', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 15:28:24', NULL, NULL),
+(12, 'Jofinson', '1002', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 15:31:30', NULL, NULL),
+(13, 'Kelsey', '1003', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 15:31:57', NULL, NULL),
+(14, 'Darrell', '1004', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 17:32:44', NULL, NULL),
+(15, 'Richard', '1005', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 17:33:34', NULL, NULL),
+(16, 'Yanda', '1006', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 17:34:02', NULL, NULL),
+(17, NULL, 'Pak If', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 2, NULL, '2024-04-19 19:22:59', NULL, NULL),
+(18, NULL, 'Bu Rosita', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 2, NULL, '2024-04-19 20:39:48', NULL, NULL),
+(19, NULL, 'Pak Beni', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 2, NULL, '2024-04-19 20:40:45', NULL, NULL),
+(20, NULL, 'Pak Tono', 'c4ca4238a0b923820dcc509a6f75849b', 6, 'default.png', NULL, NULL, NULL, '2024-04-19 22:59:42', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -720,16 +810,40 @@ ALTER TABLE `agama`
   ADD PRIMARY KEY (`id_agama`);
 
 --
--- Indeks untuk tabel `agenda_pkl`
---
-ALTER TABLE `agenda_pkl`
-  ADD PRIMARY KEY (`id_agenda`);
-
---
 -- Indeks untuk tabel `blok`
 --
 ALTER TABLE `blok`
   ADD PRIMARY KEY (`id_blok`);
+
+--
+-- Indeks untuk tabel `data_absensi_kantor`
+--
+ALTER TABLE `data_absensi_kantor`
+  ADD PRIMARY KEY (`id_absensi`);
+
+--
+-- Indeks untuk tabel `data_absensi_sekolah`
+--
+ALTER TABLE `data_absensi_sekolah`
+  ADD PRIMARY KEY (`id_absensi`);
+
+--
+-- Indeks untuk tabel `data_agenda`
+--
+ALTER TABLE `data_agenda`
+  ADD PRIMARY KEY (`id_agenda`);
+
+--
+-- Indeks untuk tabel `data_instruktur`
+--
+ALTER TABLE `data_instruktur`
+  ADD PRIMARY KEY (`id_instruktur`);
+
+--
+-- Indeks untuk tabel `data_keterangan`
+--
+ALTER TABLE `data_keterangan`
+  ADD PRIMARY KEY (`id_keterangan`);
 
 --
 -- Indeks untuk tabel `guru`
@@ -750,10 +864,10 @@ ALTER TABLE `hasil_vote`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `instruktur_pt`
+-- Indeks untuk tabel `jabatan_guru`
 --
-ALTER TABLE `instruktur_pt`
-  ADD PRIMARY KEY (`id_instruktur`);
+ALTER TABLE `jabatan_guru`
+  ADD PRIMARY KEY (`id_jabatan`);
 
 --
 -- Indeks untuk tabel `jenis_kelamin`
@@ -789,12 +903,6 @@ ALTER TABLE `kelas`
 -- Indeks untuk tabel `keterangan_perizinan`
 --
 ALTER TABLE `keterangan_perizinan`
-  ADD PRIMARY KEY (`id_keterangan`);
-
---
--- Indeks untuk tabel `keterangan_pkl`
---
-ALTER TABLE `keterangan_pkl`
   ADD PRIMARY KEY (`id_keterangan`);
 
 --
@@ -886,22 +994,46 @@ ALTER TABLE `agama`
   MODIFY `id_agama` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `agenda_pkl`
---
-ALTER TABLE `agenda_pkl`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT untuk tabel `blok`
 --
 ALTER TABLE `blok`
   MODIFY `id_blok` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT untuk tabel `data_absensi_kantor`
+--
+ALTER TABLE `data_absensi_kantor`
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `data_absensi_sekolah`
+--
+ALTER TABLE `data_absensi_sekolah`
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `data_agenda`
+--
+ALTER TABLE `data_agenda`
+  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `data_instruktur`
+--
+ALTER TABLE `data_instruktur`
+  MODIFY `id_instruktur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `data_keterangan`
+--
+ALTER TABLE `data_keterangan`
+  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `hari`
@@ -916,10 +1048,10 @@ ALTER TABLE `hasil_vote`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `instruktur_pt`
+-- AUTO_INCREMENT untuk tabel `jabatan_guru`
 --
-ALTER TABLE `instruktur_pt`
-  MODIFY `id_instruktur` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `jabatan_guru`
+  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `jenis_kelamin`
@@ -958,12 +1090,6 @@ ALTER TABLE `keterangan_perizinan`
   MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `keterangan_pkl`
---
-ALTER TABLE `keterangan_pkl`
-  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT untuk tabel `level`
 --
 ALTER TABLE `level`
@@ -997,7 +1123,7 @@ ALTER TABLE `perizinan`
 -- AUTO_INCREMENT untuk tabel `rombel`
 --
 ALTER TABLE `rombel`
-  MODIFY `id_rombel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_rombel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `semester`
@@ -1009,7 +1135,7 @@ ALTER TABLE `semester`
 -- AUTO_INCREMENT untuk tabel `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tahun`
@@ -1021,7 +1147,7 @@ ALTER TABLE `tahun`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `vote`

@@ -41,11 +41,13 @@ class M_guru extends Model
         $jenjang = session()->get('jenjang'); // Ambil jenjang dari sesi saat login
         
         $query = $this->db->table('guru')
-        ->select('rombel.nama_r, user.jenjang, guru.user, guru.id_guru, guru.nik, guru.nama, kelas.nama_kelas, jurusan.nama_jurusan')
-            ->join('user', 'user.id_user = guru.user') // Gabungkan guru dengan user
+        ->select('rombel.nama_r, user.jenjang, guru.user, guru.id_guru, guru.nik, guru.nama, kelas.nama_kelas, 
+        jurusan.nama_jurusan, user.jabatan, jabatan_guru.*')
+            ->join('user', 'user.id_user = guru.user')
             ->join('rombel', 'rombel.id_rombel = guru.rombel')
             ->join('kelas', 'kelas.id_kelas = rombel.kelas')
             ->join('jurusan', 'jurusan.id_jurusan = rombel.jurusan')
+            ->join('jabatan_guru', 'jabatan_guru.id_jabatan = user.jabatan')
             ->orderBy('guru.created_at', 'desc');
             
             if ($jenjang) {
@@ -61,6 +63,14 @@ class M_guru extends Model
             ->select('rombel.nama_r, rombel.id_rombel,kelas.nama_kelas, jurusan.nama_jurusan')
             ->join('kelas', 'kelas.id_kelas = rombel.kelas')
             ->join('jurusan', 'jurusan.id_jurusan = rombel.jurusan')
+            ->get()
+            ->getResult();
+        }
+
+        public function join2($table1, $table2, $on){
+            return $this->db->table($table1)
+            ->join($table2, $on, 'left')
+            ->orderBy("$table2.created_at", 'desc') 
             ->get()
             ->getResult();
         }

@@ -38,7 +38,7 @@
 			<a href="<?php echo base_url('data_guru/tambah_guru/')?>"><button class="btn btn-primary mt-2"><i class="fa-solid fa-plus"></i>
 			Tambah</button></a>
 			<div class="btn-group">
-				<div class="dropdown">
+				<!-- <div class="dropdown">
 					<button class="btn btn-success btn-block dropdown-toggle me-1 mt-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Import
 					</button>
@@ -50,7 +50,7 @@
 						<i class="faj-button fa-solid fa-upload"></i>Import Data
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -102,6 +102,7 @@
 						<th>NIK</th>
 						<th>Nama</th>
 						<th>Rombel</th>
+						<th>Jabatan</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -114,6 +115,7 @@
 						<td><?php echo $b->nik?> </td>
 						<td><?php echo $b->nama?> </td>
 						<td><?php echo $b->nama_kelas . '.' . $b->nama_r . ' - ' . $b->nama_jurusan ?></td>
+						<td><?php echo $b->nama_jabatan?></td>
 						<td>
 							<a href="<?php echo base_url('data_guru/edit_guru/'. $b->user)?>" class="btn btn-warning my-1"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></a>
 

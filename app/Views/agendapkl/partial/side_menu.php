@@ -10,14 +10,14 @@ $logo = $builder->select('logo_website')
 ->getRow();
 
 ?>
-<script src="<?=base_url('@agendapkl/assets/static/js/initTheme.js')?>"></script>
+<script src="<?=base_url('assets/static/js/initTheme.js')?>"></script>
 <div id="app">
   <div id="sidebar">
     <div class="sidebar-wrapper active">
       <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a href="<?=base_url('dashboard')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
+            <a href="<?=base_url('agendapkl/dashboard')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
           </div>
           <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">

@@ -10,12 +10,12 @@ class Data_instruktur extends BaseController
 {
     public function index()
     {
-     if(session()->get('level')== 1 || session()->get('level')==7) {
+     if(session()->get('level')== 1 || session()->get('level')==2) {
         $model=new M_instruktur();
         $data['jojo']=$model->tampil('data_instruktur');
         $data['title']='Data Instruktur';
         echo view('agendapkl/partial/header_datatable', $data);
-        echo view('agendapkl/partial/side_menu');
+        echo view('partial/side_menu2');
         echo view('agendapkl/partial/top_menu');
         echo view('agendapkl/data_instruktur/view', $data);
         echo view('agendapkl/partial/footer_datatable');
@@ -26,11 +26,11 @@ class Data_instruktur extends BaseController
 
 public function create()
 {
-    if(session()->get('level')== 1 || session()->get('level')==7) {
+    if(session()->get('level')== 1 || session()->get('level')==2) {
         $model=new M_instruktur();
         $data['title']='Data Instruktur';
         echo view('agendapkl/partial/header_datatable', $data);
-        echo view('agendapkl/partial/side_menu');
+        echo view('partial/side_menu2');
         echo view('agendapkl/partial/top_menu');
         echo view('agendapkl/data_instruktur/create', $data); 
         echo view('agendapkl/partial/footer_datatable');
@@ -41,14 +41,12 @@ public function create()
 
 public function aksi_create()
 { 
-    if(session()->get('level')== 1 || session()->get('level')==7) {
+    if(session()->get('level')== 1 || session()->get('level')==2) {
         $a= $this->request->getPost('username');
         $b= $this->request->getPost('password');
-        $c= $this->request->getPost('email');
         $d= $this->request->getPost('nama');
         $e= $this->request->getPost('nama_pt');
-        $f= $this->request->getPost('jenis_kelamin');
-        $g= $this->request->getPost('telpon');
+        $g= $this->request->getPost('telepon');
         date_default_timezone_set('Asia/Jakarta');
         
         $foto= $this->request->getFile('foto');
@@ -62,14 +60,12 @@ public function aksi_create()
 
         //Yang ditambah ke user
         $data1=array(
-
             'username'=>$a,
             'password'=>md5($b),
-            'email'=>$c,
             'foto'=>$imageName,
-            'level'=>5,
-            'user_create'=>session()->get('id')
+            'level'=>6,
         );
+
         $model=new M_instruktur();
         $model->simpan('user', $data1);
         $where=array('username'=>$a);
@@ -81,17 +77,10 @@ public function aksi_create()
         $data2=array(
             'nama_instruktur'=>$d,
             'nama_perusahaan'=>$e,
-            'jenis_kelamin'=>$f,
-            'telpon'=>$g,
-            'user_instruktur'=>$iduser,
-            'user_create'=>session()->get('id'),
-            'created_at'=>date('Y-m-d H:i:s')
+            'telepon'=>$g,
+            'user'=>$iduser,
         );
         $model->simpan('data_instruktur', $data2);
-        echo view('agendapkl/partial/header_datatable');
-        echo view('agendapkl/partial/side_menu');
-        echo view('agendapkl/partial/top_menu');
-        echo view('agendapkl/partial/footer_datatable');
         return redirect()->to('agendapkl/data_instruktur');
     }else {
         return redirect()->to('landing_page_erp');
@@ -99,15 +88,15 @@ public function aksi_create()
 }
 public function edit($id)
 { 
-    if(session()->get('level')== 1 || session()->get('level')==7) {
+    if(session()->get('level')== 1 || session()->get('level')==2) {
         $model=new M_instruktur();
-        $where=array('user_instruktur'=>$id);
+        $where=array('user'=>$id);
         $where2=array('id_user'=>$id);
         $data['jojo']=$model->getWhere('data_instruktur',$where);
         $data['rizkan']=$model->getWhere('user',$where2);
         $data['title']='Data Instruktur';
         echo view('agendapkl/partial/header_datatable', $data);
-        echo view('agendapkl/partial/side_menu');
+        echo view('partial/side_menu2');
         echo view('agendapkl/partial/top_menu');
         echo view('agendapkl/data_instruktur/edit',$data);
         echo view('agendapkl/partial/footer_datatable');    
@@ -118,14 +107,11 @@ public function edit($id)
 
 public function aksi_edit()
 { 
-    if(session()->get('level')== 1 || session()->get('level')==7) {
+    if(session()->get('level')== 1 || session()->get('level')==2) {
         $a= $this->request->getPost('username');
-        $b= $this->request->getPost('password');
-        $c= $this->request->getPost('email');
         $d= $this->request->getPost('nama');
         $e= $this->request->getPost('nama_pt');
-        $f= $this->request->getPost('jenis_kelamin');
-        $g= $this->request->getPost('telpon');
+        $g= $this->request->getPost('telepon');
         $id= $this->request->getPost('id');
         $id2= $this->request->getPost('id2');
         date_default_timezone_set('Asia/Jakarta');
@@ -148,22 +134,17 @@ public function aksi_edit()
         $where=array('id_user'=>$id);
         $data1=array(
             'username'=>$a,
-            'email'=>$c,
             'foto'=>$imageName,
-            'level'=>5,
-            'user_update'=>session()->get('id')
         );
         $model=new M_instruktur();
         $model->qedit('user', $data1, $where);
 
         //Yang ditambah ke karyawan
-        $where2=array('user_instruktur'=>$id2);
+        $where2=array('user'=>$id2);
         $data2=array(
             'nama_instruktur'=>$d,
             'nama_perusahaan'=>$e,
-            'jenis_kelamin'=>$f,
-            'telpon'=>$g,
-            'user_update'=>session()->get('id'),
+            'telepon'=>$g,
             'updated_at'=>date('Y-m-d H:i:s')
         );
 
@@ -175,13 +156,12 @@ public function aksi_edit()
 }
 public function delete($id)
 { 
-    if(session()->get('level')== 1 || session()->get('level')==7) {
+    if(session()->get('level')== 1 || session()->get('level')==2) {
         $model=new M_instruktur();
-        $where=array('user_instruktur'=>$id);
+        $where=array('user'=>$id);
         $where2=array('id_user'=>$id);
 
         $data=array(
-            'user_delete'=>session()->get('id'),
             'deleted_at'=>date('Y-m-d H:i:s')
         );
 

@@ -102,7 +102,7 @@ public function edit($id)
         $where=array('id_website'=>$id);
         $data['jojo']=$model->getWhere('website',$where);
         $data['title']='Data Website';        
-        echo view('partial/header_datatable');
+        echo view('partial/header_datatable', $data);
         echo view('partial/side_menu2');
         echo view('partial/top_menu');
         echo view('data_website/edit',$data);

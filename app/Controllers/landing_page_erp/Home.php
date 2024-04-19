@@ -39,6 +39,7 @@ class Home extends BaseController
             session()->set('level', $cek['level']);
             session()->set('nama', $cek['nama']);
             session()->set('jenjang', $cek['jenjang']);
+            session()->set('jabatan', $cek['jabatan']);
             return redirect()->to('landing_page_erp/Home/dashboard');
         }else {
             return redirect()->to('landing_page_erp');

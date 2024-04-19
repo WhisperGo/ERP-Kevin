@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class M_instruktur extends Model
 {		
-	protected $table      = 'data_instruktur';
+	protected $table      = 'instruktur_pt';
 	protected $primaryKey = 'id_instruktur';
 	protected $allowedFields = ['nama_instruktur', 'nama_perusahaan', 'telpon', 'user'];
 	protected $useSoftDeletes = true;
@@ -39,7 +39,7 @@ class M_instruktur extends Model
 	{
 		return $this->db->table($table1)
 		->join($table2, $on, 'left')
-		->where('data_instruktur.deleted_at', null)
+		->where('instruktur_pt.deleted_at', null)
 		->get()
 		->getResult();
 	}

@@ -19,7 +19,7 @@
 
         <section class="section">
             <div class="card">
-               <?php if (session()->get('level') == 2) { ?>
+               <?php if (session()->get('level') == 3 && session()->get('jabatan') == 1) { ?>
                    <div class="card-header">
                     <a href="<?php echo base_url('agendapkl/data_absensi_sekolah/create/'. $riz->id_absensi)?>">
                         <button class="btn btn-primary mt-2">
@@ -28,7 +28,7 @@
                     </a>
                 </div>
             <?php } ?>
-            <?php if (session()->get('level') == 3 || session()->get('level')==3) { ?>
+            <?php if (session()->get('level') == 3 && session()->get('jabatan') == 2 || session()->get('jabatan') == 3) { ?>
                    <div class="card-header">
                     <a href="javascript:history.back()"><button class="btn btn-secondary mt-2"><i class="fa-solid fa-backward"></i>
                     Back</button></a>
@@ -44,7 +44,7 @@
                                 <th>Nama Siswa</th>
                                 <th>Tanggal</th>
                                 <th>Keterangan</th>
-                                <?php if (session()->get('level') == 2){ ?>
+                                <?php if (session()->get('level') == 3 && session()->get('jabatan') == 1){ ?>
                                 <th>Action</th>
                             <?php } ?>
                         </tr>
@@ -59,7 +59,7 @@
                             <td><?php echo $riz->nama_siswa ?></td>
                             <td><?php echo date('d F Y', strtotime($riz->tanggal))?></td>
                             <td><?php echo $riz->nama_keterangan ?></td>
-                            <?php if (session()->get('level') == 2) { ?>
+                            <?php if (session()->get('level') == 3 && session()->get('jabatan') == 1) { ?>
                             <td>
                                 <a href="<?php echo base_url('agendapkl/data_absensi_sekolah/edit/'. $riz->id_absensi)?>" class="btn btn-warning my-1"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></a>
                                 <a href="<?php echo base_url('agendapkl/data_absensi_sekolah/delete/'. $riz->id_absensi)?>" class="btn btn-danger my-1"><i class="fa-solid fa-trash"></i></a>

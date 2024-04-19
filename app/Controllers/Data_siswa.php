@@ -40,6 +40,7 @@ public function tambah_siswa()
         $rombelDetails = $model->getAllRombel();
         $data['a'] = $rombelDetails;
         $data['c'] = $model->tampil('jenjang');
+        $data['jur'] = $model->tampil('jurusan');
         $data['title']='Data Siswa';
         echo view('partial/header_datatable', $data);
         echo view('partial/side_menu2');
@@ -57,7 +58,7 @@ public function aksi_tambah_siswa()
     $nama= $this->request->getPost('nama');
     $rombel= $this->request->getPost('rombel');
     $jenjang= $this->request->getPost('jenjang');
-    $a= $this->request->getPost('username');
+    $jurusan= $this->request->getPost('jurusan');
     $b= $this->request->getPost('password');
     $foto = $this->request->getFile('foto');
     if ($foto->isValid() && !$foto->hasMoved()) {
@@ -68,7 +69,8 @@ public function aksi_tambah_siswa()
     }
 
     $data1=array(
-        'username'=>$a,
+        'nama' => $nama,
+        'username'=>$nis,
         'password'=>md5($b),
         'level'=>'4',
         'foto'=>$imageName,
@@ -78,13 +80,14 @@ public function aksi_tambah_siswa()
     );
     $darrel=new M_siswa();
     $darrel->simpan('user', $data1);
-    $where=array('username'=>$a);
+    $where=array('username'=>$nis);
     $ae=$darrel->getWhere2('user', $where);
     $id = $ae['id_user'];
     $data2=array(
         'nis'=>$nis,
         'nama_siswa'=>$nama,
         'rombel'=>$rombel,
+        'jurusan'=>$jurusan,
         'user'=>$id,
         'created_at'=>date('Y-m-d H:i:s')
 
@@ -102,6 +105,7 @@ public function edit_siswa($user)
         $data['title']='Data Siswa';
         $data['a'] = $rombelDetails;
         $data['c'] = $model->tampil('jenjang');
+        $data['jur'] = $model->tampil('jurusan');
         $where=array('user'=>$user);
         $where2=array('id_user'=>$user);
         $data['jojo']=$model->getWhere('siswa',$where);
@@ -118,10 +122,10 @@ public function edit_siswa($user)
 public function aksi_edit_siswa()
 {
     $nis = $this->request->getPost('nis');
-    $a = $this->request->getPost('username');
     $nama = $this->request->getPost('nama');
     $rombel= $this->request->getPost('rombel');
     $jenjang= $this->request->getPost('jenjang');
+    $jurusan= $this->request->getPost('jurusan');
     $id = $this->request->getPost('id');
     $id2 = $this->request->getPost('id2');
     $foto = $this->request->getFile('foto');
@@ -135,7 +139,8 @@ public function aksi_edit_siswa()
 
     $where = array('id_user' => $id);
     $data1 = array(
-        'username' => $a,
+        'nama' => $nama,
+        'username' => $nis,
         'jenjang' => $jenjang
     );
 
@@ -149,7 +154,8 @@ public function aksi_edit_siswa()
     $data2 = array(
         'nis' => $nis,
         'nama_siswa' => $nama,
-        'rombel' => $rombel
+        'rombel' => $rombel,
+        'jurusan' => $jurusan
         
     );
     $darrel->qedit('siswa', $data2, $where2);

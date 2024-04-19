@@ -30,7 +30,7 @@
 		<div class="card">
 			<form action="<?= base_url('agendapkl/data_instruktur/aksi_edit/')?>" method="post" class="row g-3" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="<?php echo $rizkan->id_user ?>">
-				<input type="hidden" name="id2" value="<?php echo $jojo->user_instruktur ?>">
+				<input type="hidden" name="id2" value="<?php echo $jojo->user ?>">
 
 				<div class="card-body">
 					<div class="row">
@@ -46,17 +46,13 @@
 								<label for="fotoprofil" class="form-label">Foto Lama</label>
 								<div id="preview">
 									<?php if ($rizkan->foto): ?>
-										<img src="<?=base_url('agendapkl/images/'. $rizkan->foto)?>" width="25%">
+										<img src="<?=base_url('images/'. $rizkan->foto)?>" width="25%">
 									<?php endif; ?>
 								</div>
 							</div>
 							<div class="mb-3">
 								<label for="username" class="form-label">Username</label>
 								<input type="text" class="form-control" id="username" placeholder="Masukkan Username" name="username" value="<?php echo $rizkan->username ?>" required>
-							</div>
-							<div class="mb-3">
-								<label for="email" class="form-label">Email</label>
-								<input type="text" class="form-control" id="email" placeholder="Masukkan Email" name="email" value="<?php echo $rizkan->email ?>" required>
 							</div>
 							<!-- form bagian kiri -->
 						</div>
@@ -72,17 +68,8 @@
 								<input type="text" class="form-control" id="nama_pt" placeholder="Masukkan Nama PT" name="nama_pt" value="<?php echo $jojo->nama_perusahaan ?>" required>
 							</div>
 							<div class="mb-3">
-								<label for="namasiswa" class="form-label">Telpon</label>
-								<input type="text" class="form-control" id="telpon" placeholder="Masukkan Telpon" name="telpon" value="<?php echo $jojo->telpon ?>" required>
-							</div>
-
-							<div class="mb-3">
-								<label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
-								<select class="form-control" id="jenis_kelamin" placeholder="Masukkan Jenis Kelamin" name="jenis_kelamin" value="<?php echo  $jojo->jenis_kelamin ?>" required>
-									<option value="<?php echo $jojo->jenis_kelamin ?>">-Pilih-</option>
-									<option value="1">Laki-laki</option>
-									<option value="2">Perempuan</option>
-								</select>
+								<label for="namasiswa" class="form-label">Telepon</label>
+								<input type="text" class="form-control" id="telepon" placeholder="Masukkan Telepon" name="telepon" value="<?php echo $jojo->telepon ?>" required>
 							</div>
 							<!-- form bagian kanan -->
 						</div>

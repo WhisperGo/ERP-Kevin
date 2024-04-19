@@ -16,3 +16,304 @@ CRITICAL - 2024-04-19 12:05:54 --> Call to a member function getResult() on bool
 #4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+ERROR - 2024-04-19 13:03:20 --> Table 'erp_kevin.data_instruktur' doesn't exist
+CRITICAL - 2024-04-19 13:03:20 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_instruktur.php(15): App\Models\agendapkl\M_instruktur->tampil('data_instruktur')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_instruktur->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_instruktur))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-19 13:37:34 --> Invalid file: agendapkl/partial/side_menu2.php
+#0 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('agendapkl/parti...')
+#1 C:\xampp\htdocs\ERP-Kevin\system\Common.php(1089): CodeIgniter\View\View->render('agendapkl/parti...', Array, true)
+#2 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_instruktur.php(18): view('agendapkl/parti...')
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_instruktur->index()
+#4 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_instruktur))
+#5 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-04-19 13:38:38 --> Unknown column 'telpon' in 'field list'
+CRITICAL - 2024-04-19 13:39:29 --> Too few arguments to function App\Controllers\agendapkl\Data_instruktur::edit(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_instruktur->edit()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_instruktur))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-04-19 13:39:51 --> Unknown column 'user_instruktur' in 'where clause'
+CRITICAL - 2024-04-19 13:39:52 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_instruktur.php(95): App\Models\agendapkl\M_instruktur->getWhere('data_instruktur', Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_instruktur->edit('8')
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_instruktur))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 13:40:30 --> Unknown column 'email' in 'field list'
+ERROR - 2024-04-19 13:40:30 --> Unknown column 'user_instruktur' in 'where clause'
+ERROR - 2024-04-19 14:42:12 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 14:42:12 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_guru.php(18): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 14:42:42 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 14:42:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_guru.php(18): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 14:59:03 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 14:59:03 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_guru.php(18): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 14:59:13 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 14:59:13 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_guru.php(18): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->index()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 14:59:19 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 14:59:19 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_guru.php(37): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_guru->menu_print()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_guru))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 15:01:20 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 15:01:20 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(398): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 15:02:45 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 15:02:45 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(398): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('data_siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 15:04:27 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 15:04:27 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(33): App\Models\agendapkl\M_absensi_sekolah->tampil_rpl('data_siswa')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->rpl()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 15:37:50 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 15:37:50 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(33): App\Models\agendapkl\M_absensi_sekolah->tampil_rpl('data_siswa')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->rpl()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 15:56:47 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-19 15:56:47 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(33): App\Models\agendapkl\M_absensi_sekolah->tampil_rpl('data_siswa')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->rpl()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-19 16:09:55 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-04-19 16:40:59 --> Unknown column 'guru_pembimbing' in 'where clause'
+CRITICAL - 2024-04-19 16:40:59 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(398): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-19 16:42:09 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-04-19 16:42:16 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-04-19 16:46:02 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-04-19 16:46:04 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-04-19 16:46:06 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-04-19 16:50:45 --> Table 'erp_kevin.data_jurusan' doesn't exist
+CRITICAL - 2024-04-19 16:50:45 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(120): App\Models\agendapkl\M_absensi_sekolah->tampil('data_jurusan')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->create()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 16:51:04 --> Table 'erp_kevin.data_jurusan' doesn't exist
+CRITICAL - 2024-04-19 16:51:04 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(120): App\Models\agendapkl\M_absensi_sekolah->tampil('data_jurusan')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->create()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 16:51:29 --> Unknown column 'user_create' in 'field list'
+CRITICAL - 2024-04-19 16:59:28 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 273, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->aksi_create_all_rpl()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 17:02:17 --> Unknown column 'guru_pembimbing' in 'where clause'
+CRITICAL - 2024-04-19 17:02:17 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(394): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-19 17:27:04 --> Too few arguments to function App\Controllers\agendapkl\Data_absensi_sekolah::detail(), 0 passed in C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->detail()
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-04-19 17:31:21 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 307, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->aksi_create_all_bdp()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-19 17:31:26 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 307, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->aksi_create_all_bdp()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 17:35:22 --> Unknown column 'guru_pembimbing' in 'where clause'
+CRITICAL - 2024-04-19 17:35:22 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(390): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 17:35:24 --> Unknown column 'guru_pembimbing' in 'where clause'
+CRITICAL - 2024-04-19 17:35:24 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(390): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-19 17:53:41 --> Unknown column 'guru_pembimbing' in 'where clause'
+CRITICAL - 2024-04-19 17:53:41 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(389): App\Models\agendapkl\M_absensi_sekolah->tampil_siswa('siswa', '6')
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->menu_print_absensi_sekolah()
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-19 18:15:17 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Views\agendapkl\data_absensi_sekolah\print_windows_view.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 82, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ERP-Kevin\system\Common.php(1089): CodeIgniter\View\View->render('agendapkl/data_...', Array, true)
+#4 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(468): view('agendapkl/data_...', Array)
+#5 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->export_windows()
+#6 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#7 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-19 18:18:08 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Views\agendapkl\data_absensi_sekolah\print_windows_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 64, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ERP-Kevin\system\Common.php(1089): CodeIgniter\View\View->render('agendapkl/data_...', Array, true)
+#4 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(468): view('agendapkl/data_...', Array)
+#5 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->export_windows()
+#6 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#7 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-19 18:18:29 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Views\agendapkl\data_absensi_sekolah\print_windows_view.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 64, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ERP-Kevin\system\Common.php(1089): CodeIgniter\View\View->render('agendapkl/data_...', Array, true)
+#4 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_sekolah.php(468): view('agendapkl/data_...', Array)
+#5 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_sekolah->export_windows()
+#6 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_sekolah))
+#7 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

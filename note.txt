@@ -2,13 +2,29 @@ Yang tidak ada :
 - data_absensi_kantor (DONE)
 - data_absensi_sekolah (DONE)
 - data_agenda (DONE)
-- data_instruktur (DONE)
+- data_instruktur (DONE CRUD)
 - data_keterangan (DONE)
 
 Yang sama : 
 - data_guru -> guru
 - data_jurusan -> jurusan
 - data_siswa -> siswa
-- data_level -> level
+- data_level -> level (DONE)
 - perusahaan -> website (DONE)
 - user -> user (DONE)
+
+Yang baru : 
+- jabatan_guru
+
+
+Fix : 
+- user (CRUD DONE)
+- perusahaan (CRUD DONE)
+- data_keterangan (CRUD Tidak diperlukan)
+- data_instruktur (CRUD DONE)
+- data_jurusan (CRUD DONE)
+- data_level (CRUD DONE)
+- data_absensi_sekolah (CRUD & PRINT DONE)
+
+Akun : 
+- Kesiswaan (DONE)

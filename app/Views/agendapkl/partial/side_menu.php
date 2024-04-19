@@ -46,9 +46,9 @@ $logo = $builder->select('logo_website')
         </div>
       </div>
 
-      <!-- Menu Admin  --------------------------------------------------------------------------------------->
+      <!-- Menu Superadmin & Admin  --------------------------------------------------------------------------------------->
 
-      <?php if (session()->get('level')==1){ ?>
+      <?php if (session()->get('level')==1 || session()->get('level')==2){ ?>
         <div class="sidebar-menu">
           <ul class="menu">
             <li class="sidebar-title">Menu</li>
@@ -121,7 +121,7 @@ $logo = $builder->select('logo_website')
 
 <!-- Menu Kesiswaan  -------------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==4){ ?>
+<?php }else if (session()->get('level')==3 && session()->get('jabatan')==1){ ?>
  <div class="sidebar-menu">
   <ul class="menu">
     <li class="sidebar-title">Menu</li>
@@ -160,7 +160,7 @@ $logo = $builder->select('logo_website')
 
 <!-- Menu Kajur  -------------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==7){ ?>
+<?php }else if (session()->get('level')==3 && session()->get('jabatan')==2){ ?>
  <div class="sidebar-menu">
   <ul class="menu">
     <li class="sidebar-title">Menu</li>
@@ -233,7 +233,7 @@ $logo = $builder->select('logo_website')
 
 <!-- Menu Guru  -------------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==3){ ?>
+<?php }else if (session()->get('level')==3 && session()->get('jabatan')==3){ ?>
  <div class="sidebar-menu">
   <ul class="menu">
     <li class="sidebar-title">Menu</li>
@@ -287,7 +287,7 @@ $logo = $builder->select('logo_website')
 
 <!-- Menu Instruktur  -------------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==8){ ?>
+<?php }else if (session()->get('level')==6){ ?>
  <div class="sidebar-menu">
   <ul class="menu">
     <li class="sidebar-title">Menu</li>

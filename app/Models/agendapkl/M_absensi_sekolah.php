@@ -25,14 +25,14 @@ class M_absensi_sekolah extends Model
 	public function tampil_rpl($table1)	
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 1)
+		->where('jurusan', 2)
 		->get()
 		->getResult();
 	}
 	public function tampil_bdp($table1)	
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 2)
+		->where('jurusan', 4)
 		->get()
 		->getResult();
 	}
@@ -83,9 +83,9 @@ class M_absensi_sekolah extends Model
 	}
 	public function getJurusan($idAbsensi)
 	{
-		return $this->db->table('data_siswa')
+		return $this->db->table('siswa')
 		->select('jurusan')
-		->where('user_siswa', $idAbsensi)
+		->where('user', $idAbsensi)
 		->get()
 		->getRow();
 	}
@@ -96,7 +96,7 @@ class M_absensi_sekolah extends Model
 		$builder = $this->db->table('data_absensi_sekolah');
 
     // Join dengan tabel data_siswa
-		$builder->join('data_siswa', 'data_siswa.user_siswa = data_absensi_sekolah.siswa');
+		$builder->join('siswa', 'siswa.user = data_absensi_sekolah.siswa');
 
     // Join dengan tabel data_keterangan
 		$builder->join('data_keterangan', 'data_keterangan.id_keterangan = data_absensi_sekolah.keterangan');

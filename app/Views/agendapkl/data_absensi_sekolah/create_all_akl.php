@@ -36,7 +36,7 @@
 						<div class="col-lg-6 col-md-12">
 							<div class="mb-3">
 								<!-- Hidden input field to submit the user_siswa -->
-								<input type="hidden" name="user_siswa[]" value="<?= $s->user_siswa ?>">
+								<input type="hidden" name="user_siswa[]" value="<?= $s->user ?>">
 
 								<label for="keterangan" class="form-label">Keterangan <?= $s->nama_siswa ?></label>
 								<select class="form-select" id="keterangan" name="keterangan[]">

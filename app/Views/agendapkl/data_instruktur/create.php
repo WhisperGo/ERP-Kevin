@@ -51,10 +51,6 @@
 								<label for="pwd" class="form-label">Password</label>
 								<input type="password" class="form-control" id="password" placeholder="Masukkan Password" name="password" required>
 							</div>
-							<div class="mb-3">
-								<label for="email" class="form-label">Email</label>
-								<input type="text" class="form-control" id="email" placeholder="Masukkan Email" name="email" required>
-							</div>
 						</div>
 
 						<div class="col-md-6">
@@ -68,16 +64,8 @@
 								<input type="text" class="form-control" id="nama_pt" placeholder="Masukkan Nama PT" name="nama_pt" required>
 							</div>
 							<div class="mb-3">
-								<label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
-								<select class="form-select" id="jenis_kelamin" placeholder="Masukkan Jenis Kelamin" name="jenis_kelamin" required>
-									<option value="">- Pilih -</option>
-									<option value="1">Laki-laki</option>
-									<option value="2">Perempuan</option>
-								</select>
-							</div>
-							<div class="mb-3">
-								<label for="namasiswa" class="form-label">Telpon</label>
-								<input type="text" class="form-control" id="telpon" placeholder="Masukkan Telpon (Max 13 Digit)" name="telpon" required>
+								<label for="namasiswa" class="form-label">Telepon</label>
+								<input type="text" class="form-control" id="telepon" placeholder="Masukkan Telepon (Max 13 Digit)" name="telepon" required>
 							</div>
 							<!-- form bagian kanan -->
 						</div>

@@ -82,6 +82,13 @@ $logo = $builder->select('logo_website')
                 <span>Data Siswa</span>
               </a>
             </li>
+            
+            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_instruktur") {echo "active";}?>">
+              <a href="<?= base_url('agendapkl/data_instruktur') ?>" class='sidebar-link'>
+              <i class="fa-regular fa-person-chalkboard"></i>
+                <span>Data Instruktur</span>
+              </a>
+            </li>
 
             <li class="sidebar-title">Operasional Website</li>
 

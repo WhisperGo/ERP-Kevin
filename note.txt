@@ -12,4 +12,3 @@ Yang sama :
 - data_level -> level
 - perusahaan -> website (DONE)
 - user -> user (DONE)
-

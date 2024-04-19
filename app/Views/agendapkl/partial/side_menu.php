@@ -1,23 +1,23 @@
-<?php 
+<?php
 
 $uri = service('uri');
 
 $db = \Config\Database::connect();
 $builder = $db->table('website');
 $logo = $builder->select('logo_website')
-->where('deleted_at', null)
-->get()
-->getRow();
+  ->where('deleted_at', null)
+  ->get()
+  ->getRow();
 
 ?>
-<script src="<?=base_url('assets/static/js/initTheme.js')?>"></script>
+<script src="<?= base_url('assets/static/js/initTheme.js') ?>"></script>
 <div id="app">
   <div id="sidebar">
     <div class="sidebar-wrapper active">
       <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a href="<?=base_url('agendapkl/dashboard')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
+            <a href="<?= base_url('agendapkl/dashboard') ?>"><img src="<?= base_url('logo/logo_website/' . $logo->logo_website) ?>" alt="Logo" /></a>
           </div>
           <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -31,7 +31,7 @@ $logo = $builder->select('logo_website')
               </g>
             </svg>
             <div class="form-check form-switch fs-6">
-              <input class="form-check-input me-0" type="checkbox" id="toggle-dark" style="cursor: pointer"/>
+              <input class="form-check-input me-0" type="checkbox" id="toggle-dark" style="cursor: pointer" />
               <label class="form-check-label"></label>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -39,22 +39,22 @@ $logo = $builder->select('logo_website')
             </svg>
           </div>
           <div class="sidebar-toggler x">
-            <a href="#" class="sidebar-hide d-xl-none d-block"
-            ><i class="bi bi-x bi-middle"></i
-            ></a>
+            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
           </div>
         </div>
       </div>
 
       <!-- Menu Superadmin & Admin  --------------------------------------------------------------------------------------->
 
-      <?php if (session()->get('level')==1 || session()->get('level')==2){ ?>
+      <?php if (session()->get('level') == 1 || session()->get('level') == 2) { ?>
         <div class="sidebar-menu">
           <ul class="menu">
             <li class="sidebar-title">Menu</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "dashboard"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/dashboard')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "dashboard") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/dashboard') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-grid-2"></i>
                 <span>Dashboard</span>
               </a>
@@ -62,329 +62,392 @@ $logo = $builder->select('logo_website')
 
             <li class="sidebar-title">Master Data</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "user"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/user')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "user") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/user') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-users"></i>
                 <span>Data User</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_kesiswaan"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/data_kesiswaan')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_kesiswaan") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/data_kesiswaan') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-user-group"></i>
                 <span>Data Kesiswaan</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_kajur"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/data_kajur')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_kajur") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/data_kajur') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-user-group"></i>
                 <span>Data Ketua Jurusan</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_guru"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/data_guru')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_guru") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/data_guru') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-user-group"></i>
                 <span>Data Guru Pembimbing</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_instruktur"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/data_instruktur')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_instruktur") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/data_instruktur') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-building-user"></i>
                 <span>Data Instruktur</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_siswa"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/data_siswa')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_siswa") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/data_siswa') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-user-graduate"></i>
                 <span>Data Siswa</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_level"){echo "active";}?>">
-              <a href="<?=base_url('agendapkl/data_level')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_level") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('agendapkl/data_level') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-sitemap"></i>
                 <span>Data Level</span>
               </a>
             </li>
-          </li>
+            </li>
 
-        </li>
+            </li>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Menu Kesiswaan  -------------------------------------------------------------------------------------------->
+
+<?php } else if (session()->get('level') == 3 && session()->get('jabatan') == 1) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/dashboard') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="sidebar-title">Absensi</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_sekolah" && $uri->getSegment(3) !== "menu_print_absensi_sekolah" && $uri->getSegment(3) !== "menu_print_rpl" && $uri->getSegment(3) !== "menu_print_bdp" && $uri->getSegment(3) !== "menu_print_akl") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_sekolah') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Absensi Sekolah</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print_absensi_sekolah" || $uri->getSegment(3) == "menu_print_rpl" || $uri->getSegment(3) == "menu_print_bdp" || $uri->getSegment(3) == "menu_print_akl") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_sekolah/menu_print_absensi_sekolah') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Print Absensi Sekolah</span>
+        </a>
+      </li>
+      </li>
+      </li>
+
+      </li>
       </li>
     </ul>
   </div>
 </div>
 </div>
 
-<!-- Menu Kesiswaan  -------------------------------------------------------------------------------------------->
-
-<?php }else if (session()->get('level')==3 && session()->get('jabatan')==1){ ?>
- <div class="sidebar-menu">
-  <ul class="menu">
-    <li class="sidebar-title">Menu</li>
-
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "dashboard"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/dashboard')?>" class='sidebar-link'>
-        <i class="fa-solid fa-grid-2"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
-
-    <li class="sidebar-title">Absensi</li>
-
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_absensi_sekolah" && $uri->getSegment(3) !== "menu_print_absensi_sekolah" && $uri->getSegment(3) !== "menu_print_rpl" && $uri->getSegment(3) !== "menu_print_bdp" && $uri->getSegment(3) !== "menu_print_akl"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_sekolah')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Data Absensi Sekolah</span>
-      </a>
-    </li>
-
-    <li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print_absensi_sekolah" || $uri->getSegment(3) == "menu_print_rpl" || $uri->getSegment(3) == "menu_print_bdp" || $uri->getSegment(3) == "menu_print_akl"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_sekolah/menu_print_absensi_sekolah')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Print Absensi Sekolah</span>
-      </a>
-    </li>
-  </li>
-</li>
-
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
 <!-- Menu Kajur  -------------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==3 && session()->get('jabatan')==2){ ?>
- <div class="sidebar-menu">
-  <ul class="menu">
-    <li class="sidebar-title">Menu</li>
+<?php } else if (session()->get('level') == 3 && session()->get('jabatan') == 2) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "dashboard"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/dashboard')?>" class='sidebar-link'>
-        <i class="fa-solid fa-grid-2"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/dashboard') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
 
-    <li class="sidebar-title">Absensi</li>
+      <!-- <li class="sidebar-title">Master Data</li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_absensi_sekolah_all" && $uri->getSegment(3) !== "menu_print_rpl"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_sekolah_all')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Data Absensi Sekolah</span>
-      </a>
-    </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_siswa_all") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_siswa_all') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Siswa</span>
+        </a>
+      </li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print_rpl" && $uri->getSegment(2) !== "data_agenda_all"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_sekolah_all/menu_print_rpl')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Print Absensi Sekolah</span>
-      </a>
-    </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_instruktur") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_instruktur') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Instruktur</span>
+        </a>
+      </li> -->
 
-    <li class="sidebar-title">Agenda</li>
+      <li class="sidebar-title">Absensi</li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_agenda_all" && $uri->getSegment(3) !== "menu_print_rpl"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_agenda_all')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Data Agenda</span>
-      </a>
-    </li>
-  </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_sekolah_all" && ($uri->getTotalSegments() == 2)) {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_sekolah_all') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Absensi Sekolah</span>
+        </a>
+      </li>
 
-  <li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print_rpl" && $uri->getSegment(2) !== "data_absensi_sekolah_all"){echo "active";}?>">
-    <a href="<?=base_url('agendapkl/data_agenda_all/menu_print_rpl')?>" class='sidebar-link'>
-      <i class="fa-regular fa-file-chart-column"></i>
-      <span>Print Agenda</span>
-    </a>
-  </li>
-</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_sekolah_all" && ($uri->getTotalSegments() == 3)) {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_sekolah_all/menu_print_absensi_sekolah') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Print Absensi Sekolah</span>
+        </a>
+      </li>
 
-<li class="sidebar-title">Master Data</li>
 
-<li class="sidebar-item <?php if($uri->getSegment(2) == "data_siswa_all"){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_siswa_all')?>" class='sidebar-link'>
-    <i class="fa-regular fa-file-chart-column"></i>
-    <span>Data Siswa</span>
-  </a>
-</li>
+      <li class="sidebar-title">Agenda</li>
 
-<li class="sidebar-item <?php if($uri->getSegment(2) == "data_instruktur"){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_instruktur')?>" class='sidebar-link'>
-    <i class="fa-regular fa-file-chart-column"></i>
-    <span>Data Instruktur</span>
-  </a>
-</li>
-</li>
-</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_agenda_all" && $uri->getSegment(3) !== "menu_print_rpl") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda_all') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Agenda</span>
+        </a>
+      </li>
+      </li>
 
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print_rpl" && $uri->getSegment(2) !== "data_absensi_sekolah_all") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda_all/menu_print_rpl') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Print Agenda</span>
+        </a>
+      </li>
+      </li>
 
-<!-- Menu Guru  -------------------------------------------------------------------------------------------->
+      </li>
+      </li>
 
-<?php }else if (session()->get('level')==3 && session()->get('jabatan')==3){ ?>
- <div class="sidebar-menu">
-  <ul class="menu">
-    <li class="sidebar-title">Menu</li>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "dashboard"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/dashboard')?>" class='sidebar-link'>
-        <i class="fa-solid fa-grid-2"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
+  <!-- Menu Guru  -------------------------------------------------------------------------------------------->
 
-    <li class="sidebar-title">Absensi</li>
+<?php } else if (session()->get('level') == 3 && session()->get('jabatan') == 3) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_absensi_guru" && $uri->getSegment(3) !== "menu_print" || $uri->getSegment(2) == "data_absensi_sekolah"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_guru')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Data Absensi Sekolah</span>
-      </a>
-    </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/dashboard') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print" && $uri->getSegment(2) !== "data_agenda_guru"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_guru/menu_print')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Print Data Absensi Sekolah</span>
-      </a>
-    </li>
-  </li>
-</li>
+      <li class="sidebar-title">Absensi</li>
 
-<li class="sidebar-title">Agenda</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_guru" && $uri->getSegment(3) !== "menu_print" || $uri->getSegment(2) == "data_absensi_sekolah") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_guru') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Absensi Sekolah</span>
+        </a>
+      </li>
 
-<li class="sidebar-item <?php if($uri->getSegment(2) == "data_agenda_guru" && $uri->getSegment(3) !== "menu_print"){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_agenda_guru')?>" class='sidebar-link'>
-    <i class="fa-solid fa-file-invoice"></i>
-    <span>Data Agenda</span>
-  </a>
-</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print" && $uri->getSegment(2) !== "data_agenda_guru") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_guru/menu_print') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Print Data Absensi Sekolah</span>
+        </a>
+      </li>
+      </li>
+      </li>
 
-<li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print" && $uri->getSegment(2) !== "data_absensi_guru"){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_agenda_guru/menu_print')?>" class='sidebar-link'>
-    <i class="fa-regular fa-file-chart-column"></i>
-    <span>Print Data Agenda</span>
-  </a>
-</li>
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      <li class="sidebar-title">Agenda</li>
 
-<!-- Menu Instruktur  -------------------------------------------------------------------------------------------->
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_agenda_guru" && $uri->getSegment(3) !== "menu_print") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda_guru') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Data Agenda</span>
+        </a>
+      </li>
 
-<?php }else if (session()->get('level')==6){ ?>
- <div class="sidebar-menu">
-  <ul class="menu">
-    <li class="sidebar-title">Menu</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print" && $uri->getSegment(2) !== "data_absensi_guru") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda_guru/menu_print') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Print Data Agenda</span>
+        </a>
+      </li>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "dashboard"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/dashboard')?>" class='sidebar-link'>
-        <i class="fa-solid fa-grid-2"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
+  <!-- Menu Instruktur  -------------------------------------------------------------------------------------------->
 
-    <li class="sidebar-title">Absensi</li>
+<?php } else if (session()->get('level') == 6) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_absensi_kantor" && $uri->getSegment(3) !== "menu_print_absensi_kantor"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_kantor')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Data Absensi Kantor</span>
-      </a>
-    </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/dashboard') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print_absensi_kantor"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_kantor/menu_print_absensi_kantor')?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Print Absensi Kantor</span>
-      </a>
-    </li>
-  </li>
-</li>
+      <li class="sidebar-title">Absensi</li>
 
-<li class="sidebar-title">Agenda</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_kantor" && $uri->getSegment(3) !== "menu_print_absensi_kantor") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_kantor') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Absensi Kantor</span>
+        </a>
+      </li>
 
-<li class="sidebar-item <?php if($uri->getSegment(2) == "data_agenda_instruktur" && $uri->getSegment(3) !== "menu_print_agenda"){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_agenda_instruktur')?>" class='sidebar-link'>
-    <i class="fa-solid fa-file-invoice"></i>
-    <span>Data Agenda</span>
-  </a>
-</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print_absensi_kantor") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_kantor/menu_print_absensi_kantor') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Print Absensi Kantor</span>
+        </a>
+      </li>
+      </li>
+      </li>
 
-<li class="sidebar-item <?php if($uri->getSegment(3) == "menu_print_agenda" ){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_agenda_instruktur/menu_print_agenda')?>" class='sidebar-link'>
-    <i class="fa-solid fa-file-invoice"></i>
-    <span>Print Agenda</span>
-  </a>
-</li>
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      <li class="sidebar-title">Agenda</li>
 
-<!-- Menu Siswa  ------------------------------------------------------------------------------------------->
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_agenda_instruktur" && $uri->getSegment(3) !== "menu_print_agenda") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda_instruktur') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Data Agenda</span>
+        </a>
+      </li>
 
-<?php } else if (session()->get('level')==4){ ?>
- <div class="sidebar-menu">
-  <ul class="menu">
-    <li class="sidebar-title">Menu</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print_agenda") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda_instruktur/menu_print_agenda') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Print Agenda</span>
+        </a>
+      </li>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "dashboard"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/dashboard')?>" class='sidebar-link'>
-        <i class="fa-solid fa-grid-2"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
+  <!-- Menu Siswa  ------------------------------------------------------------------------------------------->
 
-    <li class="sidebar-title">Absensi</li>
+<?php } else if (session()->get('level') == 4) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_absensi_sekolah"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_sekolah/detail/'. session()->get('id'))?>" class='sidebar-link'>
-        <i class="fa-solid fa-clipboard-user"></i>
-        <span>Data Absensi Sekolah</span>
-      </a>
-    </li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/dashboard') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
 
-    <li class="sidebar-item <?php if($uri->getSegment(2) == "data_absensi_kantor"){echo "active";}?>">
-      <a href="<?=base_url('agendapkl/data_absensi_kantor/detail/'. session()->get('id'))?>" class='sidebar-link'>
-        <i class="fa-regular fa-file-chart-column"></i>
-        <span>Data Absensi Kantor</span>
-      </a>
-    </li>
-  </li>
-</li>
+      <li class="sidebar-title">Absensi</li>
 
-<li class="sidebar-title">Agenda</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_sekolah") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_sekolah/detail/' . session()->get('id')) ?>" class='sidebar-link'>
+          <i class="fa-solid fa-clipboard-user"></i>
+          <span>Data Absensi Sekolah</span>
+        </a>
+      </li>
 
-<li class="sidebar-item <?php if($uri->getSegment(2) == "data_agenda" || $uri->getSegment(2) == "data_agenda_all"){echo "active";}?>">
-  <a href="<?=base_url('agendapkl/data_agenda/index/'. session()->get('id'))?>" class='sidebar-link'>
-    <i class="fa-solid fa-file-invoice"></i>
-    <span>Data Agenda</span>
-  </a>
-</li>
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_kantor") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_absensi_kantor/detail/' . session()->get('id')) ?>" class='sidebar-link'>
+          <i class="fa-regular fa-file-chart-column"></i>
+          <span>Data Absensi Kantor</span>
+        </a>
+      </li>
+      </li>
+      </li>
 
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      <li class="sidebar-title">Agenda</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_agenda" || $uri->getSegment(2) == "data_agenda_all") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_agenda/index/' . session()->get('id')) ?>" class='sidebar-link'>
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Data Agenda</span>
+        </a>
+      </li>
+
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 <?php } ?>
-

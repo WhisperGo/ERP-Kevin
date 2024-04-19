@@ -461,9 +461,9 @@ class Data_absensi_sekolah extends BaseController
             $awal = $this->request->getPost('awal');
             $akhir = $this->request->getPost('akhir');
 
-            // Get data absensi kantor berdasarkan filter
+            // Get data absensi Sekolah berdasarkan filter
             $data['absensi'] = $model->getDataByFilter($idSiswa, $awal, $akhir);
-            $title['title'] = 'Laporan Absensi Kantor';
+            $title['title'] = 'Laporan Absensi Sekolah';
             echo view('agendapkl/partial/header_datatable', $title);
             echo view('agendapkl/data_absensi_sekolah/print_windows_view', $data);
             echo view('agendapkl/partial/footer_datatable');
@@ -481,14 +481,14 @@ class Data_absensi_sekolah extends BaseController
             $awal = $this->request->getPost('awal');
             $akhir = $this->request->getPost('akhir');
 
-            // Get data absensi kantor berdasarkan filter
+            // Get data absensi Sekolah berdasarkan filter
             $data['absensi'] = $model->getDataByFilter($idSiswa, $awal, $akhir);
 
             // Load the dompdf library
             $dompdf = new Dompdf();
 
             // Set the HTML content for the PDF
-            $data['title'] = 'Laporan Absensi Kantor';
+            $data['title'] = 'Laporan Absensi Sekolah';
             $dompdf->loadHtml(view('agendapkl/data_absensi_sekolah/print_pdf_view', $data));
             $dompdf->setPaper('A4', 'landscape');
             $dompdf->render();

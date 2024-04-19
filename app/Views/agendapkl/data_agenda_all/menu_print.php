@@ -41,7 +41,7 @@
                               <select class="form-select" name="nama" id="nama" required>
                                 <option value="">- Pilih -</option>
                                 <?php foreach($nama as $siswa) { ?>
-                                  <option value="<?=$siswa->user_siswa?>"><?=$siswa->nama_siswa?></option>
+                                  <option value="<?=$siswa->user?>"><?=$siswa->nama_siswa?></option>
                                 <?php } ?>
                               </select>
                             </div>

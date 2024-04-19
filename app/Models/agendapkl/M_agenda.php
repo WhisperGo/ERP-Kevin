@@ -25,14 +25,14 @@ class M_agenda extends Model
 	public function tampil_rpl($table1)	
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 1)
+		->where('jurusan', 2)
 		->get()
 		->getResult();
 	}
 	public function tampil_bdp($table1)	
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 2)
+		->where('jurusan', 4)
 		->get()
 		->getResult();
 	}
@@ -111,14 +111,14 @@ class M_agenda extends Model
 	{
 		$builder = $this->db->table('data_agenda');
 
-    // Join dengan tabel data_siswa
-		$builder->join('data_siswa', 'data_siswa.user_siswa = data_agenda.siswa');
+    // Join dengan tabel siswa
+		$builder->join('siswa', 'siswa.user = data_agenda.siswa');
 
     // Menambahkan kondisi filter berdasarkan id siswa dan rentang tanggal
 		$builder->where('data_agenda.siswa', $idSiswa);
 		$builder->where('data_agenda.tanggal >=', $awal);
 		$builder->where('data_agenda.tanggal <=', $akhir);
-		$builder->where('data_agenda.user_update >', 0);
+		$builder->where('data_agenda.updated_at !=', null);
 		$builder->where('data_agenda.deleted_at', null); 
 
 		$query = $builder->get();

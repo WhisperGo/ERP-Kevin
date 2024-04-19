@@ -13,7 +13,11 @@ class M_instruktur extends Model
 
 	public function tampil($table1)	
 	{
-		return $this->db->table($table1)->where('deleted_at', null)->get()->getResult();
+		return $this->db->table($table1)
+		->where('deleted_at', null)
+		->orderBy('data_instruktur.created_at', 'desc')
+		->get()
+		->getResult();
 	}
 	public function hapus($table, $where)
 	{
@@ -39,7 +43,7 @@ class M_instruktur extends Model
 	{
 		return $this->db->table($table1)
 		->join($table2, $on, 'left')
-		->where('instruktur_pt.deleted_at', null)
+		->where('data_instruktur.deleted_at', null)
 		->get()
 		->getResult();
 	}

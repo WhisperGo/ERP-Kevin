@@ -16,7 +16,6 @@ Yang sama :
 Yang baru : 
 - jabatan_guru
 
-
 Fix : 
 - user (CRUD DONE)
 - perusahaan (CRUD DONE)
@@ -25,6 +24,14 @@ Fix :
 - data_jurusan (CRUD DONE)
 - data_level (CRUD DONE)
 - data_absensi_sekolah (CRUD & PRINT DONE)
+- data_absensi_sekolah_all (CRUD & PRINT DONE)
 
 Akun : 
+- Superadmin & Admin (Atur di landing_page_erp)
 - Kesiswaan (DONE)
+- Kajur (DONE)
+
+Note : 
+- Ubahlah logo agenda di side_menu
+- orderBy di agenda dan di absen
+- buatlah menu print agenda seperti di menu print absensi bisa pilih jurusan dulu

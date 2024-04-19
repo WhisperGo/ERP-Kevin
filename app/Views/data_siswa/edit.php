@@ -95,7 +95,7 @@
 										<?php
 										foreach ($jur as $jurusan) {
 
-											$selected = ($jojo->jenjang == $jurusan->id_jurusan) ? "selected" : "";
+											$selected = ($jojo->jurusan == $jurusan->id_jurusan) ? "selected" : "";
 										?>
 											<option value="<?= $jurusan->id_jurusan ?>" <?= $selected ?>>
 												<?php echo $jurusan->nama_jurusan ?>

@@ -87,7 +87,7 @@ class Data_agenda_instruktur extends BaseController
             echo view('agendapkl/data_agenda_instruktur/edit',$data);
             echo view('agendapkl/partial/footer_datatable');    
         }else {
-            return redirect()->to('agendapkl/home');
+            return redirect()->to('landing_page_erp');
         }
     }
 

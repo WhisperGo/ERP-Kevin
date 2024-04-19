@@ -10,7 +10,7 @@ class Data_instruktur extends BaseController
 {
     public function index()
     {
-     if(session()->get('level')== 1 || session()->get('level')==2) {
+     if(session()->get('level')== 1 || session()->get('level')==2 || session()->get('level')==3 && session()->get('jabatan')==2 ) {
         $model=new M_instruktur();
         $data['jojo']=$model->tampil('data_instruktur');
         $data['title']='Data Instruktur';
@@ -26,7 +26,7 @@ class Data_instruktur extends BaseController
 
 public function create()
 {
-    if(session()->get('level')== 1 || session()->get('level')==2) {
+    if(session()->get('level')== 1 || session()->get('level')==2 || session()->get('level')==3 && session()->get('jabatan')==2 ) {
         $model=new M_instruktur();
         $data['title']='Data Instruktur';
         echo view('agendapkl/partial/header_datatable', $data);
@@ -41,7 +41,7 @@ public function create()
 
 public function aksi_create()
 { 
-    if(session()->get('level')== 1 || session()->get('level')==2) {
+    if(session()->get('level')== 1 || session()->get('level')==2 || session()->get('level')==3 && session()->get('jabatan')==2 ) {
         $a= $this->request->getPost('username');
         $b= $this->request->getPost('password');
         $d= $this->request->getPost('nama');
@@ -88,7 +88,7 @@ public function aksi_create()
 }
 public function edit($id)
 { 
-    if(session()->get('level')== 1 || session()->get('level')==2) {
+    if(session()->get('level')== 1 || session()->get('level')==2 || session()->get('level')==3 && session()->get('jabatan')==2 ) {
         $model=new M_instruktur();
         $where=array('user'=>$id);
         $where2=array('id_user'=>$id);
@@ -101,13 +101,13 @@ public function edit($id)
         echo view('agendapkl/data_instruktur/edit',$data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl/home');
+        return redirect()->to('landing_page_erp');
     }
 }
 
 public function aksi_edit()
 { 
-    if(session()->get('level')== 1 || session()->get('level')==2) {
+    if(session()->get('level')== 1 || session()->get('level')==2 || session()->get('level')==3 && session()->get('jabatan')==2 ) {
         $a= $this->request->getPost('username');
         $d= $this->request->getPost('nama');
         $e= $this->request->getPost('nama_pt');
@@ -156,7 +156,7 @@ public function aksi_edit()
 }
 public function delete($id)
 { 
-    if(session()->get('level')== 1 || session()->get('level')==2) {
+    if(session()->get('level')== 1 || session()->get('level')==2 || session()->get('level')==3 && session()->get('jabatan')==2 ) {
         $model=new M_instruktur();
         $where=array('user'=>$id);
         $where2=array('id_user'=>$id);

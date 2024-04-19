@@ -1,23 +1,23 @@
-<?php 
+<?php
 
 $uri = service('uri');
 
 $db = \Config\Database::connect();
 $builder = $db->table('website');
 $logo = $builder->select('logo_website')
-->where('deleted_at', null)
-->get()
-->getRow();
+  ->where('deleted_at', null)
+  ->get()
+  ->getRow();
 
 ?>
-<script src="<?=base_url('assets/static/js/initTheme.js')?>"></script>
+<script src="<?= base_url('assets/static/js/initTheme.js') ?>"></script>
 <div id="app">
   <div id="sidebar">
     <div class="sidebar-wrapper active">
       <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a href="<?=base_url('master')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
+            <a href="<?= base_url('master') ?>"><img src="<?= base_url('logo/logo_website/' . $logo->logo_website) ?>" alt="Logo" /></a>
           </div>
           <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -31,7 +31,7 @@ $logo = $builder->select('logo_website')
               </g>
             </svg>
             <div class="form-check form-switch fs-6">
-              <input class="form-check-input me-0" type="checkbox" id="toggle-dark" style="cursor: pointer"/>
+              <input class="form-check-input me-0" type="checkbox" id="toggle-dark" style="cursor: pointer" />
               <label class="form-check-label"></label>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -39,22 +39,22 @@ $logo = $builder->select('logo_website')
             </svg>
           </div>
           <div class="sidebar-toggler x">
-            <a href="#" class="sidebar-hide d-xl-none d-block"
-            ><i class="bi bi-x bi-middle"></i
-            ></a>
+            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
           </div>
         </div>
       </div>
 
       <!-- Menu SuperAdmin  --------------------------------------------------------------------------------------->
 
-      <?php if (session()->get('level')==1){ ?>
+      <?php if (session()->get('level') == 1) { ?>
         <div class="sidebar-menu">
           <ul class="menu">
             <li class="sidebar-title">Menu</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "master"){echo "active";}?>">
-              <a href="<?=base_url('master')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "master") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('master') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-grid-2"></i>
                 <span>Dashboard</span>
               </a>
@@ -62,45 +62,57 @@ $logo = $builder->select('logo_website')
 
             <li class="sidebar-title">Data Pengguna</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "user"){echo "active";}?>">
-              <a href="<?=base_url('user')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "user") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('user') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-screen-users"></i>
                 <span>Data User</span>
               </a>
             </li>
-            
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "data_guru"){echo "active";}?>">
-              <a href="<?=base_url('data_guru')?>" class='sidebar-link'>
+
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_guru") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('data_guru') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-chalkboard-user"></i>
                 <span>Data Guru</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "data_siswa") {echo "active";}?>">
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_siswa") {
+                                      echo "active";
+                                    } ?>">
               <a href="<?= base_url('data_siswa') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-user-group"></i>
                 <span>Data Siswa</span>
               </a>
             </li>
-            
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "data_instruktur") {echo "active";}?>">
+
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_instruktur") {
+                                      echo "active";
+                                    } ?>">
               <a href="<?= base_url('agendapkl/data_instruktur') ?>" class='sidebar-link'>
-              <i class="fa-regular fa-person-chalkboard"></i>
+                <i class="fa-regular fa-person-chalkboard"></i>
                 <span>Data Instruktur</span>
               </a>
             </li>
 
             <li class="sidebar-title">Operasional Website</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "data_level"){echo "active";}?>">
-              <a href="<?=base_url('data_level')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_level") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('data_level') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-database"></i>
                 <span>Data Level</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "data_website"){echo "active";}?>">
-              <a href="<?=base_url('data_website')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_website") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('data_website') ?>" class='sidebar-link'>
                 <i class="fa-regular fa-globe"></i>
                 <span>Data Website</span>
               </a>
@@ -116,219 +128,265 @@ $logo = $builder->select('logo_website')
 
               <ul class="submenu">
                 <li class="submenu-item">
-                  <a href="<?= base_url('/Ruangan/jenjang') ?>" class="submenu-link"
-                    >Jenjang</a
-                    >
-                  </li>
-                  <li class="submenu-item">
-                    <a href="<?= base_url('/Ruangan') ?>" class="submenu-link"
-                      >Kelas</a
-                      >
-                    </li>
-
-                    <li class="submenu-item">
-                      <a href="<?= base_url('/Ruangan/jurusan') ?>" class="submenu-link"
-                        >Jurusan</a
-                        >
-                      </li>
-
-                      <li class="submenu-item">
-                        <a href="<?= base_url('/Ruangan/rombel') ?>" class="submenu-link"
-                          >Rombel</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "mapel"){echo "active";}?>">
-                      <a href="<?=base_url('mapel')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-book"></i>
-                        <span>Data Mapel</span>
-                      </a>
-                    </li>
-
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "tahun"){echo "active";}?>">
-                      <a href="<?=base_url('tahun')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span>Data Tahun</span>
-                      </a>
-                    </li>
-
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "blok"){echo "active";}?>">
-                      <a href="<?=base_url('blok')?>" class='sidebar-link'>
-                        <i class="fa-solid fa-star"></i>
-                        <span>Data Blok</span>
-                      </a>
-                    </li>
-
-                    
-
-                    
-
-                    <li class="sidebar-item <?php if($uri->getSegment(2) == "sekre") {echo "active";}?>">
-                      <a href="<?= base_url('/User/sekre') ?>" class="sidebar-link">
-                        <i class="bi bi-people-fill"></i>
-                        <span>Data Sekretaris</span>
-                      </a>
-                    </li>
-                    
-                    <li class="sidebar-title">Pendaftaran Siswa Baru</li>
-
-                    
-
-                    <li class="sidebar-item <?php if($uri->getSegment(1) == "data_pendaftaran") {echo "active";}?>">
-                      <a href="<?= base_url('data_pendaftaran') ?>" class="sidebar-link">
-                        <i class="fa-solid fa-user-plus"></i>
-                        <span>Data Pendaftaran</span>
-                      </a>
-                    </li>
-
-                  </li>
-
-                </li>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Menu Admin  --------------------------------------------------------------------------------------->
-
-    <?php }else if (session()->get('level')==2){ ?>
-      <div class="sidebar-menu">
-        <ul class="menu">
-          <li class="sidebar-title">Menu</li>
-
-          <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard2"){echo "active";}?>">
-            <a href="<?=base_url('dashboard2')?>" class='sidebar-link'>
-              <i class="fa-solid fa-grid-2"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-
-          <li class="sidebar-title">Data Pengguna</li>
-
-          <li class="sidebar-item <?php if($uri->getSegment(1) == "user"){echo "active";}?>">
-            <a href="<?=base_url('user')?>" class='sidebar-link'>
-              <i class="fa-solid fa-screen-users"></i>
-              <span>Data User</span>
-            </a>
-          </li>
-          
-          <li class="sidebar-item <?php if($uri->getSegment(1) == "data_guru"){echo "active";}?>">
-            <a href="<?=base_url('data_guru')?>" class='sidebar-link'>
-              <i class="fa-solid fa-chalkboard-user"></i>
-              <span>Data Guru</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item <?php if($uri->getSegment(1) == "data_siswa") {echo "active";}?>">
-            <a href="<?= base_url('data_siswa') ?>" class='sidebar-link'>
-              <i class="fa-solid fa-user-group"></i>
-              <span>Data Siswa</span>
-            </a>
-          </li>
-
-          <li class="sidebar-title">Operasional Website</li>
-
-          <li class="sidebar-item <?php if($uri->getSegment(1) == "data_level"){echo "active";}?>">
-            <a href="<?=base_url('data_level')?>" class='sidebar-link'>
-              <i class="fa-solid fa-database"></i>
-              <span>Data Level</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item <?php if($uri->getSegment(1) == "data_website"){echo "active";}?>">
-            <a href="<?=base_url('data_website')?>" class='sidebar-link'>
-              <i class="fa-regular fa-globe"></i>
-              <span>Data Website</span>
-            </a>
-          </li>
-
-          <li class="sidebar-title">Data Sekolah</li>
-
-          <li class="sidebar-item has-sub">
-            <a href="#" class="sidebar-link">
-              <i class="bi bi-grid-1x2-fill"></i>
-              <span>Rombel</span>
-            </a>
-
-            <ul class="submenu">
-              <li class="submenu-item">
-                <a href="<?= base_url('/Ruangan/jenjang') ?>" class="submenu-link"
-                  >Jenjang</a
-                  >
+                  <a href="<?= base_url('/Ruangan/jenjang') ?>" class="submenu-link">Jenjang</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="<?= base_url('/Ruangan') ?>" class="submenu-link"
-                    >Kelas</a
-                    >
-                  </li>
-
-                  <li class="submenu-item">
-                    <a href="<?= base_url('/Ruangan/jurusan') ?>" class="submenu-link"
-                      >Jurusan</a
-                      >
-                    </li>
-
-                    <li class="submenu-item">
-                      <a href="<?= base_url('/Ruangan/rombel') ?>" class="submenu-link"
-                        >Rombel</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="sidebar-item <?php if($uri->getSegment(1) == "mapel"){echo "active";}?>">
-                    <a href="<?=base_url('mapel')?>" class='sidebar-link'>
-                      <i class="fa-solid fa-book"></i>
-                      <span>Data Mapel</span>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-item <?php if($uri->getSegment(1) == "tahun"){echo "active";}?>">
-                    <a href="<?=base_url('tahun')?>" class='sidebar-link'>
-                      <i class="fa-solid fa-calendar-days"></i>
-                      <span>Data Tahun</span>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-item <?php if($uri->getSegment(1) == "blok"){echo "active";}?>">
-                    <a href="<?=base_url('blok')?>" class='sidebar-link'>
-                      <i class="fa-solid fa-star"></i>
-                      <span>Data Blok</span>
-                    </a>
-                  </li>
-
-                  
-
-                  
-
-                  <li class="sidebar-item <?php if($uri->getSegment(2) == "sekre") {echo "active";}?>">
-                    <a href="<?= base_url('/User/sekre') ?>" class="sidebar-link">
-                      <i class="bi bi-people-fill"></i>
-                      <span>Data Sekretaris</span>
-                    </a>
-                  </li>
-                  
-                  <li class="sidebar-title">Pendaftaran Siswa Baru</li>
-
-                  
-
-                  <li class="sidebar-item <?php if($uri->getSegment(1) == "data_pendaftaran") {echo "active";}?>">
-                    <a href="<?= base_url('data_pendaftaran') ?>" class="sidebar-link">
-                      <i class="fa-solid fa-user-plus"></i>
-                      <span>Data Pendaftaran</span>
-                    </a>
-                  </li>
-
+                  <a href="<?= base_url('/Ruangan') ?>" class="submenu-link">Kelas</a>
                 </li>
 
-              </li>
+                <li class="submenu-item">
+                  <a href="<?= base_url('/Ruangan/jurusan') ?>" class="submenu-link">Jurusan</a>
+                </li>
+
+                <li class="submenu-item">
+                  <a href="<?= base_url('/Ruangan/rombel') ?>" class="submenu-link">Rombel</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "mapel") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('mapel') ?>" class='sidebar-link'>
+                <i class="fa-solid fa-book"></i>
+                <span>Data Mapel</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "tahun") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('tahun') ?>" class='sidebar-link'>
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Data Tahun</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "blok") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('blok') ?>" class='sidebar-link'>
+                <i class="fa-solid fa-star"></i>
+                <span>Data Blok</span>
+              </a>
+            </li>
+
+
+
+
+
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "sekre") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('/User/sekre') ?>" class="sidebar-link">
+                <i class="bi bi-people-fill"></i>
+                <span>Data Sekretaris</span>
+              </a>
+            </li>
+
+            <li class="sidebar-title">Pendaftaran Siswa Baru</li>
+
+
+
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_pendaftaran") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('data_pendaftaran') ?>" class="sidebar-link">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Data Pendaftaran</span>
+              </a>
+            </li>
+
+            </li>
+
+            </li>
             </li>
           </ul>
         </div>
-      </div>
     </div>
-    
-    <?php } ?>
+  </div>
+
+  <!-- Menu Admin  --------------------------------------------------------------------------------------->
+
+<?php } else if (session()->get('level') == 2) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "master") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('master') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="sidebar-title">Data Pengguna</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "user") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('user') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-screen-users"></i>
+          <span>Data User</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_guru") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_guru') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <span>Data Guru</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_siswa") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_siswa') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-user-group"></i>
+          <span>Data Siswa</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_instruktur") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_instruktur') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-person-chalkboard"></i>
+          <span>Data Instruktur</span>
+        </a>
+      </li>
+
+      <li class="sidebar-title">Data Sekolah</li>
+
+      <li class="sidebar-item has-sub">
+        <a href="#" class="sidebar-link">
+          <i class="bi bi-grid-1x2-fill"></i>
+          <span>Rombel</span>
+        </a>
+
+        <ul class="submenu">
+          <li class="submenu-item">
+            <a href="<?= base_url('/Ruangan/jenjang') ?>" class="submenu-link">Jenjang</a>
+          </li>
+          <li class="submenu-item">
+            <a href="<?= base_url('/Ruangan') ?>" class="submenu-link">Kelas</a>
+          </li>
+
+          <li class="submenu-item">
+            <a href="<?= base_url('/Ruangan/jurusan') ?>" class="submenu-link">Jurusan</a>
+          </li>
+
+          <li class="submenu-item">
+            <a href="<?= base_url('/Ruangan/rombel') ?>" class="submenu-link">Rombel</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "mapel") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('mapel') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-book"></i>
+          <span>Data Mapel</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "tahun") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('tahun') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Data Tahun</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "blok") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('blok') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-star"></i>
+          <span>Data Blok</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "sekre") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('/User/sekre') ?>" class="sidebar-link">
+          <i class="bi bi-people-fill"></i>
+          <span>Data Sekretaris</span>
+        </a>
+      </li>
+
+      <li class="sidebar-title">Pendaftaran Siswa Baru</li>
+
+
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_pendaftaran") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_pendaftaran') ?>" class="sidebar-link">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Data Pendaftaran</span>
+        </a>
+      </li>
+
+      </li>
+
+      </li>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Menu Kajur  --------------------------------------------------------------------------------------->
+
+<?php } else if (session()->get('level') == 3 || session()->get('jabatan') == 2) { ?>
+  <div class="sidebar-menu">
+    <ul class="menu">
+      <li class="sidebar-title">Menu</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "master") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('master') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-grid-2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="sidebar-title">Data Pengguna</li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_siswa_all") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_siswa_all') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-user-group"></i>
+          <span>Data Siswa</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_instruktur") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('agendapkl/data_instruktur') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-person-chalkboard"></i>
+          <span>Data Instruktur</span>
+        </a>
+      </li>
+
+      </li>
+
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+
+<?php } ?>

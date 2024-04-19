@@ -103,7 +103,7 @@
 											$selected = ($rizkan->jabatan == $jabatan->id_jabatan) ? "selected" : "";
 										?>
 										?>
-											<option value="<?= $jabatan->id_jabatan ?>"><?php echo $jabatan->nama_jabatan ?>
+											<option value="<?= $jabatan->id_jabatan ?>" <?= $selected ?>><?php echo $jabatan->nama_jabatan ?>
 											</option>
 										<?php } ?>
 									</select>

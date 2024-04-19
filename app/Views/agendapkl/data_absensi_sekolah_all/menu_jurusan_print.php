@@ -37,20 +37,20 @@ if ($query->getNumRows() > 0) {
 				<div class="card">
 					<div class="card-header d-flex justify-content-center align-items-center gap-2">
 						<?php if ($level == 3 && $jurusan == 2) { ?>
-							<a href="<?php echo base_url('agendapkl/data_agenda_all/rpl/') ?>" class="btn btn-primary mt-2 mx-2"><i class="faj-button fa-regular fa-computer"></i>
+							<a href="<?php echo base_url('agendapkl/data_absensi_sekolah_all/menu_print_rpl/') ?>" class="btn btn-primary mt-2 mx-2"><i class="faj-button fa-regular fa-computer"></i>
 								RPL</a>
 						<?php } ?>
 
 						<?php if ($level == 3 && $jurusan == 3) { ?>
-							<a href="<?php echo base_url('agendapkl/data_agenda_all/akl/') ?>" class="btn btn-danger mt-2 mx-2"><i class="faj-button fa-regular fa-calculator"></i>
+							<a href="<?php echo base_url('agendapkl/data_absensi_sekolah_all/menu_print_akl/') ?>" class="btn btn-danger mt-2 mx-2"><i class="faj-button fa-regular fa-calculator"></i>
 								AKL</a>
 						<?php } ?>
 
 						<?php if ($level == 3 && $jurusan == 4) { ?>
-							<a href="<?php echo base_url('agendapkl/data_agenda_all/bdp/') ?>" class="btn btn-success mt-2 mx-2"><i class="faj-button fa-regular fa-business-time"></i>
+							<a href="<?php echo base_url('agendapkl/data_absensi_sekolah_all/menu_print_bdp/') ?>" class="btn btn-success mt-2 mx-2"><i class="faj-button fa-regular fa-business-time"></i>
 								BDP</a>
 						<?php } ?>
-
+						
 					</div>
 					<div class="card-body">
 					</div>

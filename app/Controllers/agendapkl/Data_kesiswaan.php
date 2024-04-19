@@ -121,7 +121,7 @@ public function edit($id)
         echo view('agendapkl/data_kesiswaan/edit',$data);
         echo view('agendapkl/partial/footer_datatable');    
     }else {
-        return redirect()->to('agendapkl/home');
+        return redirect()->to('landing_page_erp');
     }
 }
 

@@ -37,7 +37,7 @@
                                     <td><?= $no++ ?></td>   
                                     <td><?php echo $riz->nama_siswa ?></td>
                                     <td>
-                                        <a href="<?php echo base_url('agendapkl/data_agenda_all/detail/'. $riz->user_siswa)?>" class="btn btn-success my-1"><i class="fa-solid fa-circle-info"></i></a>
+                                        <a href="<?php echo base_url('agendapkl/data_agenda_all/detail/'. $riz->user)?>" class="btn btn-success my-1"><i class="fa-solid fa-circle-info"></i></a>
                                     </td>
                                 </tr>
                                 <?php

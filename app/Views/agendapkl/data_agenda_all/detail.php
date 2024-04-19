@@ -3,14 +3,14 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
-                    <h3><?=$title?></h3>
-                    <p class="text-subtitle text-muted">Anda dapat melihat <?=$title?> di bawah</p>
+                    <h3><?= $title ?></h3>
+                    <p class="text-subtitle text-muted">Anda dapat melihat <?= $title ?> di bawah</p>
                 </div>
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?=base_url('agendapkl/dashboard')?>">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><?=$title?></li>
+                            <li class="breadcrumb-item"><a href="<?= base_url('agendapkl/dashboard') ?>">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><?= $title ?></li>
                         </ol>
                     </nav>
                 </div>
@@ -31,28 +31,25 @@
                                 </tr>
                             </thead>
                             <?php
-                            $no=1;
+                            $no = 1;
                             foreach ($jojo as $riz) {
-                                ?>
+                            ?>
                                 <tr>
-                                    <td><?= $no++ ?></td>   
+                                    <td><?= $no++ ?></td>
                                     <td><?php echo $riz->nama_siswa ?></td>
-                                    <td><?php echo date('d F Y', strtotime($riz->tanggal))?></td>
+                                    <td><?php echo date('d F Y', strtotime($riz->tanggal)) ?></td>
                                     <td>
-                                        <?php if ($riz->senyum === null): ?>
-                                            <a href="<?php echo base_url('agendapkl/data_agenda_all/agenda/'. $riz->id_agenda)?>" class="btn btn-primary rounded-pill my-1">
-                                                <i class="fa-solid fa-circle-info"></i>
-                                            </a>
+                                        <a href="<?php echo base_url('agendapkl/data_agenda_all/agenda/' . $riz->id_agenda) ?>" class="btn btn-primary rounded-pill my-1">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                        </a>
+                                        <?php if ($riz->senyum === null) : ?>
                                             <span class="rounded-pill bg-danger text-white px-3 py-2">Belum Review</span>
-                                        <?php else: ?>
-                                            <a href="<?php echo base_url('agendapkl/data_agenda_all/agenda/'. $riz->id_agenda)?>" class="btn btn-primary rounded-pill my-1">
-                                                <i class="fa-solid fa-circle-info"></i>
-                                            </a>
+                                        <?php else : ?>
                                             <span class="rounded-pill bg-success text-white px-3 py-2">Selesai</span>
                                         <?php endif; ?>
                                     </td>
                                 </tr>
-                                <?php
+                            <?php
                             }
                             ?>
                         </table>

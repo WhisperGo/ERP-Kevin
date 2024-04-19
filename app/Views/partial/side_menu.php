@@ -1,23 +1,23 @@
-<?php 
+<?php
 
 $uri = service('uri');
 
 $db = \Config\Database::connect();
 $builder = $db->table('website');
 $logo = $builder->select('logo_website')
-->where('deleted_at', null)
-->get()
-->getRow();
+  ->where('deleted_at', null)
+  ->get()
+  ->getRow();
 
 ?>
-<script src="<?=base_url('assets/static/js/initTheme.js')?>"></script>
+<script src="<?= base_url('assets/static/js/initTheme.js') ?>"></script>
 <div id="app">
   <div id="sidebar">
     <div class="sidebar-wrapper active">
       <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a href="<?=base_url('dashboard')?>"><img src="<?=base_url('logo/logo_website/'.$logo->logo_website)?>" alt="Logo"/></a>
+            <a href="<?= base_url('dashboard') ?>"><img src="<?= base_url('logo/logo_website/' . $logo->logo_website) ?>" alt="Logo" /></a>
           </div>
           <div class="theme-toggle d-flex gap-2 align-items-center mt-2">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
@@ -31,7 +31,7 @@ $logo = $builder->select('logo_website')
               </g>
             </svg>
             <div class="form-check form-switch fs-6">
-              <input class="form-check-input me-0" type="checkbox" id="toggle-dark" style="cursor: pointer"/>
+              <input class="form-check-input me-0" type="checkbox" id="toggle-dark" style="cursor: pointer" />
               <label class="form-check-label"></label>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -39,123 +39,127 @@ $logo = $builder->select('logo_website')
             </svg>
           </div>
           <div class="sidebar-toggler x">
-            <a href="#" class="sidebar-hide d-xl-none d-block"
-            ><i class="bi bi-x bi-middle"></i
-            ></a>
+            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
           </div>
         </div>
       </div>
 
       <!-- Menu SuperAdmin  --------------------------------------------------------------------------------------->
 
-      <?php if (session()->get('level')==1){ ?>
+      <?php if (session()->get('level') == 1) { ?>
         <div class="sidebar-menu">
           <ul class="menu">
             <li class="sidebar-title">Menu</li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>">
-              <a href="<?=base_url('dashboard')?>" class='sidebar-link'>
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "dashboard") {
+                                      echo "active";
+                                    } ?>">
+              <a href="<?= base_url('dashboard') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-grid-2"></i>
                 <span>Dashboard</span>
               </a>
             </li>
 
-            
-
             <li class="sidebar-title">Data Absensi</li>
 
-            
-            
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan") {echo "active";}?>">
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "laporan") {
+                                      echo "active";
+                                    } ?>">
               <a href="<?= base_url('laporan') ?>" class="sidebar-link">
                 <i class="bi bi-book"></i>
                 <span>Laporan Absensi</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(1) == "semester") {echo "active";}?>">
+            <li class="sidebar-item <?php if ($uri->getSegment(1) == "semester") {
+                                      echo "active";
+                                    } ?>">
               <a href="<?= base_url('semester') ?>" class="sidebar-link">
                 <i class="bi bi-book"></i>
                 <span>Laporan Absensi Per Semester</span>
               </a>
             </li>
 
-            <li class="sidebar-item <?php if($uri->getSegment(2) == "menu_print") {echo "active";}?>">
+            <li class="sidebar-item <?php if ($uri->getSegment(2) == "menu_print") {
+                                      echo "active";
+                                    } ?>">
               <a href="<?= base_url('data_perizinan/menu_print') ?>" class='sidebar-link'>
                 <i class="fa-solid fa-clipboard-user"></i>
                 <span>Print Data Perizinan</span>
               </a>
             </li>
-
-            
-
-          </li>
-
-        </li>
-      </li>
-    </ul>
+            </li>
+            </li>
+            </li>
+          </ul>
+        </div>
+    </div>
   </div>
-</div>
-</div>
 
-<!-- Menu Admin  --------------------------------------------------------------------------------------->
+  <!-- Menu Admin  --------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==2){ ?>
+<?php } else if (session()->get('level') == 2) { ?>
   <div class="sidebar-menu">
     <ul class="menu">
       <li class="sidebar-title">Menu</li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>">
-        <a href="<?=base_url('dashboard')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('dashboard') ?>" class='sidebar-link'>
           <i class="fa-solid fa-grid-2"></i>
           <span>Dashboard</span>
         </a>
       </li>
 
-      
-
       <li class="sidebar-title">Data Absensi</li>
 
-      
-
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "laporan") {echo "active";}?>">
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "laporan") {
+                                echo "active";
+                              } ?>">
         <a href="<?= base_url('laporan') ?>" class="sidebar-link">
           <i class="bi bi-book"></i>
           <span>Laporan Absensi</span>
         </a>
       </li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "semester") {echo "active";}?>">
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "semester") {
+                                echo "active";
+                              } ?>">
         <a href="<?= base_url('semester') ?>" class="sidebar-link">
           <i class="bi bi-book"></i>
           <span>Laporan Absensi Per Semester</span>
         </a>
       </li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(2) == "menu_print") {echo "active";}?>">
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "menu_print") {
+                                echo "active";
+                              } ?>">
         <a href="<?= base_url('data_perizinan/menu_print') ?>" class='sidebar-link'>
           <i class="fa-solid fa-clipboard-user"></i>
           <span>Print Data Perizinan</span>
         </a>
       </li>
-    </li>
+      </li>
 
-  </li>
-</li>
-</ul>
-</div>
+      </li>
+      </li>
+    </ul>
+  </div>
 </div>
 </div>
 
 <!-- Menu Guru  -------------------------------------------------------------------------------------------->
 
-<?php }else if (session()->get('level')==3){ ?>
-  <div class="sidebar-menu">   
+<?php } else if (session()->get('level') == 3) { ?>
+  <div class="sidebar-menu">
     <ul class="menu">
       <li class="sidebar-title">Menu</li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>">
-        <a href="<?=base_url('dashboard')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('dashboard') ?>" class='sidebar-link'>
           <i class="fa-solid fa-grid-2"></i>
           <span>Dashboard</span>
         </a>
@@ -163,11 +167,9 @@ $logo = $builder->select('logo_website')
 
       <li class="sidebar-title">Data</li>
 
-      
-
-      
-
-      <li class="sidebar-item <?php if($uri->getSegment(2) == "menu_print") {echo "active";}?>">
+      <li class="sidebar-item <?php if ($uri->getSegment(2) == "menu_print") {
+                                echo "active";
+                              } ?>">
         <a href="<?= base_url('data_perizinan_guru/menu_print') ?>" class='sidebar-link'>
           <i class="fa-solid fa-clipboard-user"></i>
           <span>Print Data Perizinan</span>
@@ -175,26 +177,28 @@ $logo = $builder->select('logo_website')
       </li>
 
 
-    </li>
-  </li>
+      </li>
+      </li>
 
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 
-<!-- Menu Siswa  -------------------------------------------------------------------------------------------->
+  <!-- Menu Siswa  -------------------------------------------------------------------------------------------->
 
-<?php } else if (session()->get('level')==4){ ?>
+<?php } else if (session()->get('level') == 4) { ?>
 
   <div class="sidebar-menu">
     <ul class="menu">
       <li class="sidebar-title">Menu</li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>">
-        <a href="<?=base_url('dashboard')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('dashboard') ?>" class='sidebar-link'>
           <i class="fa-solid fa-grid-2"></i>
           <span>Dashboard</span>
         </a>
@@ -202,38 +206,44 @@ $logo = $builder->select('logo_website')
 
       <li class="sidebar-title">Data Sekolah</li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "data_perizinan"){echo "active";}?>">
-        <a href="<?=base_url('data_perizinan')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_perizinan") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_perizinan') ?>" class='sidebar-link'>
           <i class="fa fa-clock"></i>
           <span>Data Perizinan</span>
         </a>
       </li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "data_absensi_siswa"){echo "active";}?>">
-        <a href="<?=base_url('data_absensi_siswa/menu')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_absensi_siswa") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_absensi_siswa/menu') ?>" class='sidebar-link'>
           <i class="fa-solid fa-clipboard-user"></i>
           <span>Data Absensi</span>
         </a>
       </li>
 
-    </li>
-  </li>
+      </li>
+      </li>
 
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 
-<?php } else if (session()->get('level')==5 ){ ?>
+<?php } else if (session()->get('level') == 5) { ?>
 
   <div class="sidebar-menu">
     <ul class="menu">
       <li class="sidebar-title">Menu</li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>">
-        <a href="<?=base_url('dashboard')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "dashboard") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('dashboard') ?>" class='sidebar-link'>
           <i class="fa-solid fa-grid-2"></i>
           <span>Dashboard</span>
         </a>
@@ -241,35 +251,41 @@ $logo = $builder->select('logo_website')
 
       <li class="sidebar-title">Data Sekolah</li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "data_perizinan"){echo "active";}?>">
-        <a href="<?=base_url('data_perizinan')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_perizinan") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_perizinan') ?>" class='sidebar-link'>
           <i class="fa fa-clock"></i>
           <span>Data Perizinan</span>
         </a>
       </li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "data_absensi_siswa"){echo "active";}?>">
-        <a href="<?=base_url('data_absensi_siswa/menu')?>" class='sidebar-link'>
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_absensi_siswa") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('data_absensi_siswa/menu') ?>" class='sidebar-link'>
           <i class="fa-solid fa-clipboard-user"></i>
           <span>Data Absensi</span>
         </a>
       </li>
 
-      <li class="sidebar-item <?php if($uri->getSegment(1) == "data_absensi_sekretaris" && $uri->getSegment(2) !== "menu_print") {echo "active";}?>">
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_absensi_sekretaris" && $uri->getSegment(2) !== "menu_print") {
+                                echo "active";
+                              } ?>">
         <a href="<?= base_url('data_absensi_sekretaris') ?>" class='sidebar-link'>
           <i class="fa-solid fa-clipboard-user"></i>
           <span>Isi Absensi</span>
         </a>
       </li>
 
-    </li>
-  </li>
+      </li>
+      </li>
 
-</li>
-</li>
-</ul>
-</div>
-</div>
-</div>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
 
 <?php } ?>

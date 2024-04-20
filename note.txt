@@ -33,5 +33,5 @@ Akun :
 
 Note : 
 - Ubahlah logo agenda di side_menu
-- orderBy di agenda dan di absen
-- buatlah menu print agenda seperti di menu print absensi bisa pilih jurusan dulu
+- orderBy di agenda dan di absen (DONE)
+- buatlah menu print agenda seperti di menu print absensi bisa pilih jurusan dulu (DONE pakai redirect)

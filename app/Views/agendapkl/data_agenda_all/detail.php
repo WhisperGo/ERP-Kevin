@@ -42,11 +42,16 @@
                                         <a href="<?php echo base_url('agendapkl/data_agenda_all/agenda/' . $riz->id_agenda) ?>" class="btn btn-primary rounded-pill my-1">
                                             <i class="fa-solid fa-circle-info"></i>
                                         </a>
-                                        <?php if ($riz->senyum === null) : ?>
+                                        <?php if ($riz->senyum === null) { ?>
                                             <span class="rounded-pill bg-danger text-white px-3 py-2">Belum Review</span>
-                                        <?php else : ?>
+                                        <?php } else if ($riz->senyum !== null && $riz->approve_g == null) { ?>
+                                            <a href="<?php echo base_url('agendapkl/data_agenda_all/approve_g/' . $riz->id_agenda) ?>" class="btn btn-success rounded-pill my-1">
+                                                <i class="fa-solid fa-thumbs-up"></i>
+                                            </a>
+                                            <span class="rounded-pill bg-warning text-dark px-3 py-2">Butuh Approve</span>
+                                        <?php } else if ($riz->senyum !== null && $riz->approve_g !== null) { ?>
                                             <span class="rounded-pill bg-success text-white px-3 py-2">Selesai</span>
-                                        <?php endif; ?>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                             <?php

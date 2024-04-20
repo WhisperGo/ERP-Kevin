@@ -1,47 +1,51 @@
 <?php
 
 namespace App\Models\agendapkl;
+
 use CodeIgniter\Model;
 
 class M_agenda extends Model
-{		
+{
 	protected $table      = 'data_agenda';
 	protected $primaryKey = 'id_agenda';
 	protected $allowedFields = ['siswa', 'tanggal', 'jam_masuk', 'jam_keluar', 'renper_1', 'renper_2', 'renper_3', 'renper_4', 'renper_5', 'reape_1', 'renper_2', 'renper_3', 'reape_4', 'reape_5', 'pk_1', 'pk_2', 'pk_3', 'pm_1', 'pm_2', 'pm_3', 'senyum', 'keramahan', 'penampilan', 'komunikasi', 'realisasi_kerja', 'catatan_1', 'catatan_2', 'catatan_3'];
 	protected $useSoftDeletes = true;
 	protected $useTimestamps = true;
 
-	public function tampil($table1)	
+	public function tampil($table1)
 	{
 		return $this->db->table($table1)->get()->getResult();
 	}
 	public function tampil_siswa($table1, $idInstruktur)
 	{
 		return $this->db->table($table1)
-		->where('instruktur', $idInstruktur)
-		->get()
-		->getResult();
+			->where('instruktur', $idInstruktur)
+			->get()
+			->getResult();
 	}
-	public function tampil_rpl($table1)	
+	public function tampil_rpl($table1)
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 2)
-		->get()
-		->getResult();
+			->where('jurusan', 2)
+			->orderBy($table1 . '.created_at', 'desc')
+			->get()
+			->getResult();
 	}
-	public function tampil_bdp($table1)	
+	public function tampil_bdp($table1)
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 4)
-		->get()
-		->getResult();
+			->where('jurusan', 4)
+			->orderBy($table1 . '.created_at', 'desc')
+			->get()
+			->getResult();
 	}
-	public function tampil_akl($table1)	
+	public function tampil_akl($table1)
 	{
 		return $this->db->table($table1)
-		->where('jurusan', 3)
-		->get()
-		->getResult();
+			->where('jurusan', 3)
+			->orderBy($table1 . '.created_at', 'desc')
+			->get()
+			->getResult();
 	}
 	public function hapus($table, $where)
 	{
@@ -66,28 +70,29 @@ class M_agenda extends Model
 	public function join2($table1, $table2, $on)
 	{
 		return $this->db->table($table1)
-		->join($table2, $on, 'left')
-		->where('data_agenda.deleted_at', null)
-		->get()
-		->getResult();
+			->join($table2, $on, 'left')
+			->where('data_agenda.deleted_at', null)
+			->get()
+			->getResult();
 	}
 	public function join2w($table1, $table2, $on, $where)
 	{
 		return $this->db->table($table1)
-		->join($table2, $on, 'left')
-		->where('data_agenda.deleted_at', null)
-		->getWhere($where)
-		->getResult();
+			->join($table2, $on, 'left')
+			->where('data_agenda.deleted_at', null)
+			->orderBy('data_agenda.created_at', 'desc')
+			->getWhere($where)
+			->getResult();
 	}
 	public function join_gaji($table1, $table2, $table3, $on, $on2, $where)
 	{
 		return $this->db->table($table1)
-		->join($table2, $on, 'left')
-		->join($table3, $on2, 'left')
-		->where($where)
-		->where('gaji.deleted_at', null)
-		->get()
-		->getResult();
+			->join($table2, $on, 'left')
+			->join($table3, $on2, 'left')
+			->where($where)
+			->where('gaji.deleted_at', null)
+			->get()
+			->getResult();
 	}
 	public function getLogoPDF()
 	{
@@ -111,15 +116,15 @@ class M_agenda extends Model
 	{
 		$builder = $this->db->table('data_agenda');
 
-    // Join dengan tabel siswa
+		// Join dengan tabel siswa
 		$builder->join('siswa', 'siswa.user = data_agenda.siswa');
 
-    // Menambahkan kondisi filter berdasarkan id siswa dan rentang tanggal
+		// Menambahkan kondisi filter berdasarkan id siswa dan rentang tanggal
 		$builder->where('data_agenda.siswa', $idSiswa);
 		$builder->where('data_agenda.tanggal >=', $awal);
 		$builder->where('data_agenda.tanggal <=', $akhir);
 		$builder->where('data_agenda.updated_at !=', null);
-		$builder->where('data_agenda.deleted_at', null); 
+		$builder->where('data_agenda.deleted_at', null);
 
 		$query = $builder->get();
 		$builder->groupBy('data_agenda.tanggal');

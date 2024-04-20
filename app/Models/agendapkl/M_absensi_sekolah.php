@@ -26,6 +26,7 @@ class M_absensi_sekolah extends Model
 	{
 		return $this->db->table($table1)
 		->where('jurusan', 2)
+		->orderBy($table1 . '.created_at', 'desc')
 		->get()
 		->getResult();
 	}
@@ -33,6 +34,7 @@ class M_absensi_sekolah extends Model
 	{
 		return $this->db->table($table1)
 		->where('jurusan', 4)
+		->orderBy($table1 . '.created_at', 'desc')
 		->get()
 		->getResult();
 	}
@@ -40,6 +42,7 @@ class M_absensi_sekolah extends Model
 	{
 		return $this->db->table($table1)
 		->where('jurusan', 3)
+		->orderBy($table1 . '.created_at', 'desc')
 		->get()
 		->getResult();
 	}
@@ -77,6 +80,7 @@ class M_absensi_sekolah extends Model
 		->join($table2, $on, 'left')
 		->join($table3, $on2, 'left')
 		->where('data_absensi_sekolah.deleted_at', null)
+		->orderBy('data_absensi_sekolah.created_at', 'desc')
 		->where($where)
 		->get()
 		->getResult();

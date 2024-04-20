@@ -216,7 +216,11 @@ $logo = $builder->select('logo_website')
 
       <li class="sidebar-title">Absensi</li>
 
-      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_sekolah_all" && ($uri->getTotalSegments() == 2)) {
+      <li class="sidebar-item <?php if (
+                                $uri->getSegment(2) == "data_absensi_sekolah_all" && $uri->getTotalSegments() == 4
+                                ||
+                                $uri->getSegment(2) == "data_absensi_sekolah_all" && strlen($uri->getSegment(3)) == 3
+                              ) {
                                 echo "active";
                               } ?>">
         <a href="<?= base_url('agendapkl/data_absensi_sekolah_all') ?>" class='sidebar-link'>
@@ -225,7 +229,9 @@ $logo = $builder->select('logo_website')
         </a>
       </li>
 
-      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_absensi_sekolah_all" && ($uri->getTotalSegments() == 3)) {
+      <li class="sidebar-item <?php if (
+                                $uri->getSegment(2) == "data_absensi_sekolah_all" && strstr($uri->getSegment(3), "menu_print")
+                              ) {
                                 echo "active";
                               } ?>">
         <a href="<?= base_url('agendapkl/data_absensi_sekolah_all/menu_print_absensi_sekolah') ?>" class='sidebar-link'>
@@ -237,21 +243,27 @@ $logo = $builder->select('logo_website')
 
       <li class="sidebar-title">Agenda</li>
 
-      <li class="sidebar-item <?php if ($uri->getSegment(2) == "data_agenda_all" && $uri->getSegment(3) !== "menu_print_rpl") {
+      <li class="sidebar-item <?php if (
+                                $uri->getSegment(2) == "data_agenda_all" && $uri->getTotalSegments() == 4
+                                ||
+                                $uri->getSegment(2) == "data_agenda_all" && strlen($uri->getSegment(3)) == 3
+                              ) {
                                 echo "active";
                               } ?>">
         <a href="<?= base_url('agendapkl/data_agenda_all') ?>" class='sidebar-link'>
-          <i class="fa-regular fa-file-chart-column"></i>
+          <i class="fa-regular fa-book-bookmark"></i>
           <span>Data Agenda</span>
         </a>
       </li>
       </li>
 
-      <li class="sidebar-item <?php if ($uri->getSegment(3) == "menu_print_rpl" && $uri->getSegment(2) !== "data_absensi_sekolah_all") {
+      <li class="sidebar-item <?php if (
+                                $uri->getSegment(2) == "data_agenda_all" && strstr($uri->getSegment(3), "menu_print")
+                              ) {
                                 echo "active";
                               } ?>">
-        <a href="<?= base_url('agendapkl/data_agenda_all/menu_print_rpl') ?>" class='sidebar-link'>
-          <i class="fa-regular fa-file-chart-column"></i>
+        <a href="<?= base_url('agendapkl/data_agenda_all/menu_print_agenda_all') ?>" class='sidebar-link'>
+          <i class="fa-regular fa-book-bookmark"></i>
           <span>Print Agenda</span>
         </a>
       </li>

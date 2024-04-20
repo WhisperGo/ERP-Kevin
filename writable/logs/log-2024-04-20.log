@@ -80,3 +80,14 @@ CRITICAL - 2024-04-20 20:02:34 --> Invalid file: data_agenda_instruktur/print_pd
 CRITICAL - 2024-04-20 20:09:23 --> Maximum execution time of 60 seconds exceeded
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
+ERROR - 2024-04-20 21:34:05 --> Table 'erp_kevin.data_siswa' doesn't exist
+CRITICAL - 2024-04-20 21:34:05 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_agenda.php(20): App\Models\agendapkl\M_agenda->join2w('data_agenda', 'data_siswa', 'data_agenda.sis...', Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_agenda->index('11')
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_agenda))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-04-20 21:46:42 --> Unknown column 'user_create' in 'field list'
+ERROR - 2024-04-20 21:46:43 --> Unknown column 'user_create' in 'field list'

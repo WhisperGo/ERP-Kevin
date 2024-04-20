@@ -87,7 +87,7 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
                                         <?php
                                         $level = session()->get('level');
 
-                                        if ($level == 1 || $level == 2 || $level == 3) {
+                                        if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
                                             // Jika level 1, 2, atau 3, gunakan session()->get('username')
                                             echo session()->get('username');
                                         } elseif ($level == 4 || $level == 5) {

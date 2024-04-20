@@ -409,7 +409,7 @@ $logo = $builder->select('logo_website')
 
   <!-- Menu Siswa  ------------------------------------------------------------------------------------------->
 
-<?php } else if (session()->get('level') == 4) { ?>
+<?php } else if (session()->get('level') == 4 || session()->get('level') == 5) { ?>
   <div class="sidebar-menu">
     <ul class="menu">
       <li class="sidebar-title">Menu</li>
@@ -451,7 +451,7 @@ $logo = $builder->select('logo_website')
                                 echo "active";
                               } ?>">
         <a href="<?= base_url('agendapkl/data_agenda/index/' . session()->get('id')) ?>" class='sidebar-link'>
-          <i class="fa-solid fa-file-invoice"></i>
+          <i class="fa-regular fa-book-bookmark"></i>
           <span>Data Agenda</span>
         </a>
       </li>

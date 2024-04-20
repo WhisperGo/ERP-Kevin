@@ -28,6 +28,7 @@ Fix :
 - data_agenda_all (CRUD & PRINT DONE)
 - data_absensi_kantor (CRUD & PRINT DONE)
 - data_agenda_kantor (CRUD & PRINT DONE)
+- data_agenda (CRUD DONE)
 
 
 Akun : 
@@ -35,7 +36,7 @@ Akun :
 - Kesiswaan (DONE)
 - Kajur (DONE)
 - Guru Pembimbing (Tidak diperlukan lagi)
-- Siswa
+- Siswa (DONE)
 - Instruktur (DONE)
 
 Note : 
@@ -44,3 +45,7 @@ Note :
 - error absensi
 - fungsi delete agenda untuk kajur ataupun instruktur?
 - view 1 agenda memakai pdf langsung
+- menu reset password, dan ubah poto profile di top_menu
+- menu softdelete di master data
+- ganti gambar dan desc di landing_page_erp
+- alert error di login landing_page_erp

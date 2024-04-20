@@ -40,7 +40,7 @@ $namaweb = $builder->select('nama_website')
               <?php
               $level = session()->get('level');
 
-              if ($level == 1 || $level == 2 || $level == 3) {
+              if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
                 // Jika level 1, 2, atau 3, gunakan session()->get('username')
                 echo "<h5 class='font-bold'>Selamat Datang, " . session()->get('username') . " di website $namaweb->nama_website</h5>";
               } elseif ($level == 4 || $level == 5) {

@@ -104,7 +104,7 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-dark"><a href="<?= base_url('landing_page_erp/home/logout') ?>" style="color: white;"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+                       <a class="btn btn-dark" href="<?= base_url('landing_page_erp/home/logout') ?>" style="color: white;"><i class="fa-solid fa-right-from-bracket"></i></a>
                     </li>
                 </ul>
             </div>

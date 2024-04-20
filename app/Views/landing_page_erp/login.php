@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="<?= base_url('assets/extensions/@fortawesome/fontawesome-pro/css/all.min.css') ?>">
     <title>Login | ERP SPH</title>
-    
 </head>
 
 <body>
@@ -15,6 +16,15 @@
         <div class="form-container sign-in">
             <form method="post" action="<?= base_url('landing_page_erp/home/aksi_login') ?>">
                 <h1>Login</h1>
+
+                <?php if (session()->has('error')) : ?>
+                    <div class="alert alert-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                        </svg>
+                        <?= session('error') ?></div>
+                <?php endif; ?>
+
                 <input type="text" id="usernameInput_signin" name="username" placeholder="Username" oninput="capitalizeFirstLetter_signin()">
                 <script>
                     function capitalizeFirstLetter_signin() {
@@ -30,8 +40,8 @@
                 <input type="password" name="password" placeholder="Password">
 
                 <div class="form-check form-check-lg d-flex align-items-end mb-4 text-right">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault" style="width: auto;" /> 
-                    <span>Ingat Saya</span> 
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault" style="width: auto;" />
+                    <span>Ingat Saya</span>
                 </div>
 
                 <button type="submit">Sign In</button>
@@ -55,14 +65,14 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
     }
 
-    body{
+    body {
         background-color: #f47a21;
         background: linear-gradient(to right, #e2e2e2, #f47a21);
         display: flex;
@@ -72,7 +82,7 @@
         height: 100vh;
     }
 
-    .container{
+    .container {
         background-color: #fff;
         border-radius: 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -83,25 +93,25 @@
         min-height: 480px;
     }
 
-    .container p{
+    .container p {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.3px;
         margin: 20px 0;
     }
 
-    .container span{
+    .container span {
         font-size: 12px;
     }
 
-    .container a{
+    .container a {
         color: #333;
         font-size: 13px;
         text-decoration: none;
         margin: 15px 0 10px;
     }
 
-    .container button{
+    .container button {
         background-color: #f47a21;
         color: #fff;
         font-size: 12px;
@@ -115,12 +125,12 @@
         cursor: pointer;
     }
 
-    .container button.hidden{
+    .container button.hidden {
         background-color: transparent;
         border-color: #fff;
     }
 
-    .container form{
+    .container form {
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -130,7 +140,7 @@
         height: 100%;
     }
 
-    .container input{
+    .container input {
         background-color: #eee;
         border: none;
         margin: 8px 0;
@@ -141,53 +151,57 @@
         outline: none;
     }
 
-    .form-container{
+    .form-container {
         position: absolute;
         top: 0;
         height: 100%;
         transition: all 0.6s ease-in-out;
     }
 
-    .sign-in{
+    .sign-in {
         left: 0;
         width: 50%;
         z-index: 2;
     }
 
-    .container.active .sign-in{
+    .container.active .sign-in {
         transform: translateX(100%);
     }
 
-    .sign-up{
+    .sign-up {
         left: 0;
         width: 50%;
         opacity: 0;
         z-index: 1;
     }
 
-    .container.active .sign-up{
+    .container.active .sign-up {
         transform: translateX(100%);
         opacity: 1;
         z-index: 5;
         animation: move 0.6s;
     }
 
-    @keyframes move{
-        0%, 49.99%{
+    @keyframes move {
+
+        0%,
+        49.99% {
             opacity: 0;
             z-index: 1;
         }
-        50%, 100%{
+
+        50%,
+        100% {
             opacity: 1;
             z-index: 5;
         }
     }
 
-    .social-icons{
+    .social-icons {
         margin: 20px 0;
     }
 
-    .social-icons a{
+    .social-icons a {
         border: 1px solid #ccc;
         border-radius: 20%;
         display: inline-flex;
@@ -198,7 +212,7 @@
         height: 40px;
     }
 
-    .toggle-container{
+    .toggle-container {
         position: absolute;
         top: 0;
         left: 50%;
@@ -210,12 +224,12 @@
         z-index: 1000;
     }
 
-    .container.active .toggle-container{
+    .container.active .toggle-container {
         transform: translateX(-100%);
         border-radius: 0 150px 100px 0;
     }
 
-    .toggle{
+    .toggle {
         background-color: #f47a21;
         height: 100%;
         background: linear-gradient(to right, #f47a21, #f47a21);
@@ -228,11 +242,11 @@
         transition: all 0.6s ease-in-out;
     }
 
-    .container.active .toggle{
+    .container.active .toggle {
         transform: translateX(50%);
     }
 
-    .toggle-panel{
+    .toggle-panel {
         position: absolute;
         width: 50%;
         height: 100%;
@@ -247,22 +261,67 @@
         transition: all 0.6s ease-in-out;
     }
 
-    .toggle-left{
+    .toggle-left {
         transform: translateX(-200%);
     }
 
-    .container.active .toggle-left{
+    .container.active .toggle-left {
         transform: translateX(0);
     }
 
-    .toggle-right{
+    .toggle-right {
         right: 0;
         transform: translateX(0);
     }
 
-    .container.active .toggle-right{
+    .container.active .toggle-right {
         transform: translateX(200%);
     }
+
+    /* Alert From public/assets */
+    .alert {
+        --bs-alert-bg: transparent;
+        --bs-alert-padding-x: 1rem;
+        --bs-alert-padding-y: 1rem;
+        --bs-alert-margin-top: 1rem;
+        --bs-alert-margin-bottom: 1rem;
+        --bs-alert-color: inherit;
+        --bs-alert-border-color: transparent;
+        --bs-alert-border: 1px solid var(--bs-alert-border-color);
+        --bs-alert-border-radius: 0.25rem;
+        position: relative;
+        padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+        margin-top: var(--bs-alert-margin-top);
+        margin-bottom: var(--bs-alert-margin-bottom);
+        color: var(--bs-alert-color);
+        background-color: var(--bs-alert-bg);
+        border: var(--bs-alert-border);
+        border-radius: var(--bs-alert-border-radius);
+    }
+
+    .alert-danger {
+        --bs-alert-color: #842029;
+        --bs-alert-bg: #f8d7da;
+        --bs-alert-border-color: #f5c2c7;
+    }
+
+    .alert-danger .alert-link {
+        color: #6a1a21;
+    }
+
+    .alert-danger {
+        background-color: #f3616d;
+        color: #fff;
+    }
+
+    .alert-danger a {
+        color: #fff;
+        font-weight: 700;
+    }
+
+
+
+    /* Alert from public/assets */
 </style>
 
 <script>
@@ -281,11 +340,11 @@
 <script>
     // Saat halaman dimuat
     document.addEventListener("DOMContentLoaded", function() {
-  // Cek apakah ada cookie dengan nama "remember_me"
+        // Cek apakah ada cookie dengan nama "remember_me"
         if (getCookie("remember_me")) {
-    // Jika ada, tandai checkbox "Ingat Saya"
+            // Jika ada, tandai checkbox "Ingat Saya"
             document.getElementById("flexCheckDefault").checked = true;
-    // Dan isi field username dan password dengan nilai cookie
+            // Dan isi field username dan password dengan nilai cookie
             var cookie = JSON.parse(getCookie("remember_me"));
             if (cookie && cookie.username && cookie.password) {
                 document.getElementsByName("username")[0].value = cookie.username;
@@ -294,11 +353,11 @@
         }
     });
 
-// Saat form login disubmit
+    // Saat form login disubmit
     document.querySelector("form").addEventListener("submit", function() {
-  // Cek apakah checkbox "Ingat Saya" di-tick
+        // Cek apakah checkbox "Ingat Saya" di-tick
         if (document.getElementById("flexCheckDefault").checked) {
-    // Jika iya, buat cookie dengan nama "remember_me" yang berisi nilai username dan password
+            // Jika iya, buat cookie dengan nama "remember_me" yang berisi nilai username dan password
             var username = document.getElementsByName("username")[0].value;
             var password = document.getElementsByName("password")[0].value;
             if (username && password) {
@@ -309,12 +368,12 @@
                 setCookie("remember_me", JSON.stringify(cookie), 30);
             }
         } else {
-    // Jika tidak, hapus cookie dengan nama "remember_me" (jika ada)
+            // Jika tidak, hapus cookie dengan nama "remember_me" (jika ada)
             deleteCookie("remember_me");
         }
     });
 
-// Fungsi untuk membuat cookie
+    // Fungsi untuk membuat cookie
     function setCookie(name, value, days) {
         var expires = "";
         if (days) {
@@ -325,7 +384,7 @@
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-// Fungsi untuk membaca nilai cookie
+    // Fungsi untuk membaca nilai cookie
     function getCookie(name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
@@ -337,9 +396,8 @@
         return null;
     }
 
-// Fungsi untuk menghapus cookie
+    // Fungsi untuk menghapus cookie
     function deleteCookie(name) {
         document.cookie = name + '=; Max-Age=-99999999;';
     }
-
 </script>

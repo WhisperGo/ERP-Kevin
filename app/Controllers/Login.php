@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\universal\M_login;
 
 class Login extends BaseController
 {
 
-   protected function isLoggedIn()
-   {
+    protected function isLoggedIn()
+    {
         return session()->has('id');
     }
 
@@ -25,24 +26,25 @@ class Login extends BaseController
 
     public function aksi_login()
     {
-        $u=$this->request->getPost('username');
-        $p=$this->request->getPost('password');
+        $u = $this->request->getPost('username');
+        $p = $this->request->getPost('password');
 
         // Tambahkan validasi jika field kosong
-        // if (empty($u) && empty($p)) {
-        //     session()->setFlashdata('error', 'Username dan password tidak boleh kosong');
-        //     return redirect()->to('login');
-        // }
+        if (empty($u) && empty($p)) {
+            session()->setFlashdata('error', 'Username dan password tidak boleh kosong');
+            return redirect()->to('landing_page_erp');
+        }
 
-        // if (empty($u)) {
-        //     session()->setFlashdata('error', 'Username tidak boleh kosong');
-        //     return redirect()->to('login');
-        // }
+        if (empty($u)) {
+            session()->setFlashdata('error', 'Username tidak boleh kosong');
+            return redirect()->to('landing_page_erp');
+        }
 
-        // if (empty($p)) {
-        //     session()->setFlashdata('error', 'Password tidak boleh kosong');
-        //     return redirect()->to('login');
-        // }
+        if (empty($p)) {
+            session()->setFlashdata('error', 'Password tidak boleh kosong');
+            return redirect()->to('landing_page_erp');
+        }
+
 
         // // // Tambahkan validasi CAPTCHA
         // $captcha_response = $this->request->getPost('g-recaptcha-response');
@@ -74,14 +76,14 @@ class Login extends BaseController
         //     return redirect()->to('login');
         // }
 
-        $model= new M_login();
-        $data=array(
-            'username'=>$u,
-            'password'=>$p
+        $model = new M_login();
+        $data = array(
+            'username' => $u,
+            'password' => $p
 
         );
 
-        $cek=$model->getLoginWithPassword('user', $u, $p);
+        $cek = $model->getLoginWithPassword('user', $u, $p);
         if ($cek !== null) {
             session()->set('id', $cek['id_user']);
             session()->set('username', $cek['username']);
@@ -90,9 +92,9 @@ class Login extends BaseController
             session()->set('jenjang', $cek['jenjang']);
             session()->set('jabatan', $cek['jabatan']);
             return redirect()->to('landing_page_erp/Home/dashboard');
-        }else {
+        } else {
             // Tambahkan peringatan username atau password salah
-            // session()->setFlashdata('error', ' Username atau password Anda salah');
+            session()->setFlashdata('error', ' Username atau password Anda salah');
             return redirect()->to('landing_page_erp');
         }
     }

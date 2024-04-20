@@ -11,6 +11,7 @@
         .header, .alamat {
             text-align: center;
             margin-bottom: 20px;
+            margin-top: 5px;
         }
         .judul {
             font-size: 20px;
@@ -57,7 +58,8 @@
 
             <div class="header">
                 <div class="judul">Sekolah GT</div>
-                <div class="alamat">Daily Report PRAKERIND</div>
+                <div class="judul">Daily Report PRAKERIND</div>
+                <div class="alamat">Nama : <?= $riz['nama_siswa'] ?></div>
             </div>
 
             <table class="tabel-agenda">

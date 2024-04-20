@@ -20,6 +20,7 @@ class M_agenda extends Model
 	{
 		return $this->db->table($table1)
 			->where('instruktur', $idInstruktur)
+			->orderBy($table1 . '.created_at', 'desc')
 			->get()
 			->getResult();
 	}

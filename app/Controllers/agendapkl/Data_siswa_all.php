@@ -23,7 +23,7 @@ class Data_siswa_all extends BaseController
                 $row = $query->getRow();
                 $jurusan = $row->jurusan;
 
-                $on2 = 'siswa.instruktur=data_instruktur.id_instruktur';
+                $on2 = 'siswa.instruktur=data_instruktur.user';
                 $on3 = 'siswa.jurusan=jurusan.id_jurusan';
                 $data['jojo'] = $model->join3w('siswa', 'data_instruktur', 'jurusan', $on2, $on3, $jurusan);
                 $data['title'] = 'Data Siswa';

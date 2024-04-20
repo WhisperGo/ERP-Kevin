@@ -38,7 +38,7 @@ if (!empty($user->foto)) {
                     <?php
                     $level = session()->get('level');
 
-                    if ($level == 1 || $level == 2 || $level == 3) {
+                    if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
                     // Jika level 1, 2, atau 3, gunakan session()->get('username')
                       echo "<h6 class='mb-0 text-gray-600'>" . session()->get('username') . "</h6>";
                     } elseif ($level == 4 || $level == 5) {
@@ -68,7 +68,7 @@ if (!empty($user->foto)) {
                   <?php
                   $level = session()->get('level');
 
-                  if ($level == 1 || $level == 2 || $level == 3) {
+                  if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
                     // Jika level 1, 2, atau 3, gunakan session()->get('username')
                     echo "Halo, " . session()->get('username') . "!";
                   } elseif ($level == 4 || $level == 5) {

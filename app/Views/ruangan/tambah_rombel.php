@@ -35,6 +35,20 @@
                 <form class="form form-horizontal">
                   <div class="form-body">
                     <div class="row">
+                    <div class="col-md-4">
+                        <label for="first-name-horizontal"
+                        >Nama Rombel</label
+                        >
+                      </div>
+                      <div class="col-md-8 form-group">
+                        <input
+                        type="text"
+                        id="first-name-horizontal"
+                        class="form-control"
+                        name="nama"
+                        placeholder="Nama Rombel"
+                        />
+                      </div>
                       
                       <div class="col-md-4">
                         <label>Kelas</label>
@@ -91,5 +105,3 @@
         </div>
       </div>
     </div>
-    
-    

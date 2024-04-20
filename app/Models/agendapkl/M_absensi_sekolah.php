@@ -110,6 +110,7 @@ class M_absensi_sekolah extends Model
 		$builder->where('data_absensi_sekolah.tanggal >=', $awal);
 		$builder->where('data_absensi_sekolah.tanggal <=', $akhir);
 		$builder->where('data_absensi_sekolah.deleted_at', null); 
+		$builder->orderBy('data_absensi_sekolah.created_at', 'desc');
 
 		$query = $builder->get();
 

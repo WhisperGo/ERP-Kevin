@@ -39,11 +39,12 @@
 									<div class="mb-3">
 										<label for="namasiswa" class="form-label">Instruktur</label>
 										<select class="form-select" id="instruktur" placeholder="Masukkan Instruktur" name="instruktur" value="<?php echo $jojo->instruktur ?>" required>
+											<option value="<?php echo $jojo->instruktur ?>">-Pilih-</option>
 											<?php
 											foreach ($instruktur as $pt) {
-												$selected = ($jojo->instruktur == $pt->id_instruktur) ? "selected" : "";
+												$selected = ($jojo->instruktur == $pt->user) ? "selected" : "";
 											?>
-												<option value="<?= $pt->id_instruktur ?>" <?= $selected ?>><?= $pt->nama_instruktur ?> - <?= $pt->nama_perusahaan ?></option>
+												<option value="<?= $pt->user ?>" <?= $selected ?>><?= $pt->nama_instruktur ?> - <?= $pt->nama_perusahaan ?></option>
 											<?php } ?>
 										</select>
 									</div>

@@ -19,7 +19,7 @@
 
         <section class="section">
             <div class="card">
-                <?php if (session()->get('level')==8) { ?>
+                <?php if (session()->get('level')==6) { ?>
                     <div class="card-header">
                         <a href="<?php echo base_url('agendapkl/data_absensi_kantor/create/'. $riz->id_absensi)?>"><button class="btn btn-primary mt-2"><i class="fa-solid fa-plus"></i>
                         Tambah</button></a>
@@ -35,7 +35,7 @@
                                     <th>Nama Siswa</th>
                                     <th>Tanggal</th>
                                     <th>Keterangan</th>
-                                    <?php if (session()->get('level')==8) { ?>
+                                    <?php if (session()->get('level')==6) { ?>
                                         <th>Action</th>
                                     <?php } ?>
                                 </tr>
@@ -50,7 +50,7 @@
                                     <td><?php echo $riz->nama_siswa ?></td>
                                     <td><?php echo date('d F Y', strtotime($riz->tanggal))?></td>
                                     <td><?php echo $riz->nama_keterangan ?></td>
-                                    <?php if (session()->get('level')==8) { ?>
+                                    <?php if (session()->get('level')==6) { ?>
                                         <td>
                                             <a href="<?php echo base_url('agendapkl/data_absensi_kantor/edit/'. $riz->id_absensi)?>" class="btn btn-warning my-1"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></a>
                                             <a href="<?php echo base_url('agendapkl/data_absensi_kantor/delete/'. $riz->id_absensi)?>" class="btn btn-danger my-1"><i class="fa-solid fa-trash"></i></a>
@@ -64,11 +64,3 @@
                     </div>
                 </div>
             </div>
-
-            <script>
-                $(document).ready(function() {
-                    $('#table2').DataTable({
-                    "order": [[0, "desc"]] // Mengurutkan berdasarkan kolom index ke-3 (kolom tanggal) secara descending
-                });
-                });
-            </script>

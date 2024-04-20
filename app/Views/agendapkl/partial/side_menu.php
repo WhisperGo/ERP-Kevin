@@ -387,7 +387,7 @@ $logo = $builder->select('logo_website')
                                 echo "active";
                               } ?>">
         <a href="<?= base_url('agendapkl/data_agenda_instruktur') ?>" class='sidebar-link'>
-          <i class="fa-solid fa-file-invoice"></i>
+          <i class="fa-regular fa-book-bookmark"></i>
           <span>Data Agenda</span>
         </a>
       </li>
@@ -396,7 +396,7 @@ $logo = $builder->select('logo_website')
                                 echo "active";
                               } ?>">
         <a href="<?= base_url('agendapkl/data_agenda_instruktur/menu_print_agenda') ?>" class='sidebar-link'>
-          <i class="fa-solid fa-file-invoice"></i>
+          <i class="fa-regular fa-book-bookmark"></i>
           <span>Print Agenda</span>
         </a>
       </li>

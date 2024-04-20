@@ -11,11 +11,11 @@ class Data_absensi_kantor extends BaseController
 
     public function index()
     {
-        if (session()->get('level')==8) {
+        if (session()->get('level')==6) {
             $model = new M_absensi_kantor();
 
             $idInstruktur = session()->get('id');
-            $data['jojo'] = $model->tampil_siswa('data_siswa', $idInstruktur);
+            $data['jojo'] = $model->tampil_siswa('siswa', $idInstruktur);
             $data['title'] = 'Data Absensi Kantor';
 
             echo view('agendapkl/partial/header_datatable', $data);
@@ -30,17 +30,17 @@ class Data_absensi_kantor extends BaseController
 
     public function detail($id)
     {
-     if(session()->get('level')==8 || session()->get('level')==4) {
+     if (session()->get('level')==4 || session()->get('level')==5 || session()->get('level')==6) {
         $model=new M_absensi_kantor();
 
         $wheree = array('siswa'=>$id);
         $m=$model->getWhere2('data_absensi_kantor', $wheree);
-        $iduser = $m['user_siswa'];
-        $where=array('data_siswa.user_siswa'=>$iduser);
+        $iduser = $m['user'];
+        $where=array('siswa.user'=>$iduser);
 
-        $on='data_absensi_kantor.siswa=data_siswa.user_siswa';
+        $on='data_absensi_kantor.siswa=siswa.user';
         $on2='data_absensi_kantor.keterangan=data_keterangan.id_keterangan';
-        $data['jojo']=$model->join3w('data_absensi_kantor', 'data_siswa', 'data_keterangan', $on, $on2, $wheree);
+        $data['jojo']=$model->join3w('data_absensi_kantor', 'siswa', 'data_keterangan', $on, $on2, $wheree);
         $data['title']='Data Absensi Kantor';
 
         session()->set('id_balik_absensi_kantor', $id);
@@ -57,7 +57,7 @@ class Data_absensi_kantor extends BaseController
 
 public function create()
 {
-    if(session()->get('level')==8 ) {
+    if (session()->get('level')==6) {
         $model=new M_absensi_kantor();
         $data['keterangan']=$model->tampil('data_keterangan');
         $data['title']='Data Absensi Kantor';
@@ -73,7 +73,7 @@ public function create()
 
 public function aksi_create()
 { 
-    if(session()->get('level')==8 ) {
+    if (session()->get('level')==6) {
         $c= $this->request->getPost('keterangan');
         date_default_timezone_set('Asia/Jakarta');
 
@@ -84,8 +84,6 @@ public function aksi_create()
             'siswa'=>session()->get('id_balik_absensi_kantor'),
             'tanggal'=>date('Y-m-d H:i:s'),
             'keterangan'=>$c,
-            'user_create'=>session()->get('id'),
-            'created_at'=>date('Y-m-d H:i:s')
         );
         $model->simpan('data_absensi_kantor', $data2);
         echo view('agendapkl/partial/header_datatable');
@@ -99,7 +97,7 @@ public function aksi_create()
 }
 public function edit($id)
 { 
-    if(session()->get('level')==8 ) {
+    if (session()->get('level')==6) {
         $model=new M_absensi_kantor();
         $data['keterangan']=$model->tampil('data_keterangan');
         $where=array('id_absensi'=>$id);
@@ -117,7 +115,7 @@ public function edit($id)
 
 public function aksi_edit()
 { 
-    if(session()->get('level')==8 ) {
+    if (session()->get('level')==6) {
      $c= $this->request->getPost('keterangan');
      $id= $this->request->getPost('id');
      date_default_timezone_set('Asia/Jakarta');
@@ -129,7 +127,6 @@ public function aksi_edit()
      $data2=array(
         'siswa'=>session()->get('id_balik_absensi_kantor'),
         'keterangan'=>$c,
-        'user_update'=>session()->get('id'),
         'updated_at'=>date('Y-m-d H:i:s')
     );
 
@@ -141,12 +138,11 @@ public function aksi_edit()
 }
 public function delete($id)
 { 
-    if(session()->get('level')==8 ) {
+    if (session()->get('level')==6) {
         $model=new M_absensi_kantor();
         $where=array('id_absensi'=>$id);
 
         $data=array(
-            'user_delete'=>session()->get('id'),
             'deleted_at'=>date('Y-m-d H:i:s')
         );
 
@@ -161,11 +157,11 @@ public function delete($id)
 
 public function menu_print_absensi_kantor()
 {
-    if(session()->get('level')==8) {
+    if(session()->get('level')==6) {
         $model=new M_absensi_kantor();
 
         $idInstruktur = session()->get('id');
-        $data['nama'] = $model->tampil_siswa('data_siswa', $idInstruktur);
+        $data['nama'] = $model->tampil_siswa('siswa', $idInstruktur);
         $title['title']='Menu Absensi';
 
         echo view('agendapkl/partial/header_datatable', $title);
@@ -181,7 +177,7 @@ public function menu_print_absensi_kantor()
 
 public function export_windows()
 {
-    if (session()->get('level')==8) {
+    if (session()->get('level')==6) {
         $model = new M_absensi_kantor();
 
         $idSiswa = $this->request->getPost('nama');
@@ -201,7 +197,7 @@ public function export_windows()
 
 public function export_pdf()
 {
-    if (session()->get('level')==8) {
+    if (session()->get('level')==6) {
         $model = new M_absensi_kantor();
 
         $idSiswa = $this->request->getPost('nama');
@@ -227,7 +223,7 @@ public function export_pdf()
 
 public function export_excel()
 {
-    if (session()->get('level')==8) {
+    if (session()->get('level')==6) {
         $model = new M_absensi_kantor();
 
         $idSiswa = $this->request->getPost('nama');

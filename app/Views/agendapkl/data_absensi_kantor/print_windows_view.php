@@ -40,7 +40,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="<?=base_url('agendapkl/logo/logo_pdf/logo_pdf_contoh.svg')?>"> 
+        <img src="<?=base_url('logo/logo_pdf/logo_pdf_contoh.svg')?>" class="mt-3"> 
         <div class="judul mt-2">Sekolah GT</div>
         <div class="alamat">Jl. Raya Pahlawan No. 123, Kel. Sukajadi, Kec. Sukasari, Kota Batam 29424.</div>
         <div class="notel">Telp: (0778) 417852 Fax: (0778) 517523</div>

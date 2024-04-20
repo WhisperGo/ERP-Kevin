@@ -82,7 +82,10 @@ class Data_absensi_sekolah extends BaseController
 
     public function detail($id)
     {
-        if (session()->get('level') == 3 && session()->get('jabatan') == 1 || session()->get('jabatan') == 2) {
+        if ((session()->get('level') == 3 && session()->get('jabatan') == 1 || session()->get('jabatan') == 2)
+            ||
+            session()->get('level') == 4 || session()->get('level') == 5
+        ) {
             $model = new M_absensi_sekolah();
 
             $wheree = array('siswa' => $id);

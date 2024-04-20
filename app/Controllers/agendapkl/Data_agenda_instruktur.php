@@ -53,7 +53,7 @@ class Data_agenda_instruktur extends BaseController
 
     public function agenda($id)
     {
-        if (session()->get('level')==6) {
+        if (session()->get('level') == 6) {
             $model = new M_agenda();
 
             $wheree = array('id_agenda' => $id);
@@ -77,7 +77,7 @@ class Data_agenda_instruktur extends BaseController
 
     public function edit($id)
     {
-        if (session()->get('level')==6) {
+        if (session()->get('level') == 6) {
             $model = new M_agenda();
             $where = array('id_agenda' => $id);
             $data['jojo'] = $model->getWhere('data_agenda', $where);
@@ -94,7 +94,7 @@ class Data_agenda_instruktur extends BaseController
 
     public function aksi_edit()
     {
-        if (session()->get('level')==6) {
+        if (session()->get('level') == 6) {
             $pm1 = $this->request->getPost('pm1');
             $pm2 = $this->request->getPost('pm2');
             $pm3 = $this->request->getPost('pm3');
@@ -142,7 +142,7 @@ class Data_agenda_instruktur extends BaseController
     }
     public function delete($id)
     {
-        if (session()->get('level')==6) {
+        if (session()->get('level') == 6) {
             $model = new M_agenda();
             $where = array('id_agenda' => $id);
 
@@ -161,7 +161,7 @@ class Data_agenda_instruktur extends BaseController
 
     public function menu_print_agenda()
     {
-        if (session()->get('level')==6) {
+        if (session()->get('level') == 6) {
             $model = new M_agenda();
 
             $idInstruktur = session()->get('id');
@@ -189,6 +189,29 @@ class Data_agenda_instruktur extends BaseController
 
             // Get data absensi kantor berdasarkan filter
             $data['agenda'] = $model->getDataByFilter($idSiswa, $awal, $akhir);
+
+            // Load the dompdf library
+            $dompdf = new Dompdf();
+
+            // Set the HTML content for the PDF
+            $data['title'] = 'Agenda PKL';
+            $dompdf->loadHtml(view('agendapkl/data_agenda_instruktur/print_pdf_view', $data));
+            $dompdf->setPaper('A4', 'potrait');
+            $dompdf->render();
+            $dompdf->stream('agenda_pkl.pdf', ['Attachment' => 0]);
+        } else {
+            return redirect()->to('landing_page_erp');
+        }
+    }
+
+    public function cek_pdf()
+    {
+        if (session()->get('level') == 6) {
+            $model = new M_agenda();
+
+            $id = $this->request->getPost('id_agenda');
+            // Get data absensi kantor berdasarkan filter
+            $data['agenda'] = $model->getDataByFilter2($id);
 
             // Load the dompdf library
             $dompdf = new Dompdf();

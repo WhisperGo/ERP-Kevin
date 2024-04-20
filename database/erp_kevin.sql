@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Apr 2024 pada 18.39
+-- Waktu pembuatan: 20 Apr 2024 pada 19.16
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -111,6 +111,15 @@ CREATE TABLE `data_absensi_kantor` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `data_absensi_kantor`
+--
+
+INSERT INTO `data_absensi_kantor` (`id_absensi`, `siswa`, `tanggal`, `keterangan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 11, '2024-04-19', 1, '2024-04-19 13:00:00', NULL, NULL),
+(5, 14, '2024-04-20', 1, '2024-04-20 23:10:39', NULL, NULL),
+(6, 11, '2024-04-20', 1, '2024-04-20 23:10:39', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -138,7 +147,9 @@ INSERT INTO `data_absensi_sekolah` (`id_absensi`, `siswa`, `jurusan`, `tanggal`,
 (3, 13, 4, '2024-04-19', 2, '2024-04-19 18:06:41', NULL, NULL),
 (4, 16, 4, '2024-04-19', 3, '2024-04-19 18:06:41', NULL, NULL),
 (5, 12, 3, '2024-04-19', 1, '2024-04-19 18:06:47', NULL, NULL),
-(6, 15, 3, '2024-04-19', 4, '2024-04-19 18:06:47', NULL, NULL);
+(6, 15, 3, '2024-04-19', 4, '2024-04-19 18:06:47', NULL, NULL),
+(7, 11, 2, '2024-04-20', 1, '2024-04-20 13:10:58', NULL, NULL),
+(8, 14, 2, '2024-04-20', 1, '2024-04-20 13:10:58', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -187,7 +198,7 @@ CREATE TABLE `data_agenda` (
 
 INSERT INTO `data_agenda` (`id_agenda`, `siswa`, `tanggal`, `jam_masuk`, `jam_keluar`, `renper_1`, `renper_2`, `renper_3`, `renper_4`, `renper_5`, `reape_1`, `reape_2`, `reape_3`, `reape_4`, `reape_5`, `pk_1`, `pk_2`, `pk_3`, `pm_1`, `pm_2`, `pm_3`, `senyum`, `keramahan`, `penampilan`, `komunikasi`, `realisasi_kerja`, `catatan`, `kondisi`, `approve_g`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 11, '2024-04-19', '08:00:00', '17:00:00', 'Rakit komputer baru', '-', '-', '-', '-', 'Rakit komputer terselesaikan', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Baik', 'Baik', 'Baik', 'Baik', 'Baik', '-', 1, NULL, '2024-04-19 23:12:13', '2024-04-19 00:00:00', NULL),
-(2, 11, '2024-04-20', '08:00:00', '17:00:00', 'Rakit komputer baru', '-', '-', '-', '-', 'Rakit komputer setengah jadi', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', 'Baik', 'Baik', 'Baik', 'Baik', 'Baik', '-', 1, NULL, '2024-04-19 23:12:13', '2024-04-19 00:00:00', NULL);
+(3, 11, '2024-04-20', '21:47:46', '21:51:05', 'Melanjutkan wordpress', '-', '-', '-', '-', 'Wordpress selesai ', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', NULL, NULL, NULL, NULL, NULL, '-', 1, NULL, '2024-04-20 21:47:46', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -260,7 +271,7 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`id_guru`, `nik`, `nama`, `rombel`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '8001', 'Pak Dedi', 1, 6, '2024-04-19 11:47:23', NULL, NULL),
+(1, '8001', 'Pak Dedi', 23, 6, '2024-04-19 11:47:23', NULL, NULL),
 (2, '8002', 'Pak If', 3, 17, '2024-04-19 19:22:59', NULL, NULL),
 (3, '8003', 'Bu Rosita', 22, 18, '2024-04-19 20:39:48', NULL, NULL),
 (4, '8004', 'Pak Beni', 21, 19, '2024-04-19 20:40:45', NULL, NULL);
@@ -320,8 +331,7 @@ CREATE TABLE `jabatan_guru` (
 
 INSERT INTO `jabatan_guru` (`id_jabatan`, `nama_jabatan`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Kesiswaan', '2024-04-19 10:43:35', NULL, NULL),
-(2, 'Kajur', '2024-04-19 10:43:35', NULL, NULL),
-(3, 'Guru Pembimbing', '2024-04-19 10:43:35', NULL, NULL);
+(2, 'Kajur', '2024-04-19 10:43:35', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -365,7 +375,8 @@ CREATE TABLE `jenjang` (
 
 INSERT INTO `jenjang` (`id_jenjang`, `nama_jenjang`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'SMP', '2023-10-02 23:01:48', NULL, NULL),
-(2, 'SMK', '2023-10-02 23:01:59', NULL, NULL);
+(2, 'SMK', '2023-10-02 23:01:59', NULL, NULL),
+(5, 'Tidak Mengajar', '2024-04-20 15:08:43', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -389,7 +400,8 @@ INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `created_at`, `updated_at`,
 (2, 'RPL', '2023-10-02 10:56:57', NULL, NULL),
 (3, 'AKL', '2023-10-02 11:18:54', NULL, NULL),
 (4, 'BDP', '2023-10-03 01:42:21', NULL, NULL),
-(5, 'SMP', '2023-10-03 01:44:43', NULL, NULL);
+(5, 'SMP', '2023-10-03 01:44:43', NULL, NULL),
+(6, 'Tidak Mengajar\r\n', '2024-04-20 15:06:17', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -421,7 +433,7 @@ CREATE TABLE `kandidat` (
 CREATE TABLE `kelas` (
   `id_kelas` int(11) NOT NULL,
   `nama_kelas` varchar(255) NOT NULL,
-  `maker_kelas` text NOT NULL,
+  `maker_kelas` text DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
@@ -437,7 +449,8 @@ INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `maker_kelas`, `created_at`, `upd
 (7, '10', '', '2023-10-03 01:41:57', NULL, NULL),
 (8, '9', '', '2023-10-03 01:42:02', NULL, NULL),
 (9, '8', '', '2023-10-03 01:43:32', NULL, NULL),
-(14, '7', '', '2023-10-03 01:43:57', NULL, NULL);
+(14, '7', '', '2023-10-03 01:43:57', NULL, NULL),
+(15, 'Tidak Mengajar', NULL, '2024-04-20 15:04:10', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -625,7 +638,8 @@ INSERT INTO `rombel` (`id_rombel`, `nama_r`, `kelas`, `jurusan`, `jenjang`, `cre
 (18, 'Baru', 9, 5, 1, '2023-10-03 01:45:48', NULL, NULL),
 (19, 'Baru', 14, 5, 1, '2023-10-03 01:45:48', NULL, NULL),
 (21, 'A', 5, 3, 2, '2023-10-03 01:43:05', NULL, NULL),
-(22, 'A', 5, 4, 2, '2023-10-03 01:43:12', NULL, NULL);
+(22, 'A', 5, 4, 2, '2023-10-03 01:43:12', NULL, NULL),
+(23, 'Tidak Mengajar', 15, 6, 5, '2024-04-20 15:08:51', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -675,10 +689,10 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id_siswa`, `nis`, `nama_siswa`, `rombel`, `jabatan`, `jurusan`, `user`, `instruktur`, `jadwal_piket`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, '1001', 'Kevin Fernando', 6, NULL, 2, 11, 1, NULL, '2024-04-19 15:28:24', '2024-04-19 22:57:40', NULL),
+(3, '1001', 'Kevin Fernando', 6, NULL, 2, 11, 8, NULL, '2024-04-19 15:28:24', '2024-04-20 17:11:47', NULL),
 (4, '1002', 'Jofinson', 21, NULL, 3, 12, NULL, NULL, '2024-04-19 15:31:30', NULL, NULL),
 (5, '1003', 'Kelsey', 22, NULL, 4, 13, NULL, NULL, '2024-04-19 15:31:57', NULL, NULL),
-(6, '1004', 'Darrell', 6, NULL, 2, 14, 2, NULL, '2024-04-19 17:32:44', '2024-04-19 23:02:55', NULL),
+(6, '1004', 'Darrell', 6, NULL, 2, 14, 8, NULL, '2024-04-19 17:32:44', '2024-04-20 23:10:24', NULL),
 (7, '1005', 'Richard', 21, NULL, 3, 15, NULL, NULL, '2024-04-19 17:33:34', NULL, NULL),
 (8, '1006', 'Yanda', 22, NULL, 4, 16, NULL, NULL, '2024-04-19 17:34:02', NULL, NULL);
 
@@ -702,8 +716,8 @@ CREATE TABLE `tahun` (
 --
 
 INSERT INTO `tahun` (`id_tahun`, `nama_t`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '2023', 'Aktif', '2023-10-09 01:16:23', NULL, NULL),
-(3, '2024', 'Tidak-Aktif', '2023-10-09 02:28:21', NULL, NULL);
+(2, '2023', 'Tidak-Aktif', '2023-10-09 01:16:23', NULL, NULL),
+(3, '2024', 'Aktif', '2023-10-09 02:28:21', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -731,8 +745,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `level`, `foto`, `jenjang`, `jabatan`, `pendaftaran`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Superadmin SMP', 'Superadmin SMP', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 1, NULL, NULL, '2024-04-16 15:24:07', NULL, NULL),
-(2, 'Superadmin SMK', 'Superadmin SMK', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 2, NULL, NULL, '2024-04-16 15:24:07', NULL, NULL),
+(1, NULL, 'Superadmin SMP', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 1, NULL, NULL, '2024-04-16 15:24:07', NULL, NULL),
+(2, NULL, 'Superadmin SMK', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', 2, NULL, NULL, '2024-04-16 15:24:07', NULL, NULL),
 (6, NULL, 'Pak Dedi', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 1, NULL, '2024-04-19 11:47:23', NULL, NULL),
 (8, NULL, 'Pak Haris', 'c4ca4238a0b923820dcc509a6f75849b', 6, 'default.png', NULL, NULL, NULL, '2024-04-19 13:39:14', NULL, NULL),
 (11, 'Kevin Fernando', '1001', 'c4ca4238a0b923820dcc509a6f75849b', 4, 'default.png', 2, NULL, NULL, '2024-04-19 15:28:24', NULL, NULL),
@@ -744,7 +758,9 @@ INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `level`, `foto`, 
 (17, NULL, 'Pak If', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 2, NULL, '2024-04-19 19:22:59', NULL, NULL),
 (18, NULL, 'Bu Rosita', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 2, NULL, '2024-04-19 20:39:48', NULL, NULL),
 (19, NULL, 'Pak Beni', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', 2, 2, NULL, '2024-04-19 20:40:45', NULL, NULL),
-(20, NULL, 'Pak Tono', 'c4ca4238a0b923820dcc509a6f75849b', 6, 'default.png', NULL, NULL, NULL, '2024-04-19 22:59:42', NULL, NULL);
+(20, NULL, 'Pak Tono', 'c4ca4238a0b923820dcc509a6f75849b', 6, 'default.png', NULL, NULL, NULL, '2024-04-19 22:59:42', NULL, NULL),
+(21, NULL, 'Admin SMK', 'c4ca4238a0b923820dcc509a6f75849b', 2, 'default.png', 1, NULL, NULL, '2024-04-20 14:50:42', NULL, NULL),
+(22, NULL, 'Admin SMP', 'c4ca4238a0b923820dcc509a6f75849b', 2, 'default.png', 2, NULL, NULL, '2024-04-20 14:50:42', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1003,19 +1019,19 @@ ALTER TABLE `blok`
 -- AUTO_INCREMENT untuk tabel `data_absensi_kantor`
 --
 ALTER TABLE `data_absensi_kantor`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_absensi_sekolah`
 --
 ALTER TABLE `data_absensi_sekolah`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_agenda`
 --
 ALTER TABLE `data_agenda`
-  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_agenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_instruktur`
@@ -1063,13 +1079,13 @@ ALTER TABLE `jenis_kelamin`
 -- AUTO_INCREMENT untuk tabel `jenjang`
 --
 ALTER TABLE `jenjang`
-  MODIFY `id_jenjang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_jenjang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `kandidat`
@@ -1081,7 +1097,7 @@ ALTER TABLE `kandidat`
 -- AUTO_INCREMENT untuk tabel `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `keterangan_perizinan`
@@ -1123,7 +1139,7 @@ ALTER TABLE `perizinan`
 -- AUTO_INCREMENT untuk tabel `rombel`
 --
 ALTER TABLE `rombel`
-  MODIFY `id_rombel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_rombel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT untuk tabel `semester`
@@ -1147,7 +1163,7 @@ ALTER TABLE `tahun`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `vote`

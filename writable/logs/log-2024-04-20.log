@@ -91,3 +91,36 @@ CRITICAL - 2024-04-20 21:34:05 --> Call to a member function getResult() on bool
 #6 {main}
 ERROR - 2024-04-20 21:46:42 --> Unknown column 'user_create' in 'field list'
 ERROR - 2024-04-20 21:46:43 --> Unknown column 'user_create' in 'field list'
+CRITICAL - 2024-04-20 23:05:34 --> Invalid file: agendapkl/data_absensi_kantor/create_all.php
+#0 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('agendapkl/data_...')
+#1 C:\xampp\htdocs\ERP-Kevin\system\Common.php(1089): CodeIgniter\View\View->render('agendapkl/data_...', Array, true)
+#2 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_kantor.php(111): view('agendapkl/data_...', Array)
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_kantor->create_all()
+#4 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_kantor))
+#5 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-04-20 23:06:41 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\ERP-Kevin\app\Views\agendapkl\data_absensi_kantor\create_all.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ERP-Kevin\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ERP-Kevin\system\Common.php(1089): CodeIgniter\View\View->render('agendapkl/data_...', Array, true)
+#4 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_absensi_kantor.php(111): view('agendapkl/data_...', Array)
+#5 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_absensi_kantor->create_all()
+#6 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_absensi_kantor))
+#7 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2024-04-20 23:13:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `data_agenda`.`tanggal` < IS NULL
+AND `data_agenda`.`updated_at` ...' at line 5
+CRITICAL - 2024-04-20 23:13:28 --> Call to a member function getResultArray() on bool
+#0 C:\xampp\htdocs\ERP-Kevin\app\Controllers\agendapkl\Data_agenda_all.php(406): App\Models\agendapkl\M_agenda->getDataByFilter(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(832): App\Controllers\agendapkl\Data_agenda_all->cek_pdf('1')
+#2 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\agendapkl\Data_agenda_all))
+#3 C:\xampp\htdocs\ERP-Kevin\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

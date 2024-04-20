@@ -392,4 +392,27 @@ class Data_agenda_all extends BaseController
             return redirect()->to('landing_page_erp');
         }
     }
+
+    public function cek_pdf()
+    {
+        if (session()->get('level') == 3 && session()->get('jabatan') == 2) {
+            $model = new M_agenda();
+
+            $id = $this->request->getPost('id_agenda');
+            // Get data absensi kantor berdasarkan filter
+            $data['agenda'] = $model->getDataByFilter2($id);
+
+            // Load the dompdf library
+            $dompdf = new Dompdf();
+
+            // Set the HTML content for the PDF
+            $data['title'] = 'Agenda PKL';
+            $dompdf->loadHtml(view('agendapkl/data_agenda_all/print_pdf_view', $data));
+            $dompdf->setPaper('A4', 'potrait');
+            $dompdf->render();
+            $dompdf->stream('agenda_pkl.pdf', ['Attachment' => 0]);
+        } else {
+            return redirect()->to('landing_page_erp');
+        }
+    }
 }

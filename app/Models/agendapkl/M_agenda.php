@@ -132,6 +132,33 @@ class M_agenda extends Model
 		return $query->getResultArray();
 	}
 
+	public function getDataByFilter2($idAgenda)
+	{
+		$builder = $this->db->table('data_agenda');
+
+		// Menambahkan kondisi filter berdasarkan id_agenda
+		$builder->where('id_agenda', $idAgenda);
+
+		// Eksekusi query
+		$query = $builder->get();
+		$result = $query->getRowArray();
+
+		// Set nilai $idSiswa dan $tanggal
+		$idSiswa = $result['siswa'];
+		$tanggal = $result['tanggal'];
+
+		// Join dengan tabel siswa
+		$builder->join('siswa', 'siswa.user = data_agenda.siswa');
+
+		// Menambahkan kondisi filter berdasarkan id siswa dan tanggal
+		$builder->where('data_agenda.siswa', $idSiswa);
+		$builder->where('data_agenda.tanggal', $tanggal);
+		$builder->where('data_agenda.deleted_at', null);
+
+		$query = $builder->get();
+		return $query->getResultArray();
+	}
+
 	//CI4 Model
 	public function deletee($id)
 	{

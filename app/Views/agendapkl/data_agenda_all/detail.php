@@ -42,6 +42,9 @@
                                         <a href="<?php echo base_url('agendapkl/data_agenda_all/agenda/' . $riz->id_agenda) ?>" class="btn btn-primary rounded-pill my-1">
                                             <i class="fa-solid fa-circle-info"></i>
                                         </a>
+                                        <a href="<?php echo base_url('agendapkl/data_agenda_all/cek_pdf/') ?>" class="btn btn-secondary rounded-pill my-1 pdfButton" data-id="<?php echo $riz->id_agenda ?>">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                        </a>
                                         <?php if ($riz->senyum === null) { ?>
                                             <span class="rounded-pill bg-danger text-white px-3 py-2">Belum Review</span>
                                         <?php } else if ($riz->senyum !== null && $riz->approve_g == null) { ?>
@@ -61,3 +64,18 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                document.querySelectorAll('.pdfButton').forEach(button => {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        var idAgenda = this.getAttribute('data-id');
+                        var form = document.createElement('form');
+                        form.method = 'POST';
+                        form.action = '<?php echo base_url('agendapkl/data_agenda_all/cek_pdf/') ?>';
+                        form.innerHTML = '<input type="hidden" name="id_agenda" value="' + idAgenda + '">';
+                        document.body.appendChild(form);
+                        form.submit();
+                    });
+                });
+            </script>

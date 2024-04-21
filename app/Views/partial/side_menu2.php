@@ -171,10 +171,6 @@ $logo = $builder->select('logo_website')
               </a>
             </li>
 
-
-
-
-
             <li class="sidebar-item <?php if ($uri->getSegment(2) == "sekre") {
                                       echo "active";
                                     } ?>">
@@ -185,8 +181,6 @@ $logo = $builder->select('logo_website')
             </li>
 
             <li class="sidebar-title">Pendaftaran Siswa Baru</li>
-
-
 
             <li class="sidebar-item <?php if ($uri->getSegment(1) == "data_pendaftaran") {
                                       echo "active";

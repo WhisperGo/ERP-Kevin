@@ -44,9 +44,10 @@ TODO List :
 - fungsi absen sekaligus kantor untuk instruktur (DONE)
 - view 1 agenda memakai pdf langsung (DONE)
 - alert error di login landing_page_erp (DONE)
+- ganti gambar dan desc di landing_page_erp (DONE)
 - error evoting
 - error absensi
 - fungsi delete agenda untuk kajur ataupun instruktur?
 - menu reset password, dan ubah poto profile di top_menu
 - menu softdelete di master data
-- ganti gambar dan desc di landing_page_erp
+

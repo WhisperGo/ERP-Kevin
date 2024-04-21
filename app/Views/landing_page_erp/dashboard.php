@@ -131,12 +131,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-06">
                                             <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                                <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="images/topics/Datamaster.svg" class="custom-block-image img-fluid">
                                                 <br>
                                                 <div class="d-flex">
                                                     <div>
                                                         <h5 class="mb-2">Data Master</h5>
-                                                        <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                        <p class="mb-0">Aplikasi Untuk Mengelola Data Website</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -161,12 +161,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-02">
                                             <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                                <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="images/topics/Absensi.svg" class="custom-block-image img-fluid" alt="">
                                                 <br>
                                                 <div class="d-flex">
                                                     <div>
                                                         <h5 class="mb-2">Absensi</h5>
-                                                        <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                        <p class="mb-0">Aplikasi Untuk Mengelola Absensi Siswa</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -191,12 +191,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-05">
                                             <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                                <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="images/topics/Evoting.svg" class="custom-block-image img-fluid" alt="">
                                                 <br>
                                                 <div class="d-flex">
                                                     <div>
                                                         <h5 class="mb-2">E-Voting</h5>
-                                                        <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                        <p class="mb-0">Aplikasi Untuk Melakukan Voting Online</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -229,12 +229,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-01">
                                         <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                            <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                            <img src="images/topics/Penilaian.svg" class="custom-block-image img-fluid" alt="">
                                             <br>
                                             <div class="d-flex">
                                                 <div>
                                                     <h5 class="mb-2">Penilaian</h5>
-                                                    <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                    <p class="mb-0">Aplikasi Untuk Mengelola Nilai Siswa</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -261,12 +261,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
                                         <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                            <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                            <img src="images/topics/Agendapkl.svg" class="custom-block-image img-fluid" alt="">
                                             <br>
                                             <div class="d-flex">
                                                 <div>
                                                     <h5 class="mb-2">Agenda PKL</h5>
-                                                    <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                    <p class="mb-0">Aplikasi Untuk Mengelola Agenda PKL Siswa</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -294,12 +294,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-06">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Datamaster.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">Data Master</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Mengelola Data Website</p>
                                             </div>
                                         </div>
                                     </div>
@@ -324,12 +324,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-02">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Absensi.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">Absensi</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Mengelola Absensi Siswa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -354,12 +354,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Agendapkl.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">Agenda PKL</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Mengelola Agenda PKL Siswa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -392,12 +392,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-05">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Evoting.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">E-Voting</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Melakukan Voting Online</p>
                                             </div>
                                         </div>
                                     </div>
@@ -422,12 +422,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-01">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Penilaian.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">Penilaian</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Mengelola Nilai Siswa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -455,12 +455,12 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-02">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Absensi.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">Absensi</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Mengelola Absensi Siswa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -483,23 +483,23 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
+                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-05">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Evoting.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
-                                                <h5 class="mb-2">Agenda PKL</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <h5 class="mb-2">E-Voting</h5>
+                                                <p class="mb-0">Aplikasi Untuk Melakukan Voting Online</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="project-03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="project-05" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Agenda PKL</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">E-Voting</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
@@ -507,58 +507,20 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <a href="<?= base_url('agendapkl/dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
+                                                <a href="<?= base_url('voting') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-05">
-                                <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                    <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
-                                    <br>
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">E-Voting</h5>
-                                            <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal fade" id="project-05" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">E-Voting</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                            <a href="<?= base_url('voting') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><br>
-
-                            <div class="row">
-                                <style>
-                                    #webDesignCard {
-                                        cursor: pointer;
-                                    }
-                                </style>
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-01">
                                     <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                        <img src="images/topics/Penilaian.svg" class="custom-block-image img-fluid" alt="">
                                         <br>
                                         <div class="d-flex">
                                             <div>
                                                 <h5 class="mb-2">Penilaian</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <p class="mb-0">Aplikasi Untuk Mengelola Nilai Siswa</p>
                                             </div>
                                         </div>
                                     </div>
@@ -582,138 +544,145 @@ $siswa = $db->table('siswa')->where('user', $id_user)->get()->getRow();
                                     </div>
                                 </div>
 
-                            <?php } else if (session()->get('level') == 4 || session()->get('level') == 5) { ?>
+                                <div class="row">
+                                    <style>
+                                        #webDesignCard {
+                                            cursor: pointer;
+                                        }
+                                    </style>
 
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-02">
-                                    <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
-                                        <br>
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Absensi</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                <?php } else if (session()->get('level') == 4 || session()->get('level') == 5) { ?>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-02">
+                                        <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
+                                            <img src="images/topics/Absensi.svg" class="custom-block-image img-fluid" alt="">
+                                            <br>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <h5 class="mb-2">Absensi</h5>
+                                                    <p class="mb-0">Aplikasi Untuk Mengelola Absensi Siswa</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="project-02" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Absensi</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    <a href="<?= base_url('dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
+                                        <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
+                                            <img src="images/topics/Agendapkl.svg" class="custom-block-image img-fluid" alt="">
+                                            <br>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <h5 class="mb-2">Agenda PKL</h5>
+                                                    <p class="mb-0">Aplikasi Untuk Mengelola Agenda PKL Siswa</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="project-03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Agenda PKL</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    <a href="<?= base_url('agendapkl/dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-01">
+                                        <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
+                                            <img src="images/topics/Evoting.svg" class="custom-block-image img-fluid" alt="">
+                                            <br>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <h5 class="mb-2">E-Voting</h5>
+                                                    <p class="mb-0">Aplikasi Untuk Melakukan Voting Online</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="project-01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">E-Voting</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    <a href="<?= base_url('voting') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php } else if (session()->get('level') == 6) { ?>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
+                                        <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
+                                            <img src="images/topics/Agendapkl.svg" class="custom-block-image img-fluid" alt="">
+                                            <br>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <h5 class="mb-2">Agenda PKL</h5>
+                                                    <p class="mb-0">Aplikasi Untuk Mengelola Agenda PKL Siswa</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="project-03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Agenda PKL</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    <a href="<?= base_url('agendapkl/dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="project-02" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Absensi</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <a href="<?= base_url('dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
-                                    <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
-                                        <br>
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Agenda PKL</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal fade" id="project-03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Agenda PKL</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <a href="<?= base_url('agendapkl/dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <?php } ?>
 
-
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-01">
-                                    <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
-                                        <br>
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">E-Voting</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal fade" id="project-01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">E-Voting</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <a href="<?= base_url('voting') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <?php } else if (session()->get('level') == 6) { ?>
-
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" id="webDesignCard" data-bs-toggle="modal" data-bs-target="#project-03">
-                                    <div class="custom-block bg-white shadow-lg" data-aos="fade-up">
-                                        <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
-                                        <br>
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Agenda PKL</h5>
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal fade" id="project-03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Agenda PKL</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Apakah anda yakin ingin membuka aplikasi ini?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                <a href="<?= base_url('agendapkl/dashboard') ?>"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Membuka App</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <?php } ?>
-
+                            </div><br>
                         </div><br>
-                    </div><br>
+                    </div>
                 </div>
-            </div>
             </div>
             </div>
         </section>

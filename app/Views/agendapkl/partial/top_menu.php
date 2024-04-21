@@ -39,62 +39,58 @@ if (!empty($user->foto)) {
                     $level = session()->get('level');
 
                     if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
-                    // Jika level 1, 2, atau 3, gunakan session()->get('username')
+                      // Jika level 1, 2, atau 3, gunakan session()->get('username')
                       echo "<h6 class='mb-0 text-gray-600'>" . session()->get('username') . "</h6>";
                     } elseif ($level == 4 || $level == 5) {
-                    // Jika level 4 atau 5, gunakan $siswa->nama_siswa
+                      // Jika level 4 atau 5, gunakan $siswa->nama_siswa
                       echo "<h6 class='mb-0 text-gray-600'>$siswa->nama_siswa</h6>";
                     } else {
-                    // Jika level tidak sesuai dengan kriteria di atas
+                      // Jika level tidak sesuai dengan kriteria di atas
                       echo "<h6 class='mb-0 text-gray-600'>Teks Default</h6>";
                     }
                     ?>
-                    <p class="mb-0 text-sm text-gray-600"><?=$namalevel->nama_level?></p>
+                    <p class="mb-0 text-sm text-gray-600"><?= $namalevel->nama_level ?></p>
                   </div>
                   <div class="user-img d-flex align-items-center">
                     <div class="avatar avatar-md">
-                      <img src="<?=base_url('images/default.png')?>">
+                      <img src=<?= $foto ?>>
                     </div>
                   </div>
                 </div>
               </a>
-              <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="dropdownMenuButton"
-              style="min-width: 11rem"
-              >
-              <li>
-                <h6 class="dropdown-header">
-                  <?php
-                  $level = session()->get('level');
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem">
+                <li>
+                  <h6 class="dropdown-header">
+                    <?php
+                    $level = session()->get('level');
 
-                  if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
-                    // Jika level 1, 2, atau 3, gunakan session()->get('username')
-                    echo "Halo, " . session()->get('username') . "!";
-                  } elseif ($level == 4 || $level == 5) {
-                    // Jika level 4 atau 5, gunakan $siswa->nama_siswa
-                    echo "Halo, $siswa->nama_siswa!";
-                  } else {
-                    // Jika level tidak sesuai dengan kriteria di atas
-                    echo "Selamat Datang!";
-                  }
-                  ?>
-                </h6>
-              </li>
+                    if ($level == 1 || $level == 2 || $level == 3 || $level == 6) {
+                      // Jika level 1, 2, atau 3, gunakan session()->get('username')
+                      echo "Halo, " . session()->get('username') . "!";
+                    } elseif ($level == 4 || $level == 5) {
+                      // Jika level 4 atau 5, gunakan $siswa->nama_siswa
+                      echo "Halo, $siswa->nama_siswa!";
+                    } else {
+                      // Jika level tidak sesuai dengan kriteria di atas
+                      echo "Selamat Datang!";
+                    }
+                    ?>
+                  </h6>
+                </li>
 
-              <!-- <li>
-                <a class="dropdown-item" href="<?= base_url('data_pengguna/' . session()->get('id')) ?>">
-                  <i class="fa-regular fa-gear me-2"></i>
-                Settings</a>
-              </li> -->
+                <li>
+                  <a class="dropdown-item" href="<?= base_url('data_pengguna/edit/' . session()->get('id')) ?>">
+                    <i class="fa-regular fa-gear me-2"></i>
+                    Settings</a>
+                </li>
 
-              <li>
-                <a class="dropdown-item" href="<?=base_url('landing_page_erp/home/dashboard')?>">
-                  <i class="fa-regular fa-arrow-right-from-bracket me-2"></i>
-                Back</a>
-              </li>
-            </ul>
-          </div>
+                <li>
+                  <a class="dropdown-item" href="<?= base_url('landing_page_erp/home/dashboard') ?>">
+                    <i class="fa-regular fa-arrow-right-from-bracket me-2"></i>
+                    Back</a>
+                </li>
+              </ul>
+            </div>
         </div>
       </div>
     </nav>

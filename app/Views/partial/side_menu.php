@@ -166,7 +166,14 @@ $logo = $builder->select('logo_website')
       </li>
 
       <li class="sidebar-title">Data</li>
-
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "Data_absensi_guru") {
+                                echo "active";
+                              } ?>">
+        <a href="<?= base_url('Data_absensi_guru') ?>" class='sidebar-link'>
+          <i class="fa-solid fa-clipboard-user"></i>
+          <span>Input Absen</span>
+        </a>
+      </li>
       <li class="sidebar-item <?php if ($uri->getSegment(2) == "menu_print") {
                                 echo "active";
                               } ?>">

@@ -45,9 +45,33 @@ TODO List :
 - view 1 agenda memakai pdf langsung (DONE)
 - alert error di login landing_page_erp (DONE)
 - ganti gambar dan desc di landing_page_erp (DONE)
+- Sekretaris kasih rombelnya! (DONE)
+- menu reset password, dan ubah poto profile di top_menu (DONE)
+
 - error evoting
 - error absensi
 - fungsi delete agenda untuk kajur ataupun instruktur?
-- menu reset password, dan ubah poto profile di top_menu
 - menu softdelete di master data
+- import excel guru, siswa, instruktur
+- menu tambah Admin
 
+Hasil Testing : 
+1. Data master
+- Dashboard
+- Data user
+- Data guru
+- Data siswa
+- Data instruktur
+- Data level
+- Data website
+- Rombel : 
+    - Jenjang
+    - Kelas (EDIT Error, kurang $data)
+    - Jurusan (TAMBAH Error, kurang $data)
+    - Rombel
+- Data mapel
+- Data tahun
+- Data Blok
+- Data Sekretaris
+2. Data Pendaftaran (File yang aku kasih tadi)
+3. 

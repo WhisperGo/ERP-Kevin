@@ -39,9 +39,10 @@
 									</div>
 								</div>
 							</div>
+							<label for="Foto" class="form-label">Foto Lama</label>
 							<div id="preview">
 								<?php if ($rizkan->foto) : ?>
-									<img src="<?= base_url('images/' . $rizkan->foto) ?>" class="img-fluid rounded" width="100px">
+									<img src="<?= base_url('images/' . $rizkan->foto) ?>" class="img-fluid rounded mb-3" width="100px">
 								<?php endif; ?>
 							</div>
 							<div class="col-md-6 col-12">

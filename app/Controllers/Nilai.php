@@ -10,7 +10,7 @@ class nilai extends BaseController
 {
 	public function index()
 	{ 
-		if(session()->get('level')==1 ||  session()->get('level')==2){
+		if(session()->get('level')==1 ||  session()->get('level')==2 ||  session()->get('level')==3){
 			$model=new M_model();
             $on='nilai.siswa=siswa.id_siswa';
             $on2='nilai.blok=blok.id_blok';
@@ -84,8 +84,7 @@ class nilai extends BaseController
         // Lakukan operasi penyimpanan data ke database di sini
         // Misalnya, lakukan perulangan untuk menyimpan setiap entri nilai
         for ($i = 0; $i < count($id_siswa); $i++) {
-            // Memuat model
-            $modelNilai = new \App\Models\ModelNilai();
+            // Memuat model           
 
             // Lakukan operasi penyimpanan ke database di sini
             $data = [
@@ -115,7 +114,7 @@ class nilai extends BaseController
 }
 public function edit_nilai($id)
 	{
-		if(session()->get('level')==1 ||  session()->get('level')==2){
+		if(session()->get('level')==1 ||  session()->get('level')==2 ||  session()->get('level')==3){
 			$model=new M_model();
 			$data['title']='Edit Nilai';
 			$data['z'] = $model->tampil('siswa');
@@ -168,7 +167,7 @@ public function edit_nilai($id)
 	}
 	public function delete_nilai($id)
 	{
-		if(session()->get('level')==1 ||  session()->get('level')==2){
+		if(session()->get('level')==1 ||  session()->get('level')==2 ||  session()->get('level')==3){
 			$model=new m_model();
 			$where=array('id_nilai'=>$id);
 			$model->hapus('nilai',$where);

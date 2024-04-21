@@ -49,7 +49,7 @@
                           <?php
                           foreach ($a as $b) {
                             ?>
-                            <option value ="<?= $b->id_siswa?>"><?php echo $b->nama_siswa?>
+                            <option value ="<?= $b->id_siswa?>"><?php echo $b->nama_siswa?> - <?php echo $b->nama_kelas . '.' . $b->nama_r . ' - ' . $b->nama_jurusan ?>
                           </option>
                         <?php } ?>
                       </select>

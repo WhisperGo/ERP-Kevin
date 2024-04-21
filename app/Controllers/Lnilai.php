@@ -32,7 +32,7 @@ class Lnilai extends BaseController
 
  public function print_nilai()
  {
-     if (session()->get('level') == 1 || session()->get('level') == 2) {
+     if (session()->get('level') == 1 || session()->get('level') == 2 ||  session()->get('level')==3) {
          $model = new M_model();
          $blok = $this->request->getPost('blok');
          $tahun = $this->request->getPost('tahun');

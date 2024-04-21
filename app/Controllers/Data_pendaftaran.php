@@ -8,7 +8,7 @@ class Data_pendaftaran extends BaseController
 {
     public function index()
     {
-        if (session()->get('level') == 1) {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
             $model = new M_pendaftaran();
             $data['jojo'] = $model->getAllPData();
             $data['title'] = 'Data Pendaftaran';
@@ -25,7 +25,7 @@ class Data_pendaftaran extends BaseController
 
     public function detail_siswa($id)
     {
-        if (session()->get('level') == 1) {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
             $model = new M_pendaftaran();
             $data['jojo'] = $model->getAllPDataWhere($id);
             $data['title'] = 'Data Pendaftaran';
@@ -42,7 +42,7 @@ class Data_pendaftaran extends BaseController
 
     public function create()
     {
-        if (session()->get('level') == 1) {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
             $model = new M_pendaftaran();
 
             $data['jojo'] = $model->tampil('pendaftaran');
@@ -66,7 +66,7 @@ class Data_pendaftaran extends BaseController
 
     public function aksi_create()
     {
-        if (session()->get('level') == 1) {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
             $a = $this->request->getPost('nama');
             $b = $this->request->getPost('tempat_lahir');
             $c = $this->request->getPost('tanggal_lahir');
@@ -80,10 +80,14 @@ class Data_pendaftaran extends BaseController
             $k = $this->request->getPost('nama_ibu');
             $l = $this->request->getPost('pekerjaan_ortu');
             $m = $this->request->getPost('alamat_kantor');
+            $n = $this->request->getPost('nik');
+            $o = $this->request->getPost('password');
             date_default_timezone_set('Asia/Jakarta');
 
             //Yang ditambah ke user
             $data1 = array(
+                'nik' => $n,
+                'password' => md5($o),
                 'nama_lengkap' => $a,
                 'tempat_lahir' => $b,
                 'tanggal_lahir' => $c,
@@ -112,7 +116,7 @@ class Data_pendaftaran extends BaseController
 
     public function siswa_diterima($id)
     {
-        if (session()->get('level') == 1) {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
             $model = new M_pendaftaran();
             $pendaftaran = $model->getDataPendaftaranbyId($id);
 
@@ -162,7 +166,7 @@ class Data_pendaftaran extends BaseController
 
     public function siswa_ditolak($id)
     {
-        if (session()->get('level') == 1) {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
             $model = new M_pendaftaran();
             $where = array('id_pendaftaran' => $id);
 

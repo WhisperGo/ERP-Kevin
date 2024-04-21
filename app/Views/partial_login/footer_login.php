@@ -33,5 +33,32 @@
     <script src="<?=base_url('assets/extensions/toastify-js/src/toastify.js')?>"></script>
     <script src="<?=base_url('assets/static/js/pages/filepond.js')?>"></script>
     
+    <!-- Log Out Otomatis -->
+    <script>
+      // Fungsi untuk mengatur timer otomatis logout
+      function startLogoutTimer() {
+        let timeoutId;
+
+        function resetTimer() {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(logout, 30 * 60 * 1000); //30 Menit
+        }
+
+        function logout() {
+          window.location.href = '<?= base_url('login_pendaftaran/logout') ?>';
+        }
+
+        // Resep timer setiap kali ada aktivitas
+        window.addEventListener('mousemove', resetTimer);
+        window.addEventListener('click', resetTimer);
+        window.addEventListener('keypress', resetTimer);
+        resetTimer();
+      }
+
+      // Panggil fungsi untuk memulai timer otomatis logout
+      startLogoutTimer();
+    </script>
+    <!-- Log Out Otomatis -->
+
   </body>
   </html>

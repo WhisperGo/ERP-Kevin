@@ -184,13 +184,12 @@ $logo = $builder->select('logo_website')
       </li>
 
       <li class="sidebar-title">Data Nilai</li>
-
-      <li class="sidebar-item <?php if ($uri->getSegment(1) == "Ledger") {
+      <li class="sidebar-item <?php if ($uri->getSegment(1) == "nilai") {
                                 echo "active";
                               } ?>">
-        <a href="<?= base_url('Ledger') ?>" class="sidebar-link">
-          <i class="bi bi-book"></i>
-          <span>Ledger Nilai Per Blok</span>
+        <a href="<?= base_url('nilai/tambah_nilai') ?>" class='sidebar-link'>
+          <i class="bi bi-123"></i>
+          <span>Input Nilai</span>
         </a>
       </li>
       <li class="sidebar-item <?php if ($uri->getSegment(1) == "Lnilai") {

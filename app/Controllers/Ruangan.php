@@ -105,6 +105,7 @@ class Ruangan extends BaseController
 	{
 		if (session()->get('level') == 1 ||  session()->get('level') == 2) {
 			$model = new M_model();
+			$data['title'] = 'Tambah Jurusan';
 			echo view('partial/header_datatable', $data);
 			echo view('partial/side_menu2');
 			echo view('partial/top_menu');
@@ -185,6 +186,7 @@ class Ruangan extends BaseController
 		if (session()->get('level') == 1 ||  session()->get('level') == 2) {
 			$model = new M_model();
 			$where = array('id_kelas' => $id);
+			$data['title'] = 'Edit Kelas';
 			echo view('partial/header_datatable', $data);
 			echo view('partial/side_menu2');
 			echo view('partial/top_menu');

@@ -77,7 +77,7 @@ $namaweb = $builder->select('nama_website')
               </div>
 
               <div class="mb-3">
-                <label for="favicon" class="form-label">Foto Copy Ijazah SMP</label>
+                <label for="favicon" class="form-label">Foto Copy Ijazah Sebelumnya</label>
                 <div class="mb-3">
                   <div class="custom-file">
                     <div class="col-12 col-md-12">

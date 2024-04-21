@@ -70,14 +70,6 @@ $logo = $builder->select('logo_website')
               </a>
             </li>
 
-            <li class="sidebar-item <?php if ($uri->getSegment(1) == "Ledger") {
-                                      echo "active";
-                                    } ?>">
-              <a href="<?= base_url('Ledger') ?>" class="sidebar-link">
-                <i class="bi bi-book"></i>
-                <span>Ledger Nilai Per Blok</span>
-              </a>
-            </li>
             <li class="sidebar-item <?php if ($uri->getSegment(1) == "Lnilai") {
                                       echo "active";
                                     } ?>">

@@ -92,3 +92,5 @@ CRITICAL - 2024-04-21 21:00:17 --> Call to a member function getResult() on bool
 #4 C:\xampp\htdocs\ERP-Kevin\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\ERP-Kevin\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+ERROR - 2024-04-21 23:09:07 --> Unknown column 'user_delete' in 'field list'
+ERROR - 2024-04-21 23:09:09 --> Unknown column 'user_delete' in 'field list'

@@ -1,77 +1,18 @@
-Yang tidak ada : 
-- data_absensi_kantor (DONE)
-- data_absensi_sekolah (DONE)
-- data_agenda (DONE)
-- data_instruktur (DONE CRUD)
-- data_keterangan (DONE)
-
-Yang sama : 
-- data_guru -> guru (DONE)
-- data_jurusan -> jurusan (DONE)
-- data_siswa -> siswa (DONE)
-- data_level -> level (DONE)
-- perusahaan -> website (DONE)
-- user -> user (DONE)
-
-Yang baru : 
-- jabatan_guru (DONE)
-
-Fix : 
-- user (CRUD DONE)
-- perusahaan (CRUD DONE)
-- data_keterangan (CRUD Tidak diperlukan)
-- data_instruktur (CRUD DONE)
-- data_jurusan (CRUD DONE)
-- data_level (CRUD DONE)
-- data_absensi_sekolah (CRUD & PRINT DONE)
-- data_absensi_sekolah_all (CRUD & PRINT DONE)
-- data_agenda_all (CRUD & PRINT DONE)
-- data_absensi_kantor (CRUD & PRINT DONE)
-- data_agenda_kantor (CRUD & PRINT DONE)
-- data_agenda (CRUD DONE)
-
-
 Akun : 
-- Superadmin & Admin (DONE)
-- Kesiswaan (DONE)
-- Kajur (DONE)
-- Guru Pembimbing (Tidak diperlukan lagi)
-- Siswa (DONE)
-- Instruktur (DONE)
+- Superadmin
+- Admin
+- Guru : 
+    - Kesiswaan 
+    - Kajur 
+    - Guru 
+- Siswa
+- Instruktur PT 
 
-TODO List : 
-- dashboard_erp untuk level 6/data_instruktur (DONE)
-- fungsi absen sekaligus kantor untuk instruktur (DONE)
-- view 1 agenda memakai pdf langsung (DONE)
-- alert error di login landing_page_erp (DONE)
-- ganti gambar dan desc di landing_page_erp (DONE)
-- Sekretaris kasih rombelnya! (DONE)
-- menu reset password, dan ubah poto profile di top_menu (DONE)
+Aplikasi : 
+- Pendaftaran Peserta Didik baru
+- Absensi & Perizinan Siswa
+- E-voting OSIS
+- Penilaian Siswa
+- Agenda PKL
 
-- error evoting
-- error absensi
-- fungsi delete agenda untuk kajur ataupun instruktur?
-- menu softdelete di master data
-- import excel guru, siswa, instruktur
-- menu tambah Admin
 
-Hasil Testing : 
-1. Data master
-- Dashboard
-- Data user
-- Data guru
-- Data siswa
-- Data instruktur
-- Data level
-- Data website
-- Rombel : 
-    - Jenjang
-    - Kelas (EDIT Error, kurang $data)
-    - Jurusan (TAMBAH Error, kurang $data)
-    - Rombel
-- Data mapel
-- Data tahun
-- Data Blok
-- Data Sekretaris
-2. Data Pendaftaran (File yang aku kasih tadi)
-3. 

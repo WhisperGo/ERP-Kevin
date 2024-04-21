@@ -370,7 +370,6 @@ class Data_absensi_sekolah extends BaseController
             $where = array('id_absensi' => $id);
 
             $data = array(
-                'user_delete' => session()->get('id'),
                 'deleted_at' => date('Y-m-d H:i:s')
             );
 

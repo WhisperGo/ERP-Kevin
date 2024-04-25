@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers\Agendapkl;
-use App\Models\agendapkl\M_login;
+use App\Models\Agendapkl\M_login;
 
 class Dashboard extends BaseController
 {

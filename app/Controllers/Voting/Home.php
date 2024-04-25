@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers\Voting;
-use App\Models\voting\M_model;
+use App\Models\Voting\M_model;
 
 class Home extends BaseController
 {

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\universal\M_pendaftaran;
+use App\Models\Universal\M_pendaftaran;
 
 class Data_pendaftaran extends BaseController
 {

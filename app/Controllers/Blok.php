@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\universal\M_model;
-use App\Models\universal\BlokModel; 
+use App\Models\Universal\M_model;
+use App\Models\Universal\BlokModel; 
 
 class Blok extends BaseController
 {

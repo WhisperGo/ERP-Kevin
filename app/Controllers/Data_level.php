@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\universal\M_level;
+use App\Models\Universal\M_level;
 
 class Data_level extends BaseController
 {

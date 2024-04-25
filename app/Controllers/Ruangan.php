@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\universal\M_model;
+use App\Models\Universal\M_model;
 
 class Ruangan extends BaseController
 {

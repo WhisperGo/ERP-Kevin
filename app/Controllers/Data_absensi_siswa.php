@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\universal\M_perizinan;
-use App\Models\universal\M_model;
+use App\Models\Universal\M_perizinan;
+use App\Models\Universal\M_model;
 
 class Data_absensi_siswa extends BaseController
 {

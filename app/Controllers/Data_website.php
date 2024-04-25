@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Universal\M_website;
+use App\Models\universal\M_website;
 
 class Data_website extends BaseController
 {

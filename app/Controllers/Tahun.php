@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Universal\M_model;
-use App\Models\Universal\TahunModel; 
+use App\Models\universal\M_model;
+use App\Models\universal\TahunModel; 
 
 class Tahun extends BaseController
 {

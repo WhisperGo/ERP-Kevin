@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Universal\M_login;
-use App\Models\Universal\M_pendaftaran;
+use App\Models\universal\M_login;
+use App\Models\universal\M_pendaftaran;
 
 class Dashboard_pendaftaran extends BaseController
 {

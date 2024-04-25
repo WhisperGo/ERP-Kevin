@@ -2,8 +2,8 @@
 
 namespace App\Controllers\Voting;
 
-use App\Models\Voting\K_model;
-use App\Models\Voting\V_model;
+use App\Models\voting\K_model;
+use App\Models\voting\V_model;
 use TCPDF;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

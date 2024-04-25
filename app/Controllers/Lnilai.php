@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Universal\M_model;
+use App\Models\universal\M_model;
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;

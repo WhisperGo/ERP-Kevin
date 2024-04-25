@@ -2,8 +2,8 @@
 
 namespace App\Controllers\Voting;
 use CodeIgniter\Controller;
-use App\Models\Voting\M_model;
-use App\Models\Voting\U_model;
+use App\Models\voting\M_model;
+use App\Models\voting\U_model;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

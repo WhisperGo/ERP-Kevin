@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Universal\M_login;
+use App\Models\universal\M_login;
 
 class Login extends BaseController
 {

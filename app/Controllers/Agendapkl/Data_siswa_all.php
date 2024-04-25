@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Agendapkl;
 
-use App\Models\Agendapkl\M_siswa;
+use App\Models\agendapkl\M_siswa;
 
 class Data_siswa_all extends BaseController
 {

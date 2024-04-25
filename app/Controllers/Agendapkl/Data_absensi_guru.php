@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers\Agendapkl;
-use App\Models\Agendapkl\M_absensi_sekolah;
+use App\Models\agendapkl\M_absensi_sekolah;
 use Dompdf\Dompdf;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

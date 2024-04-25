@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\Universal\M_siswa;
+use App\Models\universal\M_siswa;
 
 class Data_siswa_guru extends BaseController
 {

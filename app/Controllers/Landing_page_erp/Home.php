@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Landing_page_erp;
 
-use App\Models\Landing_page_erp\M_model;
+use App\Models\landing_page_erp\M_model;
 
 class Home extends BaseController
 {

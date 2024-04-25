@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Universal\M_siswa;
+use App\Models\universal\M_siswa;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers\Agendapkl;
-use App\Models\Agendapkl\M_guru;
+use App\Models\agendapkl\M_guru;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\IOFactory;

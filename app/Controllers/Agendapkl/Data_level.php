@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers\Agendapkl;
-use App\Models\agendapkl\M_level;
+use App\Models\Agendapkl\M_level;
 
 class Data_level extends BaseController
 {

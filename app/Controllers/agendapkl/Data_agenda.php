@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Agendapkl;
 
-use App\Models\agendapkl\M_agenda;
+use App\Models\Agendapkl\M_agenda;
 
 class Data_agenda extends BaseController
 {

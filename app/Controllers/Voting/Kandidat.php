@@ -2,8 +2,8 @@
 
 namespace App\Controllers\Voting;
 use CodeIgniter\Controller;
-use App\Models\voting\M_model;
-use App\Models\voting\K_model;
+use App\Models\Voting\M_model;
+use App\Models\Voting\K_model;
 
 class Kandidat extends BaseController
 {

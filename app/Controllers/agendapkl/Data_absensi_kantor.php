@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Agendapkl;
 
-use App\Models\agendapkl\M_absensi_kantor;
+use App\Models\Agendapkl\M_absensi_kantor;
 use Dompdf\Dompdf;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

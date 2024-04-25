@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Models\universal\Amodel;
-use App\Models\universal\BlokModel;
-use App\Models\universal\TahunModel;
-use App\Models\universal\SiswaModel;
-use App\Models\universal\PerizinanModel;
+use App\Models\Universal\Amodel;
+use App\Models\Universal\BlokModel;
+use App\Models\Universal\TahunModel;
+use App\Models\Universal\SiswaModel;
+use App\Models\Universal\PerizinanModel;
 
 class Data_absensi_guru extends BaseController
 {

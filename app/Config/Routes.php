@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'landing_page::index');
+$routes->get('/', 'Landing_page::index');
 // $routes->get('agendapkl/data_agenda/(:num)', 'agendapkl/data_agenda::index/$1');
 
 
